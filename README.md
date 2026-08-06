@@ -106,7 +106,7 @@ alias documentado en `icons.js`. Requiere que se dibuje el glifo real.
 
 ## Cómo el equipo genera presentaciones
 
-Ver **[docs/GUIA-EQUIPO.md](docs/GUIA-EQUIPO.md)**. Resumen: entrás a Claude Design, el DS de
+Ver **[docs/GUIA-EQUIPO.md](docs/GUIA-EQUIPO.md)**. Gobernanza y permisos en **[docs/GOBERNANZA.md](docs/GOBERNANZA.md)**. Resumen: entrás a Claude Design, el DS de
 la organización se aplica solo, describís el deck, exportás a PPTX o PDF.
 
 ---
