@@ -30,8 +30,10 @@ cdp-design-system/
 │   ├── _ds_manifest.json       ⚠ generado por Claude Design
 │   ├── _ds_bundle.js           ⚠ generado por Claude Design
 │   └── _adherence.oxlintrc.json ⚠ generado por Claude Design
-├── docs/                   documentación de uso y gobernanza
-├── scripts/                tooling (build de iconos, empaquetado)
+├── docs/                   documentación de uso, gobernanza y plataforma
+├── skills/                 skills de Claude versionadas
+├── scripts/                tooling (build de iconos, chequeos)
+├── CLAUDE.md               contexto que Claude carga al trabajar acá
 └── CHANGELOG.md            historial de versiones del DS
 ```
 

@@ -5,6 +5,17 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado 
 Para un design system: **MAJOR** = breaking (token o componente eliminado/renombrado),
 **MINOR** = agregado compatible, **PATCH** = fix visual o de documentación.
 
+## [2.2.0] — 2026-08-06
+
+### Agregado
+- `CLAUDE.md` — contexto que Claude carga automáticamente al trabajar en la carpeta: alcance,
+  los cuatro contratos que no se rompen, comandos, flujo de cambio y criterio de producto para
+  decidir si algo entra al sistema.
+- `docs/CLAUDE-DESIGN.md` — comportamiento de la plataforma verificado contra la documentación
+  oficial: sync desde GitHub, trampas confirmadas, permisos, export, limitaciones vigentes.
+- `skills/actualizando-ds-cdp/` — skill versionada con la metodología end-to-end.
+- Revisión semanal automática de novedades de Claude Design, Agent Skills y Cowork.
+
 ## [2.1.0] — 2026-08-06
 
 ### Agregado
