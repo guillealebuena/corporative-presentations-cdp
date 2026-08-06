@@ -12,6 +12,12 @@ Para un design system: **MAJOR** = breaking (token o componente eliminado/renomb
   `Flag`, `Plugs`. Sin ellos, Claude Design los sustituía por el más cercano al resincronizar
   — y `Flag` caía en `CheckCircle`, que significa otra cosa. El set pasa de 88 a 92.
 
+### Corregido
+- `guidelines/brand/iconography.html` no tenía el comentario `@dsCard` en la primera línea.
+  Sin ese tag el archivo existe pero desaparece del índice del Design System en Claude Design
+  — falla silenciosa, no da error. Agregado, y `npm run check` ahora lo valida en las 30
+  guidelines.
+
 ### Verificado
 - Resync del bundle en Claude Design contra este repo: la guía de iconografía renderiza los
   92 glifos y el DS quedó sin referencias al webfont de Phosphor en los 12 slides, los 2

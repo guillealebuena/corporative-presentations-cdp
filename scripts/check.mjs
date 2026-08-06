@@ -106,6 +106,13 @@ const dev = files.filter((f) => /\.(html|js)$/.test(f))
 if (dev.length) warn(`${dev.length} archivos usan react.development.js (pesado, y desde CDN)`);
 else ok('sin builds de desarrollo');
 
+// ── 6. Tag @dsCard en guidelines ──────────────────────────────────────────────
+console.log('\n[6] Tag @dsCard en guidelines');
+const guides = files.filter((f) => /guidelines[/\\][^/\\]+[/\\][^/\\]+\.html$/.test(f));
+const noTag = guides.filter((f) => !fs.readFileSync(f, 'utf8').split('\n')[0].includes('@dsCard'));
+if (noTag.length) noTag.forEach((f) => fail(`${rel(f)} no tiene @dsCard en la primera linea — no va a aparecer en el indice`));
+else ok(`${guides.length} guidelines con tag`);
+
 // ── Resumen ───────────────────────────────────────────────────────────────────
 console.log(`\n${errors ? '✗' : '✓'} ${errors} errores · ${warns} advertencias\n`);
 process.exit(errors ? 1 : 0);

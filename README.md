@@ -47,6 +47,18 @@ Agregar archivos nuevos es seguro. Mover o renombrar los existentes, no.
 Los archivos con prefijo `_` los genera Claude Design. No los edites a mano: se regeneran
 en cada export y perdés el cambio.
 
+### ⚠ Toda página de `guidelines/` necesita el tag `@dsCard`
+
+Los HTML de guidelines se muestran como cards en la pestaña Design System de Claude Design
+**solo si su primera línea tiene el comentario `@dsCard`**. Sin él, el archivo existe pero
+desaparece del índice.
+
+```html
+<!-- @dsCard group="Brand" viewport="700x900" name="Iconografía — Phosphor Regular" subtitle="..." -->
+```
+
+`group` tiene que coincidir con una sección existente (Brand, Colors, Type, Spacing, Slides).
+
 ---
 
 ## Iconografía
