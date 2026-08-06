@@ -34,16 +34,21 @@ function walk(dir, out = []) {
 const files = walk(DS);
 const rel = (p) => path.relative(DS, p).replace(/\\/g, '/');
 
-// ── 1. Sin dependencias de CDN en la iconografía ──────────────────────────────
+// ── 1. Sin fuentes de iconos desde CDN en todo el bundle ──────────────────────
+// Antes solo miraba icons/. El bug original vivia en los slides y templates: cargaban
+// el webfont de Phosphor desde unpkg y los iconos desaparecian al exportar.
 console.log('\n[1] Iconografía sin CDN');
-const iconFiles = files.filter((f) => /icons[/\\].*\.(js|jsx)$/.test(f));
-if (!iconFiles.length) fail('No se encontró icons/');
-for (const f of iconFiles) {
+let cdnHits = 0;
+for (const f of files.filter((f) => /\.(js|jsx|html|css|md)$/.test(f))) {
   const src = fs.readFileSync(f, 'utf8');
-  if (/unpkg\.com|cdn\.jsdelivr|phosphor-icons\/web/.test(src)) fail(`${rel(f)} referencia un CDN`);
-  if (/class(Name)?\s*[:=]\s*['"`]?ph[\s-]/.test(src)) fail(`${rel(f)} usa clases de webfont Phosphor`);
+  if (/@phosphor-icons\/web|fontawesome|material-icons|bootstrap-icons/i.test(src)) {
+    fail(`${rel(f)} referencia una fuente de iconos externa`); cdnHits++;
+  }
+  if (/<i\s+class="ph[\s-]/.test(src)) {
+    fail(`${rel(f)} usa <i class="ph"> — el webfont no carga en los exports`); cdnHits++;
+  }
 }
-if (!errors) ok(`${iconFiles.length} archivos de iconografía, sin dependencias externas`);
+if (!cdnHits) ok(`${files.length} archivos revisados, sin fuentes de iconos externas`);
 
 // ── 2. Todo icono referenciado existe ─────────────────────────────────────────
 console.log('\n[2] Iconos referenciados');

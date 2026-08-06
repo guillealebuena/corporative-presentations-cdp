@@ -5,6 +5,30 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado 
 Para un design system: **MAJOR** = breaking (token o componente eliminado/renombrado),
 **MINOR** = agregado compatible, **PATCH** = fix visual o de documentación.
 
+## [2.3.0] — 2026-08-06
+
+### Corregido
+- **El repo todavía cargaba el webfont de Phosphor desde `unpkg.com`.** El resync anterior
+  arregló la copia de Claude Design, no la fuente: 20 archivos del bundle —los 12 slides,
+  los 2 templates y 6 specimens de componentes— seguían con `<script src="unpkg.com/@phosphor-icons/web">`
+  y 26 tags `<i class="ph">`. El próximo sync desde el repo habría reintroducido el bug.
+  Convertidos a SVG inline con los mismos glifos.
+- `npm run check` ahora busca fuentes de iconos externas en **todo el bundle**, no solo en
+  `icons/`. El chequeo anterior no habría detectado nada de lo anterior: el bug vivía
+  justamente fuera de la carpeta que miraba.
+- `Icon.d.ts`, `Icon.prompt.md` y la sección de iconografía del `readme.md` describían el
+  comportamiento viejo con CDN.
+
+### Agregado
+- `ComparisonTable` gana `variant="brand"`: violeta de marca, columna de propuesta teñida de
+  punta a punta, valores centrados y énfasis sólido solo en la celda de cierre. Para propuestas
+  comerciales donde el eje es "ellos vs. nosotros" y no la mejora en sí.
+  Sale de la tabla de la propuesta a Fono Bus, que estaba hecha a mano con hex fijos por fuera
+  del sistema.
+- `currentSubtitle` / `proposedSubtitle` para el stack de cada lado en el encabezado, y
+  `total.note` para aclarar cómo se derivó el número de cierre.
+- Specimen `ComparisonTable — variantes` con las dos lado a lado y cuándo usar cada una.
+
 ## [2.2.0] — 2026-08-06
 
 ### Agregado

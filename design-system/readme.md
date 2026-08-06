@@ -118,7 +118,9 @@ Variante para slides de datos e impacto: fondo `#19021C` (`--surface-dark`) o `#
 
 ## Iconografía
 
-La familia real es **Phosphor Icons, peso Regular** — paths rellenos (fill), sin trazo; no aplica `stroke-width`. CDN: `https://unpkg.com/@phosphor-icons/web`. El wrapper `Icon` mapea 17 nombres ya dibujados en la App (ArrowUUpLeft, User, Question, Lightbulb, Phone, FileText, MagnifyingGlass, Heart, HeartFill, CalendarDots, BookBookmark, CheckCircle, Check, Globe, GlobeHemisphereWest, DotsThreeCircle, WarningCircle) a su glifo Phosphor; cualquier otro nombre PascalCase se auto-convierte a slug Phosphor (fallback "lo que falte, cualquier ícono de Phosphor Regular"). Tamaños de uso en deck: 24 inline, 28 badge de card, 32 suelto, 22 en fila de tabla. Sin emoji, sin caracteres Unicode como ícono.
+La familia real es **Phosphor Icons, peso Regular** — paths rellenos (fill), sin trazo; no aplica `stroke-width`. Los 92 glifos del set van **embebidos como SVG inline** en `icons/icons.js`: sin CDN ni webfont, así que sobreviven a exports standalone, PPTX, PDF y uso offline. El wrapper `Icon` (`components/chrome/Icon.jsx`) reexporta desde ahí. Un nombre que no exista no renderiza nada y avisa por consola — ver `ICON_NAMES`. Tamaños de uso en deck: 24 inline, 28 badge de card, 32 suelto, 22 en fila de tabla. Sin emoji, sin caracteres Unicode como ícono.
+
+**Nunca** cargar una fuente de iconos desde un CDN en un deck: Claude Design bloquea recursos externos al exportar y los iconos desaparecen sin dar error. Si falta un glifo, se agrega al sistema.
 
 **Sustitución pendiente:** `Passenger` es un glifo propio de CDP sin equivalente en Phosphor — el wrapper cae a `user` hasta contar con el ícono real; queda marcado en el specimen de iconografía.
 

@@ -5,4 +5,8 @@ Renders a Phosphor Regular icon (filled path glyph, no stroke) — use for bulle
 <Icon name="HeartFill" size={24} color="#EF4444" />
 ```
 
-Requires the Phosphor CDN script loaded once per page: `<script src="https://unpkg.com/@phosphor-icons/web"></script>`. 17 names are drawn in the App (see IconProps); anything else falls back to the matching Phosphor Regular glyph by name. `Passenger` has no Phosphor equivalent and falls back to `user` — flagged as a substitution pending a real CDP glyph. Sizes: 24 inline text, 28 card badges, 32 standalone, 22 table rows.
+Inline SVG, no CDN and no web font: the glyphs are embedded in `icons/icons.js` (92 of them), so they survive standalone HTML, PPTX and PDF exports and work offline. An unknown name renders nothing and warns — check `ICON_NAMES`. CDP-specific concepts resolve through documented aliases: `Passenger` still falls back to `User`, pending a real glyph.
+
+Sizes: 24 inline text, 28 card badges, 32 standalone, 22 table rows.
+
+Never load an icon font from a CDN in a deck. If a glyph is missing, add it to the system.
