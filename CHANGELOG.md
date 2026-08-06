@@ -5,6 +5,18 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado 
 Para un design system: **MAJOR** = breaking (token o componente eliminado/renombrado),
 **MINOR** = agregado compatible, **PATCH** = fix visual o de documentación.
 
+## [2.1.0] — 2026-08-06
+
+### Agregado
+- 4 iconos que los specimens del DS ya usaban y no estaban en el set: `Timer`, `ClipboardText`,
+  `Flag`, `Plugs`. Sin ellos, Claude Design los sustituía por el más cercano al resincronizar
+  — y `Flag` caía en `CheckCircle`, que significa otra cosa. El set pasa de 88 a 92.
+
+### Verificado
+- Resync del bundle en Claude Design contra este repo: la guía de iconografía renderiza los
+  92 glifos y el DS quedó sin referencias al webfont de Phosphor en los 12 slides, los 2
+  templates y los specimens de componentes.
+
 ## [2.0.0] — 2026-08-06
 
 ### Corregido

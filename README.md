@@ -51,7 +51,7 @@ en cada export y perdés el cambio.
 
 ## Iconografía
 
-Phosphor Regular — paths rellenos, sin stroke. **88 glifos embebidos como SVG inline** en
+Phosphor Regular — paths rellenos, sin stroke. **92 glifos embebidos como SVG inline** en
 `design-system/icons/icons.js`.
 
 ```jsx
@@ -78,8 +78,8 @@ Los glifos son los mismos: se extraen de `@phosphor-icons/core`, no están redib
 
 ### Agregar un icono
 
-Los 88 glifos están **vendorizados** en `design-system/icons/src/` (77 KB). El repo no tiene
-dependencias: instalar `@phosphor-icons/core` serían 9000+ archivos para usar 88.
+Los 92 glifos están **vendorizados** en `design-system/icons/src/` (77 KB). El repo no tiene
+dependencias: instalar `@phosphor-icons/core` serían 9000+ archivos para usar 92.
 
 1. Bajá el SVG de [phosphoricons.com](https://phosphoricons.com) en peso **Regular**
 2. Guardalo en `design-system/icons/src/` en kebab-case (`chart-bar.svg`)
@@ -130,7 +130,7 @@ Nadie edita el DS directamente en Claude Design. Si lo hacés, el próximo resyn
 | Tokens (147) | ✅ |
 | Componentes (37) | ✅ |
 | Layouts de slide (12) | ✅ |
-| Iconografía (88) | ✅ sin dependencias externas |
+| Iconografía (92) | ✅ sin dependencias externas |
 | Templates | 2 — institucional B2B, propuesta comercial |
 | Logo vectorial real | ❌ pendiente — ver `docs/PENDIENTES.md` |
 | Glifo `Passenger` | ❌ pendiente |
