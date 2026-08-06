@@ -146,5 +146,5 @@ Nadie edita el DS directamente en Claude Design. Si lo hacés, el próximo resyn
 | Layouts de slide (12) | ✅ |
 | Iconografía (92) | ✅ sin dependencias externas |
 | Templates | 2 — institucional B2B, propuesta comercial |
-| Logo vectorial real | ❌ pendiente — ver `docs/PENDIENTES.md` |
+| Logo vectorial real | ❌ pendiente |
 | Glifo `Passenger` | ❌ pendiente |

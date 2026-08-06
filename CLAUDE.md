@@ -108,9 +108,11 @@ Ante conflicto entre un asset y `uploads/cdp-brand-brief-para-claude-design.md`,
 
 ## Deuda conocida
 
-Ver `docs/PENDIENTES.md`. Lo importante: el glifo `Passenger` no existe y cae en `User`,
-los logos son PNG sin vectorial real, y quedan 9 archivos con `react.development.js` desde CDN
-— la misma clase de fragilidad que ya rompió los iconos una vez.
+El glifo `Passenger` no existe y cae en `User` vía alias. Los logos son PNG: los "SVG" que
+circulan son un `<rect>` con bitmap embebido, cero paths reales. Y quedan 9 archivos con
+`react.development.js` desde CDN — la misma clase de fragilidad que ya rompió los iconos.
+
+Lo que esté abierto se trackea en issues del repo, no en un archivo.
 
 ---
 
@@ -121,5 +123,4 @@ los logos son PNG sin vectorial real, y quedan 9 archivos con `react.development
 | `README.md` | Estructura, iconografía, cómo se cambia |
 | `docs/GUIA-EQUIPO.md` | Cómo genera presentaciones alguien sin perfil de diseño |
 | `docs/GOBERNANZA.md` | Permisos, proceso, versionado, revisión trimestral |
-| `docs/PENDIENTES.md` | Deuda conocida |
 | `docs/CLAUDE-DESIGN.md` | Cómo se comporta la plataforma y sus trampas |

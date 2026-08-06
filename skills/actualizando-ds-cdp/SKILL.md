@@ -175,5 +175,5 @@ Esta skill cubre el *cómo* se cambia el sistema. Para el *qué*:
 
 - `reference/claude-design.md` — comportamiento de la plataforma, trampas confirmadas,
   permisos, export. Leer antes de un resync no trivial o si algo se comporta raro.
-- En el repo: `CLAUDE.md`, `docs/GOBERNANZA.md`, `docs/PENDIENTES.md`,
-  `design-system/readme.md` (spec canónica), `design-system/uploads/USAGE-NOTES.md`.
+- En el repo: `CLAUDE.md`, `docs/GOBERNANZA.md`, `design-system/readme.md` (spec canónica),
+  `design-system/uploads/USAGE-NOTES.md`.

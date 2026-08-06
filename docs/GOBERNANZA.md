@@ -115,6 +115,6 @@ por DM se pierden, y lo que se pierde se improvisa.
 - ¿Qué iconos se pidieron y no se sumaron?
 - ¿Hay decks circulando que no usan el DS? ¿Por qué?
 - ¿Algún componente que nadie usa? Candidato a borrar
-- ¿`docs/PENDIENTES.md` sigue reflejando la realidad?
+- ¿Los issues abiertos siguen siendo relevantes, o hay que cerrar los que ya no aplican?
 
 Un design system que no se poda se convierte en un catálogo de cosas que nadie usa.
