@@ -1,0 +1,31 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Chrome — decor, toggle, pill" subtitle="DotGrid, DiagonalLines, MeshGradient, PageNumberWatermark, ToggleSegment, Pill (todas las variantes)" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;font-family:'Inter',sans-serif;background:#fff;padding:24px;box-sizing:border-box;transform:scale(.5);transform-origin:top left;width:1400px}.row{display:flex;gap:16px;margin-bottom:24px;align-items:center}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { DotGrid, DiagonalLines, MeshGradient, PageNumberWatermark, ToggleSegment, Pill } = window.CentralDePasajesDesignSystem_152b2f;
+function Demo(){
+  return (
+    <div>
+      <div className="row">
+        <div style={{position:'relative',width:180,height:120,background:'#fff',border:'1.5px solid #E5E5E5',borderRadius:12,overflow:'hidden'}}><DotGrid /></div>
+        <div style={{position:'relative',width:180,height:120,background:'#fff',border:'1.5px solid #E5E5E5',borderRadius:12,overflow:'hidden'}}><DiagonalLines /></div>
+        <div style={{position:'relative',width:180,height:120,background:'#19021C',borderRadius:12,overflow:'hidden'}}><MeshGradient opacity={0.6} /></div>
+        <div style={{position:'relative',width:180,height:120,background:'#fff',border:'1.5px solid #E5E5E5',borderRadius:12,overflow:'hidden'}}><PageNumberWatermark number="06" /></div>
+      </div>
+      <div className="row"><ToggleSegment options={['Mensual','Anual']} active={1} /></div>
+      <div className="row">
+        <Pill tone="solid">Solid</Pill><Pill tone="outline">Outline</Pill>
+        <span style={{background:'#19021C',padding:'14px 20px',borderRadius:12,display:'inline-flex'}}><Pill tone="dark">Dark</Pill></span>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

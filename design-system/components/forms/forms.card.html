@@ -1,0 +1,41 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Forms" subtitle="Button — variantes, tamaños y estados" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;font-family:'Inter',sans-serif;background:#fff;padding:24px;box-sizing:border-box;transform:scale(.5);transform-origin:top left;width:1400px}.row{display:flex;align-items:center;gap:20px;margin-bottom:24px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { Button } = window.CentralDePasajesDesignSystem_152b2f;
+function Demo(){
+  return (
+    <div>
+      <div className="row">
+        <Button variant="default" icon="ArrowUUpLeft">Volver</Button>
+        <Button variant="secondary">Continuar</Button>
+        <Button variant="outline">Cancelar</Button>
+        <Button variant="ghost">Omitir</Button>
+      </div>
+      <div className="row">
+        <span style={{background:'#872191',padding:'20px',borderRadius:12,display:'inline-flex'}}><Button variant="white-outline">Ver más</Button></span>
+        <Button variant="gray-outline">Editar</Button>
+        <Button variant="success" icon="Check">Confirmado</Button>
+        <Button variant="error">Cancelado</Button>
+        <Button variant="warning">Pendiente</Button>
+      </div>
+      <div className="row">
+        <Button variant="default" size="sm">Default sm</Button>
+        <Button variant="outline" size="sm">Outline sm</Button>
+        <Button variant="outline" disabled>Outline disabled</Button>
+        <Button variant="filter">Directo</Button>
+        <Button variant="filter" icon="MagnifyingGlass">Filtros</Button>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

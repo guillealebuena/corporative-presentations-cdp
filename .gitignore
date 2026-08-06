@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# Exports y material de trabajo — no versionar binarios pesados
+/exports/
+*.pptx
+*.pdf
+*.zip
+
+# Temporales de Claude Design
+*.dc-*.html

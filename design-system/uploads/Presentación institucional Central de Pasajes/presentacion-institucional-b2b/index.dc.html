@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/central-de-pasajes-design-system-152b2f51-9dea-425f-8f74-334bafee3860/tokens/colors.css">
+<link rel="stylesheet" href="_ds/central-de-pasajes-design-system-152b2f51-9dea-425f-8f74-334bafee3860/tokens/typography.css">
+<link rel="stylesheet" href="_ds/central-de-pasajes-design-system-152b2f51-9dea-425f-8f74-334bafee3860/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/central-de-pasajes-design-system-152b2f51-9dea-425f-8f74-334bafee3860/tokens/layout.css">
+<link rel="stylesheet" href="_ds/central-de-pasajes-design-system-152b2f51-9dea-425f-8f74-334bafee3860/styles.css">
+<script src="_ds/central-de-pasajes-design-system-152b2f51-9dea-425f-8f74-334bafee3860/_ds_bundle.js"></script>
+<script src="_ds/central-de-pasajes-design-system-152b2f51-9dea-425f-8f74-334bafee3860/slide-fit.js"></script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<style>
+a{color:var(--brand-primary)}
+a:hover{color:var(--violet-700)}
+.eyebrow{display:flex;align-items:center;gap:12px}
+.eyebrow-bar{width:24px;height:3px;flex-shrink:0}
+.eyebrow-label{font-family:'Inter',sans-serif;font-weight:600;font-size:24px;line-height:30px;letter-spacing:1.6px;text-transform:uppercase}
+</style>
+</helmet>
+<div style="display:flex;flex-direction:column;align-items:center;gap:40px;background:#F3F3F3;padding:40px 0;font-family:'Inter',sans-serif">
+
+<!-- 01 PORTADA -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="01 — Portada">
+<div class="slide" style="background:var(--brand-primary);position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MeshGradient" opacity="0.35" hint-size="1920px,1080px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.DotGrid" color="#fff" opacity="0.06" hint-size="1920px,1080px"></x-import>
+<div style="position:relative;display:flex;flex-direction:column;height:100%;padding:64px 80px;box-sizing:border-box">
+<div style="display:flex;align-items:center">
+<img src="assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="height:30px;display:block">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Divider" inline="{{ true }}" color="rgba(255,255,255,.3)" hint-size="2px,32px"></x-import>
+<span style="color:rgba(255,255,255,.7);font-size:24px">[SEGMENTO DE AUDIENCIA]</span>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:32px;max-width:1400px">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Pill" tone="brand" style="width:fit-content" hint-size="460px,56px">[TIPO DE PRESENTACIÓN]</x-import>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:112px;line-height:118px;color:#fff">[TÍTULO DE PORTADA]</div>
+<div style="font-family:'Inter',sans-serif;font-size:30px;line-height:44px;color:rgba(255,255,255,.85)">[BAJADA DE PORTADA — período de cierre]</div>
+</div>
+<div class="slide-footer"><span></span><span class="page-number" style="color:#fff">01</span></div>
+</div>
+</div>
+</div>
+
+<!-- 02 QUIENES SOMOS (claro) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="02 — Quiénes somos">
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="02" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--brand-primary)"></span><span class="eyebrow-label" style="color:var(--brand-primary)">QUIÉNES SOMOS</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">[TÍTULO — QUIÉNES SOMOS]</div>
+</div>
+<div class="slide-body">
+<div class="span-9" style="font-family:'Inter',sans-serif;font-size:30px;line-height:44px;color:var(--text-body)">[PÁRRAFO DE PRESENTACIÓN DE LA EMPRESA — 2 a 3 oraciones]</div>
+<div class="span-12" style="display:flex;gap:40px">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Card" icon="CalendarDots" title="[CIFRA 1]" description="[DESCRIPCIÓN CORTA 1]" accent="violet" width="{{ 560 }}" hint-size="560px,220px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Card" icon="Globe" title="[CIFRA/ATRIBUTO 2]" description="[DESCRIPCIÓN CORTA 2]" accent="turquoise" width="{{ 560 }}" hint-size="560px,220px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Card" icon="UsersThree" title="[CIFRA/ATRIBUTO 3]" description="[DESCRIPCIÓN CORTA 3]" accent="violet" width="{{ 560 }}" hint-size="560px,220px"></x-import>
+</div>
+</div>
+</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number">02</span></div>
+</div>
+</div>
+
+<!-- 03 KPIs (oscuro) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="03 — KPIs 2024">
+<div class="slide" style="background:var(--surface-dark)">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MeshGradient" opacity="0.18" hint-size="1920px,1080px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.DotGrid" color="var(--violet-200)" opacity="0.05" hint-size="1920px,1080px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="03" color="#fff" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--turquoise-500)"></span><span class="eyebrow-label" style="color:#fff">[EYEBROW — RESULTADOS + PERÍODO]</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:#fff">[TÍTULO — KPIs]</div>
+</div>
+<div class="slide-body">
+<div class="span-6" style="border-left:2px solid var(--border-on-dark);padding:48px 0 48px 32px">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.KpiHero" icon="ChartLineUp" value="[KPI HÉROE 1 — VALOR]" label="[KPI HÉROE 1 — ETIQUETA + PERÍODO]" value-size="76px" value-lh="80px" color="#fff" hint-size="700px,180px"></x-import>
+</div>
+<div class="span-6" style="border-left:2px solid var(--border-on-dark);padding:48px 0 48px 32px">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.KpiHero" icon="Ticket" value="[KPI HÉROE 2 — VALOR]" label="[KPI HÉROE 2 — ETIQUETA + PERÍODO]" color="#fff" hint-size="700px,180px"></x-import>
+</div>
+<div class="span-12" style="display:flex;gap:40px;margin-top:32px">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Handshake" value="[KPI SOPORTE — VALOR]" label="[KPI SOPORTE — ETIQUETA]" tone="dark" accent="violet" metric-scale="medium" height="{{ 320 }}" hint-size="410px,320px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Storefront" value="[KPI SOPORTE — VALOR]" label="[KPI SOPORTE — ETIQUETA]" tone="dark" accent="turquoise" metric-scale="medium" height="{{ 320 }}" hint-size="410px,320px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="MapPin" value="[KPI SOPORTE — VALOR]" label="[KPI SOPORTE — ETIQUETA]" tone="dark" accent="violet" metric-scale="medium" height="{{ 320 }}" hint-size="410px,320px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="ShoppingCart" value="+30" label="Carritos administrados" tone="dark" accent="turquoise" metric-scale="medium" height="{{ 320 }}" hint-size="410px,320px"></x-import>
+</div>
+</div>
+</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number" style="color:#fff">03</span></div>
+</div>
+</div>
+
+<!-- 04 DIVISOR -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="04 — Divisor: canales">
+<div class="slide" style="background:var(--brand-primary);position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MeshGradient" opacity="0.3" hint-size="1920px,1080px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.DiagonalLines" color="#fff" opacity="0.06" hint-size="1920px,1080px"></x-import>
+<div style="position:relative;display:flex;flex-direction:column;height:100%;box-sizing:border-box">
+<div style="padding:64px 80px 0"><img src="assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="height:26px;width:auto;display:block"></div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 80px;box-sizing:border-box;gap:24px">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:32px;color:rgba(255,255,255,.55)">01</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:112px;line-height:118px;color:#fff">[TÍTULO DE DIVISOR DE SECCIÓN 1]</div>
+</div>
+<div class="slide-footer"><span></span><span class="page-number" style="color:#fff">04</span></div>
+</div>
+</div>
+</div>
+
+<!-- 05 WEBSITE (claro) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="05 — Canal web">
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="05" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--brand-primary)"></span><span class="eyebrow-label" style="color:var(--brand-primary)">CANAL WEB</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">[TÍTULO — CANAL WEB]</div>
+</div>
+<div class="slide-body">
+<div class="span-12" style="display:flex;gap:40px">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Globe" value="[VALOR]" label="[ETIQUETA]" tone="light" accent="violet" metric-scale="medium" hint-size="410px,260px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Target" value="[VALOR %]" label="[ETIQUETA]" tone="light" accent="turquoise" metric-scale="medium" hint-size="410px,260px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="ShieldCheck" value="[VALOR %]" label="[ETIQUETA]" tone="light" accent="violet" metric-scale="medium" hint-size="410px,260px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="WarningCircle" value="[VALOR %]" label="[ETIQUETA]" tone="light" accent="turquoise" metric-scale="medium" hint-size="410px,260px"></x-import>
+</div>
+<div class="span-12" style="background:var(--surface-soft);border-radius:var(--radius-sm);padding:40px 48px;display:flex;align-items:center">
+<p style="font-family:'Inter',sans-serif;font-weight:400;font-size:28px;line-height:40px;color:var(--text-body);margin:0">[FRASE DE CONTEXTO CON UN DATO DE RESPALDO]</p>
+</div>
+</div>
+</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number">05</span></div>
+</div>
+</div>
+
+<!-- 06 APP (oscuro) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="06 — App móvil">
+<div class="slide" style="background:var(--surface-dark-alt)">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.DiagonalLines" color="var(--turquoise-500)" opacity="0.06" hint-size="1920px,1080px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="06" color="#fff" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--turquoise-500)"></span><span class="eyebrow-label" style="color:#fff">APP MÓVIL</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:#fff">[TÍTULO — CANAL APP]</div>
+</div>
+<div class="slide-body">
+<div class="span-7" style="display:flex;flex-direction:column;gap:16px">
+<div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:40px;display:flex;flex-direction:column;gap:32px">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.KpiSparkline" values="{{ appSeries }}" color="var(--turquoise-500)" width="780" height="160" hint-size="780px,160px"></x-import>
+<div style="display:flex;justify-content:space-between">
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;color:#fff">50.000</span><span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-on-dark-secondary)">2019</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;color:#fff">38.000*</span><span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-on-dark-secondary)">2020</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;color:#fff">120.000*</span><span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-on-dark-secondary)">2021</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;color:#fff">250.000*</span><span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-on-dark-secondary)">2022</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;color:#fff">403.000*</span><span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-on-dark-secondary)">2023</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;color:#fff">535.000</span><span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-on-dark-secondary)">2024</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;color:var(--text-on-dark-secondary)">—</span><span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-on-dark-secondary)">2025</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;color:var(--text-on-dark-secondary)">—</span><span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-on-dark-secondary)">2026</span></div>
+</div>
+</div>
+<div>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Pill" tone="dark" style="width:fit-content" hint-size="620px,56px">* ESTIMADO — PENDIENTE DE DATO EXACTO 2020–2023 · 2025–2026 PENDIENTE DE CARGA</x-import>
+</div>
+</div>
+<div class="span-5" style="display:flex;flex-direction:column;gap:24px">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Star" value="4,7" label="Calificación en stores" context="Puesto 7 en Viajes" tone="dark" accent="turquoise" width="{{ 710 }}" height="{{ 300 }}" metric-scale="medium" hint-size="710px,300px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="ChatCircleText" value="31.000" label="Opiniones" tone="dark" accent="violet" width="{{ 710 }}" height="{{ 300 }}" metric-scale="medium" hint-size="710px,300px"></x-import>
+</div>
+</div>
+</div>
+<div class="slide-footnote" style="color:var(--text-on-dark-secondary)">Serie histórica estimada. Datos 2025–2026 pendientes de carga.</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number" style="color:#fff">06</span></div>
+</div>
+</div>
+
+<!-- 06B APP ALCANCE (oscuro) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="07 — App: alcance y desempeño">
+<div class="slide" style="background:var(--surface-dark)">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.DotGrid" color="var(--violet-200)" opacity="0.05" hint-size="1920px,1080px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="07" color="#fff" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--turquoise-500)"></span><span class="eyebrow-label" style="color:#fff">APP MÓVIL</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:#fff">Alcance y desempeño de la app</div>
+</div>
+<div class="slide-body">
+<div class="span-12" style="display:flex;gap:40px">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="DeviceMobile" value="9,9 M" label="Sesiones app" tone="dark" accent="violet" metric-scale="medium" hint-size="410px,260px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Target" value="9,00%" label="[ETIQUETA] app" tone="dark" accent="turquoise" metric-scale="medium" hint-size="410px,260px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="ShieldCheck" value="93%" label="[ETIQUETA]" tone="dark" accent="violet" metric-scale="medium" hint-size="410px,260px"></x-import>
+</div>
+<div class="span-12" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:40px 48px;display:flex;justify-content:space-around">
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:48px;color:#fff">750.000</span><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-on-dark-secondary)">Apps activas Android</span></div>
+<div style="width:2px;background:var(--border-on-dark)"></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:48px;color:#fff">63.000</span><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-on-dark-secondary)">Apps activas iOS</span></div>
+</div>
+</div>
+</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number" style="color:#fff">07</span></div>
+</div>
+</div>
+
+<!-- 07 RED DE AGENCIAS (claro) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="08 — Red de agencias">
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="08" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--brand-primary)"></span><span class="eyebrow-label" style="color:var(--brand-primary)">RED DE AGENCIAS</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">[TÍTULO — RED DE DISTRIBUCIÓN, con cifra total]</div>
+</div>
+<div class="slide-body">
+<div class="span-8" style="border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-table);align-self:start">
+<table style="width:100%;border-collapse:collapse;font-family:'Inter',sans-serif">
+<tr><th style="text-align:left;padding:12px 24px;background:var(--surface-soft);color:var(--text-title);font-size:24px;font-weight:600">Región</th><th style="text-align:right;padding:12px 24px;background:var(--surface-soft);color:var(--text-title);font-size:24px;font-weight:600">Puntos de venta</th></tr>
+<tr style="background:#fff"><td style="padding:12px 24px;font-size:24px;color:var(--text-body)"><span style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="MapPin" size="22" color="var(--brand-primary)" hint-size="22px,22px"></x-import>Capital Federal</span></td><td style="padding:12px 24px;font-size:24px;font-weight:600;color:var(--brand-primary);text-align:right">162</td></tr>
+<tr style="background:var(--surface-table-alt)"><td style="padding:12px 24px;font-size:24px;color:var(--text-body)"><span style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="MapPin" size="22" color="var(--brand-primary)" hint-size="22px,22px"></x-import>Región Pampeana</span></td><td style="padding:12px 24px;font-size:24px;font-weight:600;color:var(--brand-primary);text-align:right">100</td></tr>
+<tr style="background:#fff"><td style="padding:12px 24px;font-size:24px;color:var(--text-body)"><span style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="MapPin" size="22" color="var(--brand-primary)" hint-size="22px,22px"></x-import>Gran Buenos Aires Sur</span></td><td style="padding:12px 24px;font-size:24px;font-weight:600;color:var(--brand-primary);text-align:right">43</td></tr>
+<tr style="background:var(--surface-table-alt)"><td style="padding:12px 24px;font-size:24px;color:var(--text-body)"><span style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="MapPin" size="22" color="var(--brand-primary)" hint-size="22px,22px"></x-import>Región Noroeste</span></td><td style="padding:12px 24px;font-size:24px;font-weight:600;color:var(--brand-primary);text-align:right">41</td></tr>
+<tr style="background:#fff"><td style="padding:12px 24px;font-size:24px;color:var(--text-body)"><span style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="MapPin" size="22" color="var(--brand-primary)" hint-size="22px,22px"></x-import>Gran Buenos Aires Norte</span></td><td style="padding:12px 24px;font-size:24px;font-weight:600;color:var(--brand-primary);text-align:right">40</td></tr>
+<tr style="background:var(--surface-table-alt)"><td style="padding:12px 24px;font-size:24px;color:var(--text-body)"><span style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="MapPin" size="22" color="var(--brand-primary)" hint-size="22px,22px"></x-import>Gran Buenos Aires Oeste</span></td><td style="padding:12px 24px;font-size:24px;font-weight:600;color:var(--brand-primary);text-align:right">30</td></tr>
+<tr style="background:#fff"><td style="padding:12px 24px;font-size:24px;color:var(--text-body)"><span style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="MapPin" size="22" color="var(--brand-primary)" hint-size="22px,22px"></x-import>Región Cuyo</span></td><td style="padding:12px 24px;font-size:24px;font-weight:600;color:var(--brand-primary);text-align:right">17</td></tr>
+<tr style="background:var(--surface-table-alt)"><td style="padding:12px 24px;font-size:24px;color:var(--text-body)"><span style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="MapPin" size="22" color="var(--brand-primary)" hint-size="22px,22px"></x-import>Región Patagonia</span></td><td style="padding:12px 24px;font-size:24px;font-weight:600;color:var(--brand-primary);text-align:right">15</td></tr>
+<tr style="background:#fff"><td style="padding:12px 24px;font-size:24px;color:var(--text-body)"><span style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="MapPin" size="22" color="var(--brand-primary)" hint-size="22px,22px"></x-import>Región Mesopotamia</span></td><td style="padding:12px 24px;font-size:24px;font-weight:600;color:var(--brand-primary);text-align:right">14</td></tr>
+<tr style="background:var(--surface-table-alt)"><td style="padding:12px 24px;font-size:24px;color:var(--text-body)"><span style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="MapPin" size="22" color="var(--brand-primary)" hint-size="22px,22px"></x-import>Uruguay</span></td><td style="padding:12px 24px;font-size:24px;font-weight:600;color:var(--brand-primary);text-align:right">3</td></tr>
+<tr style="background:#fff"><td style="padding:12px 24px;font-size:24px;color:var(--text-body)"><span style="display:flex;align-items:center;gap:10px"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="MapPin" size="22" color="var(--brand-primary)" hint-size="22px,22px"></x-import>Bolivia</span></td><td style="padding:12px 24px;font-size:24px;font-weight:600;color:var(--brand-primary);text-align:right">1</td></tr>
+</table>
+</div>
+<div class="span-4" style="display:flex;flex-direction:column;gap:40px;align-self:start;align-items:flex-end;text-align:right">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.KPIStat" icon="MapPin" value="466" label="Puntos de venta" metric-scale="medium" hint-size="410px,140px"></x-import>
+<div style="width:100%;height:2px;background:var(--border-subtle)"></div>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.KPIStat" icon="FileText" value="+241" label="Cuentas corporativas" metric-scale="medium" hint-size="410px,140px"></x-import>
+</div>
+</div>
+</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number">08</span></div>
+</div>
+</div>
+
+<!-- 08 DIVISOR -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="09 — Divisor: productos">
+<div class="slide" style="background:var(--brand-primary);position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MeshGradient" opacity="0.3" hint-size="1920px,1080px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.DiagonalLines" color="#fff" opacity="0.06" hint-size="1920px,1080px"></x-import>
+<div style="position:relative;display:flex;flex-direction:column;height:100%;box-sizing:border-box">
+<div style="padding:64px 80px 0"><img src="assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="height:26px;width:auto;display:block"></div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 80px;box-sizing:border-box;gap:24px">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:32px;color:rgba(255,255,255,.55)">02</div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:112px;line-height:118px;color:#fff">[TÍTULO DE DIVISOR DE SECCIÓN 2]</div>
+</div>
+<div class="slide-footer"><span></span><span class="page-number" style="color:#fff">09</span></div>
+</div>
+</div>
+</div>
+
+<!-- 09 CARRITO DE VENTAS (oscuro) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="10 — Carrito de ventas">
+<div class="slide" style="background:var(--surface-dark)">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.DotGrid" color="var(--violet-200)" opacity="0.05" hint-size="1920px,1080px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="10" color="#fff" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--turquoise-500)"></span><span class="eyebrow-label" style="color:#fff">CARRITO DE VENTAS</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:#fff">[TÍTULO — PRODUCTO 1]</div>
+</div>
+<div class="slide-body">
+<div class="span-7" style="display:flex;flex-direction:column;gap:40px;justify-content:center">
+<div style="font-family:'Inter',sans-serif;font-size:30px;line-height:44px;color:rgba(255,255,255,.85)">[DESCRIPCIÓN DEL PRODUCTO 1 — qué es y tracción]</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.06);border-radius:var(--radius-md);padding:24px 28px">
+<div style="width:56px;height:56px;border-radius:var(--radius-sm);background:rgba(27,206,200,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="Check" size="28" color="var(--turquoise-400)" hint-size="28px,28px"></x-import></div>
+<span style="font-family:'Inter',sans-serif;font-size:30px;color:#fff">Sin desarrollo interno</span>
+</div>
+<div style="display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.06);border-radius:var(--radius-md);padding:24px 28px">
+<div style="width:56px;height:56px;border-radius:var(--radius-sm);background:rgba(27,206,200,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="Check" size="28" color="var(--turquoise-400)" hint-size="28px,28px"></x-import></div>
+<span style="font-family:'Inter',sans-serif;font-size:30px;color:#fff">Sin mantenimiento</span>
+</div>
+<div style="display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.06);border-radius:var(--radius-md);padding:24px 28px">
+<div style="width:56px;height:56px;border-radius:var(--radius-sm);background:rgba(27,206,200,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="Check" size="28" color="var(--turquoise-400)" hint-size="28px,28px"></x-import></div>
+<span style="font-family:'Inter',sans-serif;font-size:30px;color:#fff">Sin hosting</span>
+</div>
+</div>
+</div>
+<div class="span-5" style="border:2px dashed rgba(255,255,255,.3);border-radius:var(--radius-md);background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;align-self:stretch">
+<span style="font-family:'Inter',sans-serif;font-size:24px;color:rgba(255,255,255,.6);text-align:center;padding:0 40px">Visual de producto — Carrito de ventas</span>
+</div>
+</div>
+</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number" style="color:#fff">10</span></div>
+</div>
+</div>
+
+<!-- 10 APPS NATIVAS (claro) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="11 — Apps nativas">
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="11" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--brand-primary)"></span><span class="eyebrow-label" style="color:var(--brand-primary)">APPS NATIVAS</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">[TÍTULO — PRODUCTO 2]</div>
+</div>
+<div class="slide-body">
+<div class="span-5" style="display:flex;flex-direction:column;gap:32px">
+<div style="font-family:'Inter',sans-serif;font-size:30px;line-height:44px;color:var(--text-body)">[DESCRIPCIÓN DEL PRODUCTO 2]</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:20px;background:var(--surface-soft);border-radius:var(--radius-md);padding:20px 24px">
+<div style="width:56px;height:56px;border-radius:var(--radius-sm);background:var(--turquoise-50);display:flex;align-items:center;justify-content:center;flex-shrink:0"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="Check" size="28" color="var(--turquoise-500)" hint-size="28px,28px"></x-import></div>
+<span style="font-family:'Inter',sans-serif;font-size:30px;color:var(--text-title)">Apps iOS y Android con tu marca</span>
+</div>
+<div style="display:flex;align-items:center;gap:20px;background:var(--surface-soft);border-radius:var(--radius-md);padding:20px 24px">
+<div style="width:56px;height:56px;border-radius:var(--radius-sm);background:var(--turquoise-50);display:flex;align-items:center;justify-content:center;flex-shrink:0"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="GearSix" size="28" color="var(--turquoise-500)" hint-size="28px,28px"></x-import></div>
+<span style="font-family:'Inter',sans-serif;font-size:30px;color:var(--text-title)">Gestión y actualizaciones a cargo de CDP</span>
+</div>
+<div style="display:flex;align-items:center;gap:20px;background:var(--surface-soft);border-radius:var(--radius-md);padding:20px 24px">
+<div style="width:56px;height:56px;border-radius:var(--radius-sm);background:var(--turquoise-50);display:flex;align-items:center;justify-content:center;flex-shrink:0"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="ShoppingCart" size="28" color="var(--turquoise-500)" hint-size="28px,28px"></x-import></div>
+<span style="font-family:'Inter',sans-serif;font-size:30px;color:var(--text-title)">Complementa tu carrito web</span>
+</div>
+</div>
+</div>
+<div class="span-7" style="border:2px dashed var(--gray-200);border-radius:var(--radius-md);background:var(--surface-soft);display:flex;align-items:center;justify-content:center;align-self:stretch">
+<span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-muted);text-align:center;padding:0 40px">Visual de producto — App nativa</span>
+</div>
+</div>
+</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number">11</span></div>
+</div>
+</div>
+
+<!-- 11 COMUNIDADES SOY ESTUDIANTE (oscuro) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="12 — Comunidades Soy Estudiante">
+<div class="slide" style="background:var(--surface-dark-alt)">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="12" color="#fff" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--turquoise-500)"></span><span class="eyebrow-label" style="color:#fff">SOY ESTUDIANTE</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:#fff">[TÍTULO — PRODUCTO/COMUNIDAD 3]</div>
+</div>
+<div class="slide-body">
+<div class="span-6" style="display:flex;flex-direction:column;gap:24px">
+<div style="font-family:'Inter',sans-serif;font-size:30px;line-height:44px;color:rgba(255,255,255,.85)">[DESCRIPCIÓN DEL PRODUCTO/COMUNIDAD 3]</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.06);border-radius:var(--radius-md);padding:20px 24px">
+<div style="width:56px;height:56px;border-radius:var(--radius-sm);background:rgba(27,206,200,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="Check" size="28" color="var(--turquoise-400)" hint-size="28px,28px"></x-import></div>
+<span style="font-family:'Inter',sans-serif;font-size:30px;color:#fff">Validación automática de condición de alumno regular</span>
+</div>
+<div style="display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.06);border-radius:var(--radius-md);padding:20px 24px">
+<div style="width:56px;height:56px;border-radius:var(--radius-sm);background:rgba(27,206,200,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="Check" size="28" color="var(--turquoise-400)" hint-size="28px,28px"></x-import></div>
+<span style="font-family:'Inter',sans-serif;font-size:30px;color:#fff">Compra en cualquier canal asociado</span>
+</div>
+</div>
+</div>
+<div class="span-6" style="display:flex;flex-direction:column;gap:24px;align-self:start">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.InsightCard" icon="UsersThree" value="250.000–350.000" trend="up" label="Usuarios registrados en Argentina" context="Dato en revisión, confirmar cifra exacta antes de publicar." width="{{ 860 }}" height="{{ 340 }}" hint-size="860px,340px"></x-import>
+</div>
+</div>
+</div>
+<div class="slide-footnote" style="color:var(--text-on-dark-secondary)">Usuarios registrados: dato pendiente de confirmar (250.000–350.000).</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number" style="color:#fff">12</span></div>
+</div>
+</div>
+
+<!-- 12 PROTOTIPOS DE PRODUCTO (claro) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="13 — Prototipos de producto">
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="13" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--brand-primary)"></span><span class="eyebrow-label" style="color:var(--brand-primary)">PROTOTIPOS DE PRODUCTO</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">[TÍTULO — GRILLA DE VISUALES DE PRODUCTO]</div>
+</div>
+<div class="slide-body">
+<div class="span-4" style="display:flex;flex-direction:column;gap:16px">
+<div style="border:2px dashed var(--gray-200);border-radius:var(--radius-md);background:var(--surface-soft);height:580px;display:flex;align-items:center;justify-content:center">
+<span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-muted);text-align:center;padding:0 32px">Visual de producto — Web</span>
+</div>
+<span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;color:var(--text-title)">Canal web</span>
+</div>
+<div class="span-4" style="display:flex;flex-direction:column;gap:16px">
+<div style="border:2px dashed var(--gray-200);border-radius:var(--radius-md);background:var(--surface-soft);height:580px;display:flex;align-items:center;justify-content:center">
+<span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-muted);text-align:center;padding:0 32px">Visual de producto — App</span>
+</div>
+<span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;color:var(--text-title)">App nativa</span>
+</div>
+<div class="span-4" style="display:flex;flex-direction:column;gap:16px">
+<div style="border:2px dashed var(--gray-200);border-radius:var(--radius-md);background:var(--surface-soft);height:580px;display:flex;align-items:center;justify-content:center">
+<span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-muted);text-align:center;padding:0 32px">Visual de producto — Soy Estudiante</span>
+</div>
+<span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;color:var(--text-title)">Soy Estudiante</span>
+</div>
+</div>
+</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number">13</span></div>
+</div>
+</div>
+
+<!-- 13 POR QUE CDP (claro) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="14 — Por qué Central de Pasajes">
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="14" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--brand-primary)"></span><span class="eyebrow-label" style="color:var(--brand-primary)">POR QUÉ CENTRAL DE PASAJES</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">[TÍTULO — POR QUÉ ELEGIRNOS, N razones]</div>
+</div>
+<div class="slide-body">
+<div class="span-12" style="display:grid;grid-template-columns:repeat(3,560px);gap:40px;justify-content:start">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="ChartLineUp" value="4,46 M" label="Pasajes al año" context="No son proyecciones" tone="light" accent="violet" width="{{ 560 }}" height="{{ 320 }}" metric-scale="medium" hint-size="560px,320px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Card" icon="Stack" title="Tres canales, un inventario" description="Web, app y 466 agencias sin gestión separada." accent="turquoise" width="{{ 560 }}" hint-size="560px,320px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Card" icon="GearSix" title="Cero desarrollo" description="Hosting, actualizaciones y soporte a cargo de CDP." accent="violet" width="{{ 560 }}" hint-size="560px,320px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Target" value="5,50%" label="[ETIQUETA] en canal web" tone="light" accent="turquoise" width="{{ 560 }}" height="{{ 320 }}" metric-scale="medium" hint-size="560px,320px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Card" icon="Megaphone" title="Demanda incorporada" description="Comunidades de descuento con base propia." accent="turquoise" width="{{ 560 }}" hint-size="560px,320px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Card" icon="Trophy" title="20 años de operación" description="Dentro del grupo de transporte más grande del país." accent="violet" width="{{ 560 }}" hint-size="560px,320px"></x-import>
+</div>
+</div>
+</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number">14</span></div>
+</div>
+</div>
+
+<!-- 14 CIERRE -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="15 — Cierre">
+<div class="slide" style="background:linear-gradient(135deg,var(--brand-primary),var(--violet-700));position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MeshGradient" opacity="0.4" hint-size="1920px,1080px"></x-import><div style="position:relative;display:flex;flex-direction:column;height:100%;padding:64px 80px;box-sizing:border-box">
+<img src="assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="height:26px;width:auto;display:block;align-self:flex-start;flex-shrink:0">
+<div style="flex:1;display:flex;align-items:center;gap:80px">
+<div style="display:flex;flex-direction:column;gap:32px;max-width:1000px">
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:112px;line-height:118px;color:#fff">[TÍTULO DE CIERRE — llamado a la acción]</div>
+<div style="font-family:'Inter',sans-serif;font-size:30px;color:rgba(255,255,255,.85)">[BAJADA DE CIERRE]</div>
+</div>
+<div style="flex:1;min-height:620px;border:2px dashed rgba(255,255,255,.4);border-radius:var(--radius-md);background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center">
+<span style="font-family:'Inter',sans-serif;font-size:24px;color:rgba(255,255,255,.7)">Visual de producto</span>
+</div>
+</div>
+</div>
+<div class="slide-footer"><span></span><span class="page-number" style="color:#fff">15</span></div>
+</div>
+
+</div>
+</div>
+
+<!-- 15 UTILITARIA — FONDO LISO CLARO (spare) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="16 — Utilitaria (fondo liso claro)">
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="16" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--brand-primary)"></span><span class="eyebrow-label" style="color:var(--brand-primary)">TITULO DE SECCIÓN</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">Slide utilitaria — fondo liso claro, sin degradé</div>
+</div>
+<div class="slide-body">
+<div class="span-12" style="border:2px dashed var(--gray-200);border-radius:var(--radius-md);background:var(--surface-soft);display:flex;align-items:center;justify-content:center;min-height:400px">
+<span style="font-family:'Inter',sans-serif;font-size:24px;color:var(--text-muted);text-align:center">Reemplazar por el contenido que corresponda — fondo blanco sólido, sin MeshGradient ni DotGrid</span>
+</div>
+</div>
+</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number">16</span></div>
+</div>
+</div>
+
+<!-- 16 UTILITARIA — FONDO LISO OSCURO (spare) -->
+<div class="slide-viewport" style="width:100%;max-width:1920px;aspect-ratio:16/9;flex-shrink:0" data-screen-label="17 — Utilitaria (fondo liso oscuro)">
+<div class="slide" style="background:var(--surface-dark)">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="17" color="#fff" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div class="eyebrow"><span class="eyebrow-bar" style="background:var(--turquoise-500)"></span><span class="eyebrow-label" style="color:#fff">TITULO DE SECCIÓN</span></div>
+<div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:#fff">Slide utilitaria — fondo liso oscuro, sin degradé</div>
+</div>
+<div class="slide-body">
+<div class="span-12" style="border:2px dashed rgba(255,255,255,.3);border-radius:var(--radius-md);background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;min-height:400px">
+<span style="font-family:'Inter',sans-serif;font-size:24px;color:rgba(255,255,255,.6);text-align:center">Reemplazar por el contenido que corresponda — fondo sólido oscuro (--surface-dark), sin MeshGradient ni DiagonalLines</span>
+</div>
+</div>
+</div>
+<div class="slide-footnote" style="color:var(--text-on-dark-secondary)">Slide utilitaria — sin usar en esta presentación.</div>
+<div class="slide-footer"><img src="assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="height:22px;display:block"><span class="page-number" style="color:#fff">17</span></div>
+</div>
+</div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      appSeries: [50000, 38000, 120000, 250000, 403000, 535000, 535000, 535000],
+      carritoSteps: [
+        { icon: 'Handshake', label: 'Alta del operador', description: 'Configuramos marca, tarifas y medios de pago.' },
+        { icon: 'Globe', label: 'Puesta en producción', description: 'Tu ecommerce queda online con tu dominio.' },
+        { icon: 'GearSix', label: 'Gestión continua', description: 'Hosting, actualizaciones y soporte a cargo de CDP.' },
+        { icon: 'ChartLineUp', label: 'Venta creciente', description: 'Mismo inventario que web, app y agencias.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

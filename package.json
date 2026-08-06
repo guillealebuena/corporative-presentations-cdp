@@ -1,0 +1,11 @@
+{
+  "name": "cdp-design-system",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Design system de presentaciones y material institucional de Central de Pasajes",
+  "scripts": {
+    "build:icons": "node scripts/build-icons.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "comment": "Sin dependencias a propósito. Los 88 glifos que usa el DS están vendorizados en design-system/icons/src/. Instalar @phosphor-icons/core serían 9000+ archivos para usar 88."
+}

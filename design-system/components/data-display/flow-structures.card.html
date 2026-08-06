@@ -1,0 +1,29 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Flow — rings, timeline, layers, branch" subtitle="FlowRings, FlowTimeline, FlowLayers, FlowBranch" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;font-family:'Inter',sans-serif;background:#fff;padding:24px;box-sizing:border-box;transform:scale(.5);transform-origin:top left;width:1400px}.row{margin-bottom:32px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { FlowRings, FlowTimeline, FlowLayers, FlowBranch } = window.CentralDePasajesDesignSystem_152b2f;
+function Demo(){
+  return (
+    <div>
+      <div className="row" style={{display:'flex',gap:60}}>
+        <FlowRings steps={[{icon:'MagnifyingGlass',label:'Buscar',active:true},{icon:'Ticket',label:'Reservar'},{icon:'CheckCircle',label:'Viajar'}]} />
+        <FlowTimeline milestones={[{label:'Q1 — Kickoff',description:'Alta técnica'},{label:'Q2 — Integración',description:'Ambientes de prueba'}]} />
+      </div>
+      <div className="row" style={{display:'flex',gap:60}}>
+        <FlowLayers layers={[{label:'Carrito CDP',detail:'Checkout + pagos'},{label:'API de inventario',detail:'Tu backend actual'},{label:'Operador Fono Bus'}]} />
+        <FlowBranch root="Carrito CDP" branches={[{label:'Web'},{label:'App'},{label:'Call center'}]} />
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

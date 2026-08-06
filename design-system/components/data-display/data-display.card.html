@@ -1,0 +1,45 @@
+<!-- @dsCard group="Components" viewport="700x760" name="Data display" subtitle="Card, KPIStat, ComparisonTable, Timeline, InsightBand, Tag, ProductCard" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;font-family:'Inter',sans-serif;background:#fff;padding:24px;box-sizing:border-box;transform:scale(.5);transform-origin:top left;width:1400px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { Card, KPIStat, ComparisonTable, Timeline, InsightBand, Tag, ProductCard } = window.CentralDePasajesDesignSystem_152b2f;
+function Demo(){
+  return (
+    <div style={{display:'flex',flexDirection:'column',gap:36}}>
+      <div style={{display:'flex',gap:24}}>
+        <Card icon="Lightbulb" title="Reservá en 2 minutos" description="Comparás y confirmás sin pasos extra." accent="violet" />
+        <ProductCard badge="destacado" title="Vía Bariloche">La ruta más elegida esta semana.</ProductCard>
+        <ProductCard badge="promo" title="BsAs → Mar del Plata">Semicama, salida 22:30.</ProductCard>
+      </div>
+      <div style={{display:'flex',gap:16,alignItems:'center'}}>
+        <Tag variant="default">Default</Tag>
+        <Tag variant="outline">Outline</Tag>
+        <Tag variant="secondary">Secondary</Tag>
+        <Tag variant="expired">Vencido</Tag>
+        <Tag variant="primary-soft">Promo</Tag>
+        <Tag serviceClass>Cama</Tag>
+        <Tag serviceClass>Semicama</Tag>
+      </div>
+      <div style={{display:'flex',gap:64}}>
+        <KPIStat value="+38%" label="Conversión" context="vs. checkout anterior" />
+        <KPIStat value="4.2x" label="ROI" context="a 12 meses" />
+      </div>
+      <ComparisonTable
+        rows={[{label:'Costo de emisión',current:'$1.200',proposed:'$0'},{label:'Tiempo de checkout',current:'6 min',proposed:'2 min'}]}
+        total={{label:'Ahorro anual estimado',current:'—',proposed:'$4.8M'}}
+      />
+      <Timeline steps={[{label:'Kickoff',description:'Alta técnica'},{label:'Integración',description:'2 semanas'},{label:'Lanzamiento',description:'Con soporte dedicado'}]} />
+      <InsightBand text="Los pasajeros que comparan tarifas en el carrito convierten 2.3x más." highlight="convierten 2.3x más" />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

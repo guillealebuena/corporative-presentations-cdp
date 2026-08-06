@@ -1,0 +1,11 @@
+:root{
+--space-1:8px;--space-2:16px;--space-3:20px;--space-4:24px;--space-5:32px;--space-6:40px;--space-7:48px;--space-8:64px;--space-9:80px;--space-10:96px;--space-11:128px;
+--space-16:16px;--space-24:24px;--space-32:32px;--space-48:48px;--space-64:64px;--space-80:80px;
+--canvas-w:1920px;--canvas-h:1080px;--canvas-margin:80px;--canvas-cols:12;/* @kind other */--canvas-col-w:110px;--canvas-gutter:40px;--canvas-safe-w:1760px;--canvas-safe-h:920px;
+--slide-margin:80px;--col:110px;--gutter:40px;--safe-w:1760px;
+--w-2:260px;--w-3:410px;--w-4:560px;--w-5:710px;--w-6:860px;--w-7:1010px;--w-8:1160px;--w-9:1310px;--w-12:1760px;
+--radius-sm:12px;--radius-md:16px;--radius-lg:20px;--radius-xl:24px;--radius-pill:999px;
+--shadow-card:0 4px 16px rgba(0,0,0,.07);
+--shadow-table:0 6px 22px rgba(0,0,0,.10);
+--border-card:1.5px solid var(--border-subtle);
+}

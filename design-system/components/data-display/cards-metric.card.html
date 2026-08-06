@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components" viewport="700x520" name="Cards — metric, insight, numbered, quote" subtitle="MetricCard, InsightCard, NumberedCard, QuoteCard" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;font-family:'Inter',sans-serif;background:#F3F3F3;padding:24px;box-sizing:border-box;transform:scale(.5);transform-origin:top left;width:1400px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { MetricCard, InsightCard, NumberedCard, QuoteCard } = window.CentralDePasajesDesignSystem_152b2f;
+function Demo(){
+  return (
+    <div style={{display:'flex',gap:24}}>
+      <MetricCard icon="TrendUp" value="94%" label="Satisfacción" accent="turquoise" />
+      <InsightCard icon="ChartLineUp" value="+38%" trend="up" label="Conversión" context="vs. checkout anterior" />
+      <NumberedCard order="01" title="Kickoff" description="Alta técnica y credenciales." />
+      <QuoteCard quote="El carrito de CDP nos ahorró dos semanas de desarrollo." author="Gerente de Producto, Fono Bus" />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

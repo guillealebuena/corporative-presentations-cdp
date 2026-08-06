@@ -1,0 +1,23 @@
+<!-- @dsCard group="Components" viewport="700x280" name="KPI — bar, sparkline" subtitle="KpiBar (progress row), KpiSparkline (axis-free trend)" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;font-family:'Inter',sans-serif;background:#fff;padding:24px;box-sizing:border-box;transform:scale(.5);transform-origin:top left;width:1400px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { KpiBar, KpiSparkline } = window.CentralDePasajesDesignSystem_152b2f;
+function Demo(){
+  return (
+    <div style={{display:'flex',flexDirection:'column',gap:24,width:500}}>
+      <KpiBar label="Web" value="82%" percent={82} />
+      <KpiBar label="App" value="64%" percent={64} color="var(--turquoise-500)" />
+      <div style={{display:'flex',alignItems:'center',gap:24}}><span style={{fontFamily:'Inter',fontSize:17,color:'#6D6D6D'}}>Tendencia</span><KpiSparkline values={[4,7,6,9,12,11,15]} /></div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600&display=swap');
+:root{
+--font-display:'Poppins',sans-serif;
+--font-body:'Inter',sans-serif;
+--font-product:'Outfit',sans-serif;
+--weight-display:600;--weight-body-regular:400;--weight-body-medium:500;--weight-body-semibold:600;
+--text-display-size:88px;--text-display-lh:96px;
+--text-slide-title-size:48px;--text-slide-title-lh:58px;
+--text-block-title-size:32px;--text-block-title-lh:40px;
+--text-card-title-size:24px;--text-card-title-lh:32px;
+--text-eyebrow-size:20px;--text-eyebrow-lh:24px;--text-eyebrow-tracking:1.6px;
+--text-title-sub-size:23px;--text-title-sub-lh:34px;
+--text-body-size:21px;--text-body-lh:30px;
+--text-card-desc-size:19px;--text-card-desc-lh:28px;
+--text-footnote-size:17px;--text-footnote-lh:24px;
+--text-hero-number-size:76px;--text-hero-number-lh:80px;
+--text-table-value-size:26px;--text-table-value-lh:32px;
+--text-mega-number-size:144px;--text-mega-number-lh:152px;
+}

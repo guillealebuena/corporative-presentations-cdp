@@ -1,0 +1,37 @@
+<!-- @dsCard group="Spacing" viewport="700x520" name="Slots y anchos válidos" subtitle="header/body(1fr)/footer + anchos = n*110+(n-1)*40" -->
+<link rel="stylesheet" href="../../styles.css">
+<style>*{margin:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+.mini-slide{width:660px;height:280px;background:#F3F3F3;border-radius:8px;position:relative;overflow:hidden}
+.mini-frame{position:absolute;left:22px;top:22px;right:22px;bottom:40px;display:grid;grid-template-rows:auto 1fr;row-gap:14px}
+.mini-header{height:20px;background:#EA98F6;border-radius:4px}
+.mini-body{display:grid;grid-template-columns:repeat(12,1fr);column-gap:6px;align-content:start}
+.mini-footer{position:absolute;left:22px;right:22px;bottom:14px;display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#9B9B9B}
+.blk{background:#872191;border-radius:4px;height:70px}
+table{width:100%;border-collapse:collapse;font-size:11px;margin-top:16px}
+th,td{text-align:left;padding:5px 8px;color:#2E2E2E}
+th{color:#6D6D6D;font-weight:600;border-bottom:1.5px solid #E5E5E5}
+td.n{text-align:right;font-weight:600;color:#872191}
+</style>
+<div class="mini-slide">
+<div class="mini-frame">
+<div class="mini-header"></div>
+<div class="mini-body">
+<div class="blk" style="grid-column:span 6"></div>
+<div class="blk" style="grid-column:span 6;background:#1BCEC8"></div>
+</div>
+</div>
+<div class="mini-footer"><span>logo</span><span>04</span></div>
+</div>
+<table>
+<tr><th>Columnas (n)</th><th>Ancho válido</th><th>Token</th><th>Par a 1760</th></tr>
+<tr><td>2</td><td class="n">260px</td><td>--w-2</td><td>—</td></tr>
+<tr><td>3</td><td class="n">410px</td><td>--w-3</td><td>3+9</td></tr>
+<tr><td>4</td><td class="n">560px</td><td>--w-4</td><td>—</td></tr>
+<tr><td>5</td><td class="n">710px</td><td>--w-5</td><td>5+7</td></tr>
+<tr><td>6</td><td class="n">860px</td><td>--w-6</td><td>6+6</td></tr>
+<tr><td>7</td><td class="n">1010px</td><td>--w-7</td><td>7+5</td></tr>
+<tr><td>8</td><td class="n">1160px</td><td>--w-8</td><td>8+4</td></tr>
+<tr><td>9</td><td class="n">1310px</td><td>--w-9</td><td>9+3</td></tr>
+<tr><td>12</td><td class="n">1760px</td><td>--w-12</td><td>fila completa</td></tr>
+</table>
+<div style="font-size:11px;color:#9B9B9B;margin-top:10px">.span-n = grid-column:span n sobre 12 columnas de 110px + gutter 40px. Único ancho posible por bloque; ancho arbitrario, imposible.</div>

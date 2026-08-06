@@ -1,0 +1,24 @@
+/* Slide layout system — canvas 1920x1080, fixed, overflow hidden, never scrolled or shrunk to fit. */
+.slide{width:1920px;height:1080px;position:relative;overflow:hidden;font-family:'Inter',sans-serif;box-sizing:border-box}
+.slide *{box-sizing:border-box}
+/* Slide scaling — a .slide is authored at 1920x1080, the fixed design coordinate system, but is NEVER
+   shown at that literal size: wrap it in .slide-viewport, sized to whatever box it's given (a full
+   viewport, or a responsive container), and slide-fit.js fits it, preserving 16:9, centered, letterboxed.
+   No scroll, no crop, no shrinking type to make content fit — if it doesn't fit, split into two slides. */
+.slide-viewport{position:relative;overflow:hidden;background:#000}
+.slide-viewport .slide{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform:translate(-50%,-50%)}
+/* Rule 2: header(auto) / body(1fr) / footer(auto) — footer is pinned at y=978 regardless, so the frame
+   reserves top:80 to bottom:930 (978 minus the mandatory 48 gap), leaving body genuinely elastic. */
+.slide-frame{position:absolute;left:var(--slide-margin);top:var(--slide-margin);right:var(--slide-margin);bottom:150px;display:grid;grid-template-rows:auto 1fr;row-gap:var(--space-48)}
+.slide-header{display:flex;flex-direction:column;gap:var(--space-24)}
+/* Rule 3: 12 columns of 110px with 40px gutter — grid-column:span n is the ONLY way to size a block,
+   so its rendered width always lands on 260/410/560/710/860/1010/1160/1310/1760. */
+.slide-body{display:grid;grid-template-columns:repeat(12,var(--col));column-gap:var(--gutter);row-gap:var(--space-48);align-content:start}
+.slide-body>*{min-width:0}
+.span-2{grid-column:span 2}.span-3{grid-column:span 3}.span-4{grid-column:span 4}.span-5{grid-column:span 5}
+.span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-8{grid-column:span 8}.span-9{grid-column:span 9}
+.span-12{grid-column:span 12}
+/* Rule 7: footer fixed at y=978 — never part of the flow, never shifts with body content. */
+.slide-footer{position:absolute;left:var(--slide-margin);right:var(--slide-margin);top:978px;display:flex;align-items:center;justify-content:space-between}
+.slide-footer .page-number{font-family:var(--font-body);font-weight:600;font-size:24px;color:var(--brand-primary);line-height:1}
+.slide-footnote{position:absolute;left:var(--slide-margin);right:var(--slide-margin);top:930px;font-family:var(--font-body);font-weight:400;font-size:24px;line-height:34px;color:#9B9B9B}
