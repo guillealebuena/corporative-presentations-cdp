@@ -118,6 +118,31 @@ const noTag = guides.filter((f) => !fs.readFileSync(f, 'utf8').split('\n')[0].in
 if (noTag.length) noTag.forEach((f) => fail(`${rel(f)} no tiene @dsCard en la primera linea — no va a aparecer en el indice`));
 else ok(`${guides.length} guidelines con tag`);
 
+// ── 7. Recursos externos ──────────────────────────────────────────────────────
+// El chequeo [1] solo miraba fuentes de ICONOS. Las tipografias venian de
+// fonts.googleapis.com y pasaban limpias: renderizaban bien en pantalla y caian a la
+// sans-serif del sistema en cada export. Misma clase de falla, distinto recurso.
+// Todo lo que la presentacion necesita para renderizar tiene que estar embebido.
+console.log('\n[7] Recursos externos');
+const NS = /^https?:\/\/(www\.)?w3\.org\//; // namespaces XML: no se descargan
+let extStyle = 0, extScript = 0;
+for (const f of files.filter((f) => /\.(html|css|jsx|js)$/.test(f))) {
+  const src = fs.readFileSync(f, 'utf8');
+  // hoja de estilo o tipografia externa → rompe el render del export
+  for (const m of src.matchAll(/@import\s+url\(\s*['"]?(https?:\/\/[^'")]+)/gi)) {
+    if (!NS.test(m[1])) { fail(`${rel(f)} importa CSS externo: ${m[1].slice(0, 60)}`); extStyle++; }
+  }
+  for (const m of src.matchAll(/<link[^>]+href=["'](https?:\/\/[^"']+)/gi)) {
+    if (!NS.test(m[1])) { fail(`${rel(f)} linkea una hoja externa: ${m[1].slice(0, 60)}`); extStyle++; }
+  }
+  // script externo → deuda conocida (react/babel), se reporta aparte
+  for (const m of src.matchAll(/<script[^>]+src=["'](https?:\/\/[^"']+)/gi)) {
+    if (!NS.test(m[1])) extScript++;
+  }
+}
+if (extScript) warn(`${extScript} scripts desde CDN (react/babel) — deuda conocida, ver [5]`);
+if (!extStyle) ok('sin CSS ni tipografías externas');
+
 // ── Resumen ───────────────────────────────────────────────────────────────────
 console.log(`\n${errors ? '✗' : '✓'} ${errors} errores · ${warns} advertencias\n`);
 process.exit(errors ? 1 : 0);

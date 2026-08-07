@@ -23,8 +23,10 @@ Agregar archivos nuevos es seguro.
 Todo lo que la presentación necesite para renderizar va embebido. Claude Design bloquea
 recursos externos al exportar a HTML standalone, y en PPTX/PDF directamente no existen.
 
-Esto ya rompió una vez: los iconos venían de un webfont en `unpkg.com` y desaparecían de cada
-export. Si vas a sumar una fuente, un icono o una librería, va vendorizada.
+Esto ya rompió dos veces: los iconos venían de un webfont en `unpkg.com`, y las tres
+tipografías de un `@import` a `fonts.googleapis.com`. Ninguna de las dos daba error. Si vas a
+sumar una fuente, un icono o una librería, va vendorizada — las tipografías viven en
+`design-system/fonts/`, ver `fonts/SOURCE.md`.
 
 ### 3. Toda página de `guidelines/` necesita `@dsCard` en la primera línea
 
@@ -56,7 +58,7 @@ npm run check         # 6 validaciones — correr SIEMPRE antes de commitear
 
 `check` detecta lo que rompe en silencio: CDNs en la iconografía, iconos referenciados que no
 existen, rutas relativas muertas, componentes del manifest que no resuelven, builds de React
-de desarrollo, y guidelines sin `@dsCard`.
+de desarrollo, guidelines sin `@dsCard`, y cualquier CSS o tipografía externa.
 
 ---
 
@@ -110,7 +112,8 @@ Ante conflicto entre un asset y `uploads/cdp-brand-brief-para-claude-design.md`,
 
 El glifo `Passenger` no existe y cae en `User` vía alias. Los logos son PNG: los "SVG" que
 circulan son un `<rect>` con bitmap embebido, cero paths reales. Y quedan 9 archivos con
-`react.development.js` desde CDN — la misma clase de fragilidad que ya rompió los iconos.
+`react.development.js` desde CDN — la misma clase de fragilidad que ya rompió los iconos y las
+tipografías. `npm run check` ahora los reporta como advertencia en `[5]` y `[7]`.
 
 Lo que esté abierto se trackea en issues del repo, no en un archivo.
 

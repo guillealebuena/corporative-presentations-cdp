@@ -5,6 +5,28 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado 
 Para un design system: **MAJOR** = breaking (token o componente eliminado/renombrado),
 **MINOR** = agregado compatible, **PATCH** = fix visual o de documentación.
 
+## [3.0.1] — 2026-08-07
+
+### Corregido
+- **Las tres tipografías del sistema venían de `fonts.googleapis.com`.** `tokens/typography.css`
+  y `guidelines/brand/iconography.html` las cargaban con un `@import` a un CDN. Renderiza
+  perfecto en pantalla y cae a la sans-serif del sistema en cada export standalone, sin dar
+  ningún error — la misma clase de falla que borró la iconografía, solo que acá el recurso
+  perdido era la tipografía de todo el deck.
+  Poppins 600, Inter 400/500/600 y Outfit 400/500/600 ahora viven en `design-system/fonts/`
+  como woff2 subset latin: 128 KB en total. Procedencia y cómo agregar un peso en
+  `fonts/SOURCE.md`.
+- **`npm run check` no lo detectaba.** El chequeo `[1]` buscaba fuentes de *iconos*
+  específicamente (`@phosphor-icons/web`, fontawesome, material-icons, bootstrap-icons), así
+  que un `@import` de tipografía pasaba limpio. Nuevo chequeo `[7] Recursos externos`: falla
+  ante cualquier `@import url(http…)` o `<link href="http…">` en el bundle, y reporta aparte
+  los scripts desde CDN. Verificado reintroduciendo el `@import` a propósito.
+
+### Agregado
+- `design-system/fonts/` con los 7 woff2 y `SOURCE.md`.
+
+---
+
 ## [3.0.0] — 2026-08-07
 
 ### Eliminado

@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600&display=swap');
+/* Tipografías vendorizadas en fonts/ — NO volver a un CDN.
+   Los recursos externos se bloquean al exportar a HTML standalone y no existen en PPTX/PDF.
+   Es la misma falla que borró la iconografía. Ver CLAUDE.md, contrato 2. */
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/poppins-600.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/inter-400.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/inter-500.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/inter-600.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/outfit-400.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/outfit-500.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/outfit-600.woff2') format('woff2')}
 :root{
 --font-display:'Poppins',sans-serif;
 --font-body:'Inter',sans-serif;
