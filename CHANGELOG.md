@@ -18,9 +18,17 @@ Para un design system: **MAJOR** = breaking (token o componente eliminado/renomb
   **Breaking:** el template desaparece del panel de Claude Design tras el próximo resync.
   Los decks ya generados a partir de él no se ven afectados.
 
+- **Carpeta `docs/` completa** — `GUIA-EQUIPO.md`, `GOBERNANZA.md` y `CLAUDE-DESIGN.md`.
+  Ninguno de los tres vivía en `design-system/`, así que no se sincronizaban ni afectaban lo
+  que Claude Design genera. `CLAUDE-DESIGN.md` era byte-idéntico a
+  `skills/actualizando-ds-cdp/reference/claude-design.md`. La guía de uso para el equipo y la
+  gobernanza pasan a documentarse en Notion, donde el equipo las va a leer.
+  El repo queda con lo que es sistema: el bundle, el tooling y el contexto para Claude.
+
 ### Cambiado
-- `README.md`, `docs/GUIA-EQUIPO.md` y `design-system/readme.md` ahora describen un único
+- `README.md`, `design-system/readme.md` y la guía del equipo ahora describen un único
   template (institucional B2B) y remiten a los layouts para el resto de los casos.
+- `README.md`, `CLAUDE.md` y `skills/actualizando-ds-cdp/SKILL.md` ya no apuntan a `docs/`.
 
 ---
 

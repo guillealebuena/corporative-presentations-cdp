@@ -121,6 +121,3 @@ Lo que esté abierto se trackea en issues del repo, no en un archivo.
 | Archivo | Para qué |
 |---|---|
 | `README.md` | Estructura, iconografía, cómo se cambia |
-| `docs/GUIA-EQUIPO.md` | Cómo genera presentaciones alguien sin perfil de diseño |
-| `docs/GOBERNANZA.md` | Permisos, proceso, versionado, revisión trimestral |
-| `docs/CLAUDE-DESIGN.md` | Cómo se comporta la plataforma y sus trampas |

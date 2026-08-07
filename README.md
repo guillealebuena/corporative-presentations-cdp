@@ -30,7 +30,6 @@ cdp-design-system/
 │   ├── _ds_manifest.json       ⚠ generado por Claude Design
 │   ├── _ds_bundle.js           ⚠ generado por Claude Design
 │   └── _adherence.oxlintrc.json ⚠ generado por Claude Design
-├── docs/                   documentación de uso, gobernanza y plataforma
 ├── skills/                 skills de Claude versionadas
 ├── scripts/                tooling (build de iconos, chequeos)
 ├── CLAUDE.md               contexto que Claude carga al trabajar acá
@@ -120,8 +119,11 @@ alias documentado en `icons.js`. Requiere que se dibuje el glifo real.
 
 ## Cómo el equipo genera presentaciones
 
-Ver **[docs/GUIA-EQUIPO.md](docs/GUIA-EQUIPO.md)**. Gobernanza y permisos en **[docs/GOBERNANZA.md](docs/GOBERNANZA.md)**. Resumen: entrás a Claude Design, el DS de
-la organización se aplica solo, describís el deck, exportás a PPTX o PDF.
+Entrás a Claude Design, el DS de la organización se aplica solo, describís el deck, exportás
+a PPTX o PDF.
+
+La guía de uso para el equipo, la gobernanza y los permisos se documentan en **Notion**, no
+en este repo. Acá vive el sistema; allá, cómo se usa.
 
 ---
 
