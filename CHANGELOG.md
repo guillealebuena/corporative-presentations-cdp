@@ -5,6 +5,25 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado 
 Para un design system: **MAJOR** = breaking (token o componente eliminado/renombrado),
 **MINOR** = agregado compatible, **PATCH** = fix visual o de documentación.
 
+## [3.0.0] — 2026-08-07
+
+### Eliminado
+- **Template `propuesta-comercial`.** Era un deck concreto (la propuesta a Fono Bus) publicado
+  como punto de partida, no un patrón reutilizable: cada propuesta comercial tiene otro alcance,
+  otras condiciones y otros números, así que arrancar desde ahí implicaba borrar más de lo que
+  se aprovechaba. Los 12 layouts de slide cubren el caso sin fijar contenido.
+  Lo que sí quedó sistematizado de ese deck —`ComparisonTable variant="brand"`— sigue en el
+  sistema desde 2.3.0.
+
+  **Breaking:** el template desaparece del panel de Claude Design tras el próximo resync.
+  Los decks ya generados a partir de él no se ven afectados.
+
+### Cambiado
+- `README.md`, `docs/GUIA-EQUIPO.md` y `design-system/readme.md` ahora describen un único
+  template (institucional B2B) y remiten a los layouts para el resto de los casos.
+
+---
+
 ## [2.3.0] — 2026-08-06
 
 ### Corregido

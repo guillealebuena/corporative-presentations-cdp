@@ -42,9 +42,11 @@ Lo que conviene incluir siempre:
 | Template | Cuándo |
 |---|---|
 | Presentación institucional B2B | Presentar CDP a empresas de transporte, agencias, partners |
-| Propuesta comercial | Propuesta concreta con alcance, condiciones y precios |
 
-Pedí arrancar desde uno: *"usá el template de propuesta comercial"*.
+Pedí arrancar desde él: *"usá el template de presentación institucional B2B"*.
+
+Para cualquier otro tipo de deck —propuestas comerciales, reportes, presentaciones internas—
+armalo desde los 12 layouts de slide, que cubren todos los casos.
 
 ---
 

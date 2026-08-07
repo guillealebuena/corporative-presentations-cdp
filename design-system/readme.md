@@ -24,7 +24,7 @@ Uso mínimo:
   <div class="slide" style="background:#fff">…</div>
 </div>
 ```
-Para un contenedor responsivo en vez de pantalla completa (como el template), usá `width:100%;max-width:1920px;aspect-ratio:16/9` en el `.slide-viewport`. Los 12 layouts en `guidelines/slides/` y el template `templates/propuesta-comercial/` ya siguen esta regla.
+Para un contenedor responsivo en vez de pantalla completa (como el template), usá `width:100%;max-width:1920px;aspect-ratio:16/9` en el `.slide-viewport`. Los 12 layouts en `guidelines/slides/` y el template `templates/presentacion-institucional-b2b/` ya siguen esta regla.
 
 ## Índice
 
@@ -36,7 +36,7 @@ Para un contenedor responsivo en vez de pantalla completa (como el template), us
 - `components/data-display/` — Card, ProductCard, Tag, KPIStat, ComparisonTable, Timeline, InsightBand, MetricCard, InsightCard, NumberedCard, ChartCard, ListCard, QuoteCard, KpiHero, KpiDelta, KpiRing, KpiBar, KpiSparkline, KpiCompare, FlowRings, FlowTimeline, FlowLayers, FlowBranch.
 - `guidelines/colors/`, `guidelines/type/`, `guidelines/spacing/`, `guidelines/brand/` — specimen cards (Design System tab).
 - `guidelines/slides/` — los 12 layouts de presentación (incluye tema oscuro), como referencia visual.
-- `templates/propuesta-comercial/` — template ejecutable de propuesta comercial.
+- `templates/presentacion-institucional-b2b/` — único template ejecutable del sistema.
 - `thumbnail.html` — tile del proyecto.
 - `SKILL.md` — versión portable para Claude Code / Agent Skills.
 

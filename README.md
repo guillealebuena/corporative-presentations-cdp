@@ -24,7 +24,7 @@ cdp-design-system/
 │   ├── icons/                  iconografía (SVG inline, sin CDN)
 │   ├── components/             chrome · data-display · forms
 │   ├── guidelines/             brand · colors · type · spacing · slides
-│   ├── templates/              presentación institucional B2B · propuesta comercial
+│   ├── templates/              presentación institucional B2B
 │   ├── assets/logos/           logos en uso
 │   ├── uploads/                material fuente original (ingesta autoritativa)
 │   ├── _ds_manifest.json       ⚠ generado por Claude Design
@@ -145,6 +145,6 @@ Nadie edita el DS directamente en Claude Design. Si lo hacés, el próximo resyn
 | Componentes (37) | ✅ |
 | Layouts de slide (12) | ✅ |
 | Iconografía (92) | ✅ sin dependencias externas |
-| Templates | 2 — institucional B2B, propuesta comercial |
+| Templates | 1 — institucional B2B |
 | Logo vectorial real | ❌ pendiente |
 | Glifo `Passenger` | ❌ pendiente |
