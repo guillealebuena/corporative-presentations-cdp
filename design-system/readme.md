@@ -7,7 +7,7 @@ Central de Pasajes opera la infraestructura de e-commerce líder de transporte t
 ## Fuentes
 
 - `uploads/cdp-brand-brief-para-claude-design.md` — **especificación autoritativa**. Ante conflicto con cualquier asset, manda este documento.
-- `uploads/cdp-wordmark-violeta.png`, `cdp-wordmark-blanco.png`, `cdp-isotipo-violeta.png`, `cdp-lockup-bajada-violeta.png`, `cdp-lockup-bajada-blanco.png` — logos originales (copiados a `assets/logos/`).
+- Los 5 logos originales viven en `assets/logos/` (`cdp-wordmark-violeta.png`, `cdp-wordmark-blanco.png`, `cdp-isotipo-violeta.png`, `cdp-lockup-bajada-violeta.png`, `cdp-lockup-bajada-blanco.png`). `uploads/` ya no guarda una copia duplicada.
 - No se recibió Figma ni codebase del producto digital para este sistema — los componentes de abajo son primitivas de presentación construidas desde cero a partir del brief, no una extracción de un inventario existente (ver "Adiciones intencionales").
 
 **Nota crítica de color:** los archivos de logo contienen `#9B278F`/`#39C0C0` por una deriva histórica de los assets. Los colores de marca reales, usados en todo este sistema, están en `tokens/colors.css` y son los del brief: violeta `#872191`, turquesa `#1BCEC8`, tinta `#2A052D`.

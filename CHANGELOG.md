@@ -5,6 +5,53 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado 
 Para un design system: **MAJOR** = breaking (token o componente eliminado/renombrado),
 **MINOR** = agregado compatible, **PATCH** = fix visual o de documentación.
 
+## [4.1.0] — 2026-08-10
+
+Prioridad 2: limpieza y mejoras planeadas aparte del pull de la entrada anterior. Ningún token
+ni componente se elimina ni renombra para quien consume el sistema — por eso MINOR, no MAJOR.
+
+### Agregado
+- Íconos `ListBullets` y `Eye` (Phosphor Regular, vendorizados en `icons/src/`) — `ListCard` y
+  `ComparisonTable` ya los usaban como default sin que existieran en el set: renderizaban un
+  hueco y un warning por consola. 94 glifos + 5 alias en total.
+- `design-system/vendor/react.production.min.js` + `react-dom.production.min.js` (18.3.1, 142 KB
+  los dos) — bajados de npm, no de un CDN.
+- `.github/workflows/check.yml` — corre `npm run check` en cada push a `main` y cada PR, Node 22,
+  sin `npm install` (el repo no tiene dependencias). Suma un paso que avisa en PRs si hay
+  archivos movidos o renombrados dentro de `design-system/` — la única cláusula del contrato que
+  `check.mjs` no cubre.
+
+### Cambiado
+- **Los 10 specimens de componentes y los 17 `guidelines/slides/tpl-*.html` ya no cargan React,
+  ReactDOM ni Babel desde `unpkg`.** Es la misma clase de fragilidad que ya rompió la iconografía
+  y las tipografías — no daba error, se veía perfecto en pantalla y fallaba en el export a PPTX.
+  El JSX inline se precompiló a `React.createElement` (Babel real, no a mano) contra los 27
+  archivos; con eso Babel desaparece del todo. Se sacó `crossorigin` de los scripts que quedan
+  (rompe con `file://`). `templates/presentacion-institucional-b2b/support.js` es la única
+  excepción documentada: lo genera el dc-runtime de Claude Design, no se toca.
+- `scripts/check.mjs`: `[5]` (React de desarrollo) y `[7]` (recursos externos) pasan de
+  advertencia a error — pagada la deuda, un resync desde Claude Design que la reintroduzca ahora
+  rompe el check en vez de pasar en silencio. Nuevo chequeo de `type="text/babel"` dentro de `[5]`.
+  `[2]` (íconos referenciados) ahora detecta `icon="X"`, `icon: 'X'`, `icon = 'X'` y
+  `createElement(Icon, { name: "X" })` — antes solo la forma JSX con comillas dobles; pasó de
+  detectar 29 íconos referenciados a 38.
+- `_ds_manifest.json` local reemplazado por el que genera Claude Design tras el pull de la
+  entrada anterior — no se tocaba desde el commit inicial.
+- `package.json`: versión `2.0.0` → `4.1.0` (no se tocaba desde el commit inicial, quedó dos
+  MAJOR atrás) y el comentario de conteo de glifos actualizado a 94.
+- `README.md`, `CLAUDE.md` y `skills/actualizando-ds-cdp/`: actualizados al modelo real (Design
+  es donde se diseña, el repo es el gate — no "el repo manda, Design consume"). Documentada por
+  primera vez la dirección Design → repo, y el conteo real de guidelines (47, no 30 ni 44) e
+  iconografía (94 glifos + 5 alias = 99 nombres válidos, no 88/92 sueltos).
+
+### Eliminado
+- 5 logos PNG duplicados en `uploads/` (idénticos byte a byte a los de `assets/logos/`, 131 KB) —
+  `uploads/` queda con lo que es fuente autoritativa: el brief de marca y las notas de uso.
+- `uploads/Presentación institucional Central de Pasajes/` — export crudo de 49 KB de un
+  template ya sistematizado en `guidelines/slides/tpl-*.html`, con el mismo problema de CDN que
+  el resto de esta entrada arregla en el bundle real. Incluía un archivo `.dc-*.html` que ni
+  siquiera estaba trackeado (lo tapa el `.gitignore`).
+
 ## [4.0.0] — 2026-08-10
 
 Primer pull en la dirección Design → repo: ajustes hechos directo en Claude Design (tokens,

@@ -62,10 +62,16 @@ else {
   const used = new Map();
   for (const f of files.filter((f) => /\.(jsx|html|md)$/.test(f))) {
     const s = fs.readFileSync(f, 'utf8');
-    for (const m of s.matchAll(/\bicon=\\?["']([A-Z][A-Za-z0-9]*)/g)) {
+    // icon="X" (JSX) · icon: 'X' (objeto/prompt.md) · icon = 'X' (default de prop desestructurada)
+    for (const m of s.matchAll(/\bicon\s*[:=]\s*\\?["']([A-Z][A-Za-z0-9]*)/g)) {
       if (!used.has(m[1])) used.set(m[1], rel(f));
     }
+    // <Icon name="X" /> (JSX) — acotado a Icon: un name: suelto es cualquier prop
     for (const m of s.matchAll(/<Icon\s+name=\\?["']([A-Z][A-Za-z0-9]*)/g)) {
+      if (!used.has(m[1])) used.set(m[1], rel(f));
+    }
+    // createElement(Icon, { name: "X" }) — JSX precompilado, mismo acotamiento a Icon
+    for (const m of s.matchAll(/createElement\(Icon,\s*\{[^}]*?\bname:\s*["']([A-Z][A-Za-z0-9]*)/g)) {
       if (!used.has(m[1])) used.set(m[1], rel(f));
     }
   }
@@ -108,8 +114,14 @@ else {
 console.log('\n[5] Build de React');
 const dev = files.filter((f) => /\.(html|js)$/.test(f))
   .filter((f) => /react(-dom)?\.development\.js/.test(fs.readFileSync(f, 'utf8')));
-if (dev.length) warn(`${dev.length} archivos usan react.development.js (pesado, y desde CDN)`);
+if (dev.length) dev.forEach((f) => fail(`${rel(f)} usa react.development.js (pesado, y desde CDN)`));
 else ok('sin builds de desarrollo');
+
+// JSX sin compilar implica Babel en runtime, o sea un CDN más — la deuda que [7] ya reporta.
+const uncompiledJsx = files.filter((f) => f.endsWith('.html'))
+  .filter((f) => /type=["']text\/babel["']/.test(fs.readFileSync(f, 'utf8')));
+if (uncompiledJsx.length) uncompiledJsx.forEach((f) => fail(`${rel(f)} tiene <script type="text/babel"> — JSX sin precompilar, depende de Babel en runtime`));
+else ok('sin JSX sin compilar (type="text/babel")');
 
 // ── 6. Tag @dsCard en guidelines ──────────────────────────────────────────────
 console.log('\n[6] Tag @dsCard en guidelines');
@@ -135,13 +147,12 @@ for (const f of files.filter((f) => /\.(html|css|jsx|js)$/.test(f))) {
   for (const m of src.matchAll(/<link[^>]+href=["'](https?:\/\/[^"']+)/gi)) {
     if (!NS.test(m[1])) { fail(`${rel(f)} linkea una hoja externa: ${m[1].slice(0, 60)}`); extStyle++; }
   }
-  // script externo → deuda conocida (react/babel), se reporta aparte
+  // script externo → ya no es deuda tolerada: React/ReactDOM viven vendorizados en vendor/
   for (const m of src.matchAll(/<script[^>]+src=["'](https?:\/\/[^"']+)/gi)) {
-    if (!NS.test(m[1])) extScript++;
+    if (!NS.test(m[1])) { fail(`${rel(f)} carga un script desde CDN: ${m[1].slice(0, 60)}`); extScript++; }
   }
 }
-if (extScript) warn(`${extScript} scripts desde CDN (react/babel) — deuda conocida, ver [5]`);
-if (!extStyle) ok('sin CSS ni tipografías externas');
+if (!extStyle && !extScript) ok('sin CSS, tipografías ni scripts externos');
 
 // ── Resumen ───────────────────────────────────────────────────────────────────
 console.log(`\n${errors ? '✗' : '✓'} ${errors} errores · ${warns} advertencias\n`);

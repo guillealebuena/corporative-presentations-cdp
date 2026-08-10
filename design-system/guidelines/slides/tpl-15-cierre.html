@@ -1,33 +1,95 @@
 <!-- @dsCard group="Slides" viewport="1280x720" name="B2B · 15 Cierre" subtitle="Fondo oscuro sólido, título + bajada y placeholder de visual" -->
 <!doctype html><html><head><meta charset="utf-8">
 <link rel="stylesheet" href="../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../vendor/react.production.min.js"></script>
+<script src="../../vendor/react-dom.production.min.js"></script>
 <script src="../../_ds_bundle.js"></script>
 <style>*{margin:0;box-sizing:border-box}html,body{width:100%;height:100%;overflow:hidden}</style>
 </head><body>
 <div class="slide-viewport" style="width:1280px;height:720px"><div id="root" style="width:100%;height:100%"></div></div>
-<script type="text/babel">
-const {  } = window.CentralDePasajesDesignSystem_152b2f;
-function Slide(){return(
-<div className="slide" style={{background:'var(--surface-dark-alt)',position:'relative'}}>
-<div style={{position:'relative',display:'flex',flexDirection:'column',height:'100%',padding:'64px 80px',boxSizing:'border-box'}}>
-<img src="../../assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style={{height:26,width:'auto',display:'block',alignSelf:'flex-start',flexShrink:0}}/>
-<div style={{flex:1,display:'flex',alignItems:'center',gap:80}}>
-<div style={{display:'flex',flexDirection:'column',gap:32,maxWidth:1000}}>
-<div style={{fontFamily:"'Poppins',sans-serif",fontWeight:600,fontSize:112,lineHeight:'118px',color:'#fff'}}>[TÍTULO DE CIERRE — llamado a la acción]</div>
-<div style={{fontFamily:"'Inter',sans-serif",fontSize:30,color:'rgba(255,255,255,.85)'}}>[BAJADA DE CIERRE]</div>
-</div>
-<div style={{flex:1,minHeight:620,border:'2px dashed rgba(255,255,255,.4)',borderRadius:'var(--radius-md)',background:'rgba(255,255,255,.06)',display:'flex',alignItems:'center',justifyContent:'center'}}>
-<span style={{fontFamily:"'Inter',sans-serif",fontSize:24,color:'rgba(255,255,255,.7)'}}>Visual de producto</span>
-</div>
-</div>
-<div className="slide-footer"><span></span><span className="page-number" style={{color:'#fff'}}>15</span></div>
-</div>
-</div>
-);}
-ReactDOM.createRoot(document.getElementById('root')).render(<Slide/>);
+<script>
+const {} = window.CentralDePasajesDesignSystem_152b2f;
+function Slide() {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "slide",
+    style: {
+      background: 'var(--surface-dark-alt)',
+      position: 'relative'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100%',
+      padding: '64px 80px',
+      boxSizing: 'border-box'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "../../assets/logos/cdp-wordmark-blanco.png",
+    alt: "Central de Pasajes",
+    style: {
+      height: 26,
+      width: 'auto',
+      display: 'block',
+      alignSelf: 'flex-start',
+      flexShrink: 0
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      display: 'flex',
+      alignItems: 'center',
+      gap: 80
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 32,
+      maxWidth: 1000
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Poppins',sans-serif",
+      fontWeight: 600,
+      fontSize: 112,
+      lineHeight: '118px',
+      color: '#fff'
+    }
+  }, "[T\xCDTULO DE CIERRE \u2014 llamado a la acci\xF3n]"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Inter',sans-serif",
+      fontSize: 30,
+      color: 'rgba(255,255,255,.85)'
+    }
+  }, "[BAJADA DE CIERRE]")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minHeight: 620,
+      border: '2px dashed rgba(255,255,255,.4)',
+      borderRadius: 'var(--radius-md)',
+      background: 'rgba(255,255,255,.06)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Inter',sans-serif",
+      fontSize: 24,
+      color: 'rgba(255,255,255,.7)'
+    }
+  }, "Visual de producto"))), /*#__PURE__*/React.createElement("div", {
+    className: "slide-footer"
+  }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", {
+    className: "page-number",
+    style: {
+      color: '#fff'
+    }
+  }, "15"))));
+}
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Slide, null));
 </script>
 <script src="../../slide-fit.js"></script>
 </body></html>

@@ -1,31 +1,90 @@
 <!-- @dsCard group="Components" viewport="700x340" name="Chrome — decor, toggle, pill" subtitle="DotGrid, DiagonalLines, MeshGradient (guiño chico), PageNumberWatermark, ToggleSegment, Pill" -->
 <!doctype html><html><head><meta charset="utf-8">
 <link rel="stylesheet" href="../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../vendor/react.production.min.js"></script>
+<script src="../../vendor/react-dom.production.min.js"></script>
 <script src="../../_ds_bundle.js"></script>
 <style>body{margin:0;font-family:'Inter',sans-serif;background:#fff;padding:24px;box-sizing:border-box;transform:scale(.5);transform-origin:top left;width:1400px}.row{display:flex;gap:16px;margin-bottom:24px;align-items:center}</style>
 </head><body><div id="root"></div>
-<script type="text/babel">
-const { DotGrid, DiagonalLines, MeshGradient, PageNumberWatermark, ToggleSegment, Pill } = window.CentralDePasajesDesignSystem_152b2f;
-function Demo(){
-  return (
-    <div>
-      <div className="row">
-        <div style={{position:'relative',width:180,height:120,background:'#fff',border:'1.5px solid #E5E5E5',borderRadius:12,overflow:'hidden'}}><DotGrid /></div>
-        <div style={{position:'relative',width:180,height:120,background:'#fff',border:'1.5px solid #E5E5E5',borderRadius:12,overflow:'hidden'}}><DiagonalLines /></div>
-        <div style={{position:'relative',width:180,height:120,background:'#19021C',borderRadius:12,overflow:'hidden'}}><MeshGradient opacity={0.6} size={160} corner="top-right" /></div>
-        <div style={{position:'relative',width:180,height:120,background:'#fff',border:'1.5px solid #E5E5E5',borderRadius:12,overflow:'hidden'}}><PageNumberWatermark number="06" /></div>
-      </div>
-      <div className="row"><ToggleSegment options={['Mensual','Anual']} active={1} /></div>
-      <div className="row">
-        <Pill tone="solid">Solid</Pill><Pill tone="outline">Outline</Pill>
-        <span style={{background:'#19021C',padding:'14px 20px',borderRadius:12,display:'inline-flex'}}><Pill tone="dark">Dark</Pill></span>
-      </div>
-    </div>
-  );
+<script>
+const {
+  DotGrid,
+  DiagonalLines,
+  MeshGradient,
+  PageNumberWatermark,
+  ToggleSegment,
+  Pill
+} = window.CentralDePasajesDesignSystem_152b2f;
+function Demo() {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'relative',
+      width: 180,
+      height: 120,
+      background: '#fff',
+      border: '1.5px solid #E5E5E5',
+      borderRadius: 12,
+      overflow: 'hidden'
+    }
+  }, /*#__PURE__*/React.createElement(DotGrid, null)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'relative',
+      width: 180,
+      height: 120,
+      background: '#fff',
+      border: '1.5px solid #E5E5E5',
+      borderRadius: 12,
+      overflow: 'hidden'
+    }
+  }, /*#__PURE__*/React.createElement(DiagonalLines, null)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'relative',
+      width: 180,
+      height: 120,
+      background: '#19021C',
+      borderRadius: 12,
+      overflow: 'hidden'
+    }
+  }, /*#__PURE__*/React.createElement(MeshGradient, {
+    opacity: 0.6,
+    size: 160,
+    corner: "top-right"
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'relative',
+      width: 180,
+      height: 120,
+      background: '#fff',
+      border: '1.5px solid #E5E5E5',
+      borderRadius: 12,
+      overflow: 'hidden'
+    }
+  }, /*#__PURE__*/React.createElement(PageNumberWatermark, {
+    number: "06"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/React.createElement(ToggleSegment, {
+    options: ['Mensual', 'Anual'],
+    active: 1
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/React.createElement(Pill, {
+    tone: "solid"
+  }, "Solid"), /*#__PURE__*/React.createElement(Pill, {
+    tone: "outline"
+  }, "Outline"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      background: '#19021C',
+      padding: '14px 20px',
+      borderRadius: 12,
+      display: 'inline-flex'
+    }
+  }, /*#__PURE__*/React.createElement(Pill, {
+    tone: "dark"
+  }, "Dark"))));
 }
-ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Demo, null));
 </script>
 </body></html>

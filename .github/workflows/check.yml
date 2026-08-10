@@ -1,0 +1,38 @@
+name: Design system check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Sin npm install a propósito: el repo no tiene dependencias (ver package.json).
+      - name: npm run check
+        run: npm run check
+
+      # La única cláusula del contrato que check.mjs no cubre: check.mjs valida rutas y
+      # referencias, pero no ve un archivo que se movió/renombró y sigue resolviendo por
+      # casualidad. git detecta el rename; check.mjs no.
+      - name: Avisar si se movieron o renombraron archivos dentro de design-system/
+        if: github.event_name == 'pull_request'
+        run: |
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+          RENAMED=$(git diff --name-status -M "$BASE" "$HEAD" -- design-system/ | grep '^R' || true)
+          if [ -n "$RENAMED" ]; then
+            echo "::warning::Hay archivos movidos/renombrados dentro de design-system/. _ds_manifest.json usa rutas absolutas y las guidelines relativas — mover algo no da error, deja de aplicar estilos en silencio. Confirmar que es intencional:"
+            echo "$RENAMED"
+          else
+            echo "Sin archivos movidos/renombrados dentro de design-system/."
+          fi
