@@ -1,7 +1,11 @@
-/** Diffuse violet-to-turquoise mesh gradient for brand backgrounds (covers, dark data slides) — the only place gradients are allowed. Absolutely positioned; place inside a `position:relative` dark-background container. */
+/** Small corner "guiño" — a soft radial light for compact graphic elements (cards, badges, icon wells). Never for full-slide or full-canvas backgrounds; gradients are not a background resource in this system. */
 export interface MeshGradientProps {
-  /** Full-strength by default; pass ~0.15 for a subtle corner wash on a card. */
+  /** Full-strength by default; pass ~0.15–0.2 for a subtle accent inside a card. */
   opacity?: number;
+  /** Diameter in px of the glow. Default 480 — size it well under the container so it reads as an accent, not a wash. */
+  size?: number;
+  corner?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+  color?: string;
   style?: React.CSSProperties;
 }
 export function MeshGradient(props: MeshGradientProps): JSX.Element;

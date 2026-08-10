@@ -5,6 +5,50 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado 
 Para un design system: **MAJOR** = breaking (token o componente eliminado/renombrado),
 **MINOR** = agregado compatible, **PATCH** = fix visual o de documentación.
 
+## [4.0.0] — 2026-08-10
+
+Primer pull en la dirección Design → repo: ajustes hechos directo en Claude Design (tokens,
+componentes y layouts) traídos al repo tal cual, archivo por archivo. Hasta ahora el modelo
+documentado solo cubría repo → Design; esta entrada invierte el flujo por primera vez.
+
+### Cambiado
+- **`MeshGradient` deja de ser un fondo full-slide.** Pasó de un mesh difuso violeta→turquesa
+  en `inset:0` a un glow chico anclado a una esquina (props nuevas `size` y `corner`; `color`
+  ahora es un solo color en vez de la mezcla de dos). Actualizados `InsightCard` y el specimen
+  `decor-toggle-pill.card.html` al nuevo uso.
+  **Breaking:** cualquier slide que dependiera del mesh como fondo completo pierde ese fondo —
+  revisar decks existentes que lo usaran así.
+- **`guidelines/slides/11-cierre.html`**: fondo de gradiente violeta → sólido `#2A052D`, acorde
+  a la regla ya vigente de "sin degradados como fondo" (que antes tenía portada/cierre como
+  excepción documentada).
+- `readme.md` actualizado: sin excepción de gradiente en ningún slide, `MeshGradient` documentado
+  como glow chico, sección de índice sin el template ejecutable (ver Eliminado).
+- `_ds_manifest.json` y `_adherence.oxlintrc.json` regenerados desde Design — los locales no se
+  tocaban desde el commit inicial y ya no reflejaban la realidad (el manifest todavía listaba el
+  template `propuesta-comercial`, eliminado en 3.0.0; el lint de `MeshGradient` todavía validaba
+  las props viejas). El namespace del bundle (`_ds_bundle.js`) se deja sin tocar por ahora: tiene
+  un ID propio de este repo y traer el de Design rompería los 27 specimens/slides que lo
+  referencian — queda pendiente para una migración deliberada.
+
+### Agregado
+- `guidelines/slides/tpl-01-portada.html` a `tpl-17-utilitaria-oscura.html` — los 17 slides reales
+  de la presentación institucional B2B, ahora como cards de referencia sueltas en vez de template
+  ejecutable (ver Eliminado). Todos con `@dsCard group="Slides"` válido.
+  **Deuda conocida:** los 17 cargan React/ReactDOM/Babel desde unpkg — mismo patrón que ya rompió
+  la iconografía y las tipografías dos veces. `npm run check` lo reporta como advertencia en
+  `[5]`/`[7]`, no como error; sumados a la tarea ya planeada de vendorizar React (antes acotada a
+  los 10 specimens de componentes).
+- `github.md` — log de sincronización que genera Claude Design al importar desde el repo.
+
+### Eliminado
+- `icons/Icon.jsx` e `icons/Icon.legacy.jsx`. `Icon` quedó consolidado en
+  `components/chrome/Icon.jsx` (antes era un re-export). `Icon.legacy.jsx` era el `Icon` anterior
+  a 2.0.0 (webfont de Phosphor vía `<i class="ph">`); nada lo referenciaba.
+- Con esto, el template ejecutable de la presentación institucional B2B deja de existir en
+  Claude Design — sus 17 slides pasan a `guidelines/slides/tpl-*.html` (ver Agregado). La carpeta
+  `templates/presentacion-institucional-b2b/` sigue en el repo sin tocar; queda desincronizada del
+  estado real de Design hasta que se decida qué hacer con ella.
+
 ## [3.0.1] — 2026-08-07
 
 ### Corregido

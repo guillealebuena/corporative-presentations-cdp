@@ -1,7 +1,7 @@
 /**
  * Phosphor Regular icon (filled paths, no stroke). Renders inline SVG — no web font,
  * no CDN, so it survives standalone HTML, PPTX and PDF exports and works offline.
- * Reexported from icons/Icon.jsx; the glyph data lives in icons/icons.js (92 glyphs).
+ * The glyph data lives in icons/icons.js (92 glyphs).
  * Sizes used in the deck: 24 inline, 28 card badge, 32 standalone, 22 table row.
  */
 export interface IconProps {

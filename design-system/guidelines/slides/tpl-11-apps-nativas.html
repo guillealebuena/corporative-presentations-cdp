@@ -1,0 +1,44 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="B2B · 11 Apps nativas" subtitle="Fondo claro, lista de 3 features con Icon + placeholder de visual" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script>
+<style>*{margin:0;box-sizing:border-box}html,body{width:100%;height:100%;overflow:hidden}</style>
+</head><body>
+<div class="slide-viewport" style="width:1280px;height:720px"><div id="root" style="width:100%;height:100%"></div></div>
+<script type="text/babel">
+const { PageNumberWatermark, Icon } = window.CentralDePasajesDesignSystem_152b2f;
+
+const items = [['Check','Apps iOS y Android con tu marca'],['GearSix','Gestión y actualizaciones a cargo de CDP'],['ShoppingCart','Complementa tu carrito web']];
+function Slide(){return(
+<div className="slide" style={{background:'#fff',position:'relative'}}>
+<PageNumberWatermark number="11"/>
+<div className="slide-frame">
+<div className="slide-header">
+<div style={{display:'flex',alignItems:'center',gap:12}}><span style={{width:24,height:3,background:'var(--brand-primary)',flexShrink:0}}></span><span style={{fontFamily:"'Inter',sans-serif",fontWeight:600,fontSize:24,letterSpacing:'1.6px',textTransform:'uppercase',color:'var(--brand-primary)'}}>APPS NATIVAS</span></div>
+<div style={{fontFamily:"'Poppins',sans-serif",fontWeight:600,fontSize:72,lineHeight:'84px',color:'var(--text-title)'}}>[TÍTULO — PRODUCTO 2]</div>
+</div>
+<div className="slide-body">
+<div className="span-5" style={{display:'flex',flexDirection:'column',gap:32}}>
+<div style={{fontFamily:"'Inter',sans-serif",fontSize:30,lineHeight:'44px',color:'var(--text-body)'}}>[DESCRIPCIÓN DEL PRODUCTO 2]</div>
+<div style={{display:'flex',flexDirection:'column',gap:16}}>
+{items.map(([ic,t],i)=>(<div key={i} style={{display:'flex',alignItems:'center',gap:20,background:'var(--surface-soft)',borderRadius:'var(--radius-md)',padding:'20px 24px'}}>
+<div style={{width:56,height:56,borderRadius:'var(--radius-sm)',background:'var(--turquoise-50)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}><Icon name={ic} size={28} color="var(--turquoise-500)"/></div>
+<span style={{fontFamily:"'Inter',sans-serif",fontSize:30,color:'var(--text-title)'}}>{t}</span>
+</div>))}
+</div>
+</div>
+<div className="span-7" style={{border:'2px dashed var(--gray-200)',borderRadius:'var(--radius-md)',background:'var(--surface-soft)',display:'flex',alignItems:'center',justifyContent:'center',alignSelf:'stretch'}}>
+<span style={{fontFamily:"'Inter',sans-serif",fontSize:24,color:'var(--text-muted)',textAlign:'center',padding:'0 40px'}}>Visual de producto — App nativa</span>
+</div>
+</div>
+</div>
+<div className="slide-footer"><img src="../../assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style={{height:22,display:'block'}}/><span className="page-number">11</span></div>
+</div>
+);}
+ReactDOM.createRoot(document.getElementById('root')).render(<Slide/>);
+</script>
+<script src="../../slide-fit.js"></script>
+</body></html>
