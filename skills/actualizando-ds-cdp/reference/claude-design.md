@@ -27,9 +27,13 @@ No hay cuota separada.
 ## El modelo de datos
 
 ```
-  Repo GitHub  ──sync──>  Design System (org)  ──>  Proyectos  ──>  Export
-  fuente de verdad         publicado, default        decks         PPTX/PDF/HTML
+  Repo GitHub  <──sync──>  Design System (org)  ──>  Proyectos  ──>  Export
+  gate + archivo            publicado, default        decks         PPTX/PDF/HTML
 ```
+
+El sync entre repo y Design System va en las dos direcciones (ver `SKILL.md` § "Sincronizar
+Design → repo", el caso más común). Esta sección describe el comportamiento de la plataforma en
+sí — vale para ambas direcciones.
 
 Un design system publicado y marcado como **org default** se aplica solo a todo proyecto nuevo
 que cree cualquiera de la organización. Se pueden tener varios design systems en paralelo

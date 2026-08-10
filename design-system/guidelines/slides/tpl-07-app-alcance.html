@@ -1,41 +1,171 @@
 <!-- @dsCard group="Slides" viewport="1280x720" name="B2B · 07 App alcance" subtitle="Fondo oscuro + DotGrid, 3 MetricCard y banda de 2 stats" -->
 <!doctype html><html><head><meta charset="utf-8">
 <link rel="stylesheet" href="../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../vendor/react.production.min.js"></script>
+<script src="../../vendor/react-dom.production.min.js"></script>
 <script src="../../_ds_bundle.js"></script>
 <style>*{margin:0;box-sizing:border-box}html,body{width:100%;height:100%;overflow:hidden}</style>
 </head><body>
 <div class="slide-viewport" style="width:1280px;height:720px"><div id="root" style="width:100%;height:100%"></div></div>
-<script type="text/babel">
-const { DotGrid, PageNumberWatermark, MetricCard } = window.CentralDePasajesDesignSystem_152b2f;
-function Slide(){return(
-<div className="slide" style={{background:'var(--surface-dark)'}}>
-<DotGrid color="var(--violet-200)" opacity={0.05}/>
-<PageNumberWatermark number="07" color="#fff"/>
-<div className="slide-frame">
-<div className="slide-header">
-<div style={{display:'flex',alignItems:'center',gap:12}}><span style={{width:24,height:3,background:'var(--turquoise-500)',flexShrink:0}}></span><span style={{fontFamily:"'Inter',sans-serif",fontWeight:600,fontSize:24,letterSpacing:'1.6px',textTransform:'uppercase',color:'#fff'}}>APP MÓVIL</span></div>
-<div style={{fontFamily:"'Poppins',sans-serif",fontWeight:600,fontSize:72,lineHeight:'84px',color:'#fff'}}>Alcance y desempeño de la app</div>
-</div>
-<div className="slide-body">
-<div className="span-12" style={{display:'flex',gap:40}}>
-<MetricCard icon="DeviceMobile" value="9,9 M" label="Sesiones app" tone="dark" accent="violet" metricScale="medium"/>
-<MetricCard icon="Target" value="9,00%" label="[ETIQUETA] app" tone="dark" accent="turquoise" metricScale="medium"/>
-<MetricCard icon="ShieldCheck" value="93%" label="[ETIQUETA]" tone="dark" accent="violet" metricScale="medium"/>
-</div>
-<div className="span-12" style={{background:'rgba(255,255,255,.04)',border:'1px solid rgba(255,255,255,.12)',borderRadius:'var(--radius-lg)',padding:'40px 48px',display:'flex',justifyContent:'space-around'}}>
-<div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:8}}><span style={{fontFamily:"'Poppins',sans-serif",fontWeight:600,fontSize:48,color:'#fff'}}>750.000</span><span style={{fontFamily:"'Inter',sans-serif",fontWeight:600,fontSize:24,letterSpacing:'1.2px',textTransform:'uppercase',color:'var(--text-on-dark-secondary)'}}>Apps activas Android</span></div>
-<div style={{width:2,background:'var(--border-on-dark)'}}></div>
-<div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:8}}><span style={{fontFamily:"'Poppins',sans-serif",fontWeight:600,fontSize:48,color:'#fff'}}>63.000</span><span style={{fontFamily:"'Inter',sans-serif",fontWeight:600,fontSize:24,letterSpacing:'1.2px',textTransform:'uppercase',color:'var(--text-on-dark-secondary)'}}>Apps activas iOS</span></div>
-</div>
-</div>
-</div>
-<div className="slide-footer"><img src="../../assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style={{height:22,display:'block'}}/><span className="page-number" style={{color:'#fff'}}>07</span></div>
-</div>
-);}
-ReactDOM.createRoot(document.getElementById('root')).render(<Slide/>);
+<script>
+const {
+  DotGrid,
+  PageNumberWatermark,
+  MetricCard
+} = window.CentralDePasajesDesignSystem_152b2f;
+function Slide() {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "slide",
+    style: {
+      background: 'var(--surface-dark)'
+    }
+  }, /*#__PURE__*/React.createElement(DotGrid, {
+    color: "var(--violet-200)",
+    opacity: 0.05
+  }), /*#__PURE__*/React.createElement(PageNumberWatermark, {
+    number: "07",
+    color: "#fff"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "slide-frame"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "slide-header"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 24,
+      height: 3,
+      background: 'var(--turquoise-500)',
+      flexShrink: 0
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Inter',sans-serif",
+      fontWeight: 600,
+      fontSize: 24,
+      letterSpacing: '1.6px',
+      textTransform: 'uppercase',
+      color: '#fff'
+    }
+  }, "APP M\xD3VIL")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Poppins',sans-serif",
+      fontWeight: 600,
+      fontSize: 72,
+      lineHeight: '84px',
+      color: '#fff'
+    }
+  }, "Alcance y desempe\xF1o de la app")), /*#__PURE__*/React.createElement("div", {
+    className: "slide-body"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "span-12",
+    style: {
+      display: 'flex',
+      gap: 40
+    }
+  }, /*#__PURE__*/React.createElement(MetricCard, {
+    icon: "DeviceMobile",
+    value: "9,9 M",
+    label: "Sesiones app",
+    tone: "dark",
+    accent: "violet",
+    metricScale: "medium"
+  }), /*#__PURE__*/React.createElement(MetricCard, {
+    icon: "Target",
+    value: "9,00%",
+    label: "[ETIQUETA] app",
+    tone: "dark",
+    accent: "turquoise",
+    metricScale: "medium"
+  }), /*#__PURE__*/React.createElement(MetricCard, {
+    icon: "ShieldCheck",
+    value: "93%",
+    label: "[ETIQUETA]",
+    tone: "dark",
+    accent: "violet",
+    metricScale: "medium"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "span-12",
+    style: {
+      background: 'rgba(255,255,255,.04)',
+      border: '1px solid rgba(255,255,255,.12)',
+      borderRadius: 'var(--radius-lg)',
+      padding: '40px 48px',
+      display: 'flex',
+      justifyContent: 'space-around'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Poppins',sans-serif",
+      fontWeight: 600,
+      fontSize: 48,
+      color: '#fff'
+    }
+  }, "750.000"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Inter',sans-serif",
+      fontWeight: 600,
+      fontSize: 24,
+      letterSpacing: '1.2px',
+      textTransform: 'uppercase',
+      color: 'var(--text-on-dark-secondary)'
+    }
+  }, "Apps activas Android")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 2,
+      background: 'var(--border-on-dark)'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Poppins',sans-serif",
+      fontWeight: 600,
+      fontSize: 48,
+      color: '#fff'
+    }
+  }, "63.000"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Inter',sans-serif",
+      fontWeight: 600,
+      fontSize: 24,
+      letterSpacing: '1.2px',
+      textTransform: 'uppercase',
+      color: 'var(--text-on-dark-secondary)'
+    }
+  }, "Apps activas iOS"))))), /*#__PURE__*/React.createElement("div", {
+    className: "slide-footer"
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "../../assets/logos/cdp-wordmark-blanco.png",
+    alt: "Central de Pasajes",
+    style: {
+      height: 22,
+      display: 'block'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "page-number",
+    style: {
+      color: '#fff'
+    }
+  }, "07")));
+}
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Slide, null));
 </script>
 <script src="../../slide-fit.js"></script>
 </body></html>

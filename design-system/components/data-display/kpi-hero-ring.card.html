@@ -1,22 +1,44 @@
 <!-- @dsCard group="Components" viewport="700x420" name="KPI — hero, delta, ring, compare" subtitle="KpiHero, KpiDelta, KpiRing, KpiCompare" -->
 <!doctype html><html><head><meta charset="utf-8">
 <link rel="stylesheet" href="../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../vendor/react.production.min.js"></script>
+<script src="../../vendor/react-dom.production.min.js"></script>
 <script src="../../_ds_bundle.js"></script>
 <style>body{margin:0;font-family:'Inter',sans-serif;background:#fff;padding:24px;box-sizing:border-box;transform:scale(.5);transform-origin:top left;width:1400px}.row{display:flex;align-items:center;gap:60px;margin-bottom:32px}</style>
 </head><body><div id="root"></div>
-<script type="text/babel">
-const { KpiHero, KpiDelta, KpiRing, KpiCompare } = window.CentralDePasajesDesignSystem_152b2f;
-function Demo(){
-  return (
-    <div>
-      <div className="row"><KpiHero value="4.8M" label="Ahorro anual" /><KpiDelta value="128k" direction="up" delta="+12%" label="Pasajes vendidos" /></div>
-      <div className="row"><KpiRing percent={72} /><KpiRing percent={45} color="var(--turquoise-500)" /><KpiCompare leftValue="6 min" leftLabel="Antes" rightValue="2 min" rightLabel="Ahora" delta="-66%" /></div>
-    </div>
-  );
+<script>
+const {
+  KpiHero,
+  KpiDelta,
+  KpiRing,
+  KpiCompare
+} = window.CentralDePasajesDesignSystem_152b2f;
+function Demo() {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/React.createElement(KpiHero, {
+    value: "4.8M",
+    label: "Ahorro anual"
+  }), /*#__PURE__*/React.createElement(KpiDelta, {
+    value: "128k",
+    direction: "up",
+    delta: "+12%",
+    label: "Pasajes vendidos"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/React.createElement(KpiRing, {
+    percent: 72
+  }), /*#__PURE__*/React.createElement(KpiRing, {
+    percent: 45,
+    color: "var(--turquoise-500)"
+  }), /*#__PURE__*/React.createElement(KpiCompare, {
+    leftValue: "6 min",
+    leftLabel: "Antes",
+    rightValue: "2 min",
+    rightLabel: "Ahora",
+    delta: "-66%"
+  })));
 }
-ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Demo, null));
 </script>
 </body></html>

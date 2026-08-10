@@ -5,9 +5,12 @@ Sistema de diseño para **presentaciones, documentos institucionales y material 
 > No cubre la UI del producto (app React Native / web checkout). Eso vive en un Figma
 > aparte y usa la tipografía Outfit. Si estás buscando el DS del producto, este no es el repo.
 
-Este repositorio es la **fuente de verdad**. Claude Design, las presentaciones y cualquier
-material institucional consumen desde acá. Un cambio de token o de componente entra por acá,
-no al revés.
+**El repo es el gate, no el único lugar de autoría.** El diseño pasa por Claude Design —
+ahí se ve el resultado en tiempo real — y el repo es donde un cambio queda versionado, revisado
+por `npm run check` y con historial. Ninguno de los dos manda sobre el otro en abstracto: lo que
+está en Design y no en el repo es un cambio sin respaldo (Design no tiene historial ni undo); lo
+que está en el repo y no en Design es un cambio sin efecto (nadie lo ve). Un cambio no está
+terminado hasta que está en los dos.
 
 ---
 
@@ -39,7 +42,7 @@ cdp-design-system/
 ### ⚠ Regla de oro: no muevas archivos dentro de `design-system/`
 
 La estructura interna de esa carpeta es un **contrato**. `_ds_manifest.json` referencia rutas
-absolutas (`tokens/colors.css`, `components/chrome/Avatar.jsx`) y las 44 páginas de guidelines
+absolutas (`tokens/colors.css`, `components/chrome/Avatar.jsx`) y las 47 páginas de guidelines
 usan rutas relativas (`../../styles.css`, `../../slide-fit.js`, `../../_ds_bundle.js`).
 Mover un archivo rompe el bundle en silencio: no falla, simplemente deja de aplicar estilos.
 
@@ -64,8 +67,10 @@ desaparece del índice.
 
 ## Iconografía
 
-Phosphor Regular — paths rellenos, sin stroke. **92 glifos embebidos como SVG inline** en
-`design-system/icons/icons.js`.
+Phosphor Regular — paths rellenos, sin stroke. **94 glifos embebidos como SVG inline** en
+`design-system/icons/icons.js`, más 5 alias de conceptos propios de CDP sin equivalente directo
+(`Passenger`, `Pasajero`, `Colectivo`, `Empresa`, `Agencia` → todos caen en un glifo existente).
+`npm run check` reporta 99 nombres válidos porque cuenta glifos + alias, no solo glifos.
 
 ```jsx
 import { Icon } from './icons/Icon.jsx';
@@ -112,8 +117,8 @@ en la iconografía y componentes del manifest que no resuelven.
 
 ### Pendiente
 
-`Passenger` es un concepto propio de CDP sin equivalente en Phosphor. Hoy cae en `User` vía
-alias documentado en `icons.js`. Requiere que se dibuje el glifo real.
+`Passenger`/`Pasajero` son conceptos propios de CDP sin equivalente en Phosphor. Hoy caen en
+`User` vía alias documentado en `icons.js`. Requieren que se dibuje el glifo real.
 
 ---
 
@@ -129,13 +134,19 @@ en este repo. Acá vive el sistema; allá, cómo se usa.
 
 ## Cómo se cambia el DS
 
-1. Rama desde `main`
-2. Cambio en `design-system/`
-3. Entrada en `CHANGELOG.md`
-4. PR con captura del antes/después
-5. Merge → resync del bundle en Claude Design
+El cambio puede nacer en cualquiera de los dos lados — lo que importa es que termine en los dos.
 
-Nadie edita el DS directamente en Claude Design. Si lo hacés, el próximo resync lo pisa.
+**Si arrancás en el repo** (rama desde `main` → cambio en `design-system/` → `npm run check` →
+CHANGELOG → PR con captura antes/después → merge → resync del bundle en Claude Design).
+
+**Si arrancás en Claude Design** (que es donde se ve el resultado en tiempo real): el cambio ahí
+es la única copia hasta que se trae al repo. Compará el proyecto de Design contra `design-system/`
+archivo por archivo (no un reemplazo masivo), traé lo que cambió, `npm run check` → 0 errores,
+CHANGELOG, PR. Recién ahí el cambio tiene respaldo. Detalle del procedimiento en la skill
+`actualizando-ds-cdp`.
+
+Un cambio editado solo en Claude Design y nunca bajado al repo no está terminado: se pierde en el
+próximo resync desde el repo, y hasta entonces no tiene historial ni undo.
 
 ---
 
@@ -145,8 +156,8 @@ Nadie edita el DS directamente en Claude Design. Si lo hacés, el próximo resyn
 |---|---|
 | Tokens (147) | ✅ |
 | Componentes (37) | ✅ |
-| Layouts de slide (12) | ✅ |
-| Iconografía (92) | ✅ sin dependencias externas |
-| Templates | 1 — institucional B2B |
+| Layouts de slide (12 genéricos + 17 de la B2B) | ✅ |
+| Iconografía (94 + 5 alias) | ✅ sin dependencias externas |
+| Templates ejecutables | 0 — el institucional B2B se desarmó en los 17 layouts de arriba en Claude Design; la carpeta `templates/presentacion-institucional-b2b/` sigue en el repo, desincronizada de esa realidad |
 | Logo vectorial real | ❌ pendiente |
-| Glifo `Passenger` | ❌ pendiente |
+| Glifos `Passenger`/`Pasajero` | ❌ pendiente |

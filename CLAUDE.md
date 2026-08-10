@@ -1,7 +1,10 @@
 # Contexto del proyecto
 
 Design system de **presentaciones y material institucional** de Central de Pasajes.
-Este repo es la fuente de verdad; Claude Design lo consume.
+El diseño pasa por Claude Design (ahí se ve el resultado); el repo es el gate y el archivo —
+un cambio no está terminado hasta que está en `main`, con `npm run check` en verde y entrada en
+el `CHANGELOG`. Ninguno de los dos manda en abstracto: lo que está en Design y no en el repo no
+tiene respaldo (Design no versiona), lo que está en el repo y no en Design no tiene efecto.
 
 **No es** el design system del producto (app React Native / web checkout). Eso vive en Figma
 y usa Outfit. Si un pedido es sobre la UI del producto, decilo y no toques nada acá.
@@ -13,7 +16,7 @@ y usa Outfit. Si un pedido es sobre la UI del producto, decilo y no toques nada 
 ### 1. La estructura interna de `design-system/` es un contrato
 
 `_ds_manifest.json` referencia rutas absolutas (`tokens/colors.css`, `components/chrome/Avatar.jsx`)
-y las 30 guidelines usan relativas (`../../styles.css`, `../../_ds_bundle.js`).
+y las 47 guidelines usan relativas (`../../styles.css`, `../../_ds_bundle.js`).
 
 **Mover o renombrar un archivo ahí adentro no da error: deja de aplicar estilos en silencio.**
 Agregar archivos nuevos es seguro.
@@ -42,10 +45,11 @@ Sin el tag el archivo existe pero desaparece del índice de Claude Design. Otra 
 `_ds_manifest.json`, `_ds_bundle.js`, `_adherence.oxlintrc.json`. No editarlos a mano: se
 regeneran en cada sync y el cambio se pierde.
 
-### 5. El sistema no se edita en Claude Design
+### 5. Un cambio en Claude Design que no bajó al repo es la única copia que existe
 
-Todo cambio entra por este repo. Lo que se edita directo en Claude Design lo pisa el próximo
-resync. Claude Design es superficie de consumo, no de autoría.
+Claude Design no versiona: no hay historial ni undo, y un resync desde el repo lo pisa sin
+preguntar. Si el ajuste nació en Design, hay que traerlo al repo antes de resincronizar en
+cualquier dirección — nunca al revés primero. Ver "Flujo de un cambio" más abajo.
 
 ---
 
@@ -64,6 +68,8 @@ de desarrollo, guidelines sin `@dsCard`, y cualquier CSS o tipografía externa.
 
 ## Flujo de un cambio
 
+**Si nace en el repo:**
+
 1. Rama desde `main`
 2. Cambio en `design-system/`
 3. `npm run check` → 0 errores
@@ -72,7 +78,16 @@ de desarrollo, guidelines sin `@dsCard`, y cualquier CSS o tipografía externa.
 6. Resync en Claude Design: `+` → Choose a repository → `corporative-presentations-cdp` → instrucción precisa de qué copiar
 7. Verificar visualmente en Claude Design antes de dar por cerrado
 
-Para el detalle del paso 6, ver la skill `actualizando-ds-cdp`.
+**Si nace en Claude Design** (caso más común — ahí se ve el resultado):
+
+1. Antes de tocar nada: listar archivos del proyecto de Design y compararlos contra `design-system/`, archivo por archivo — no un reemplazo masivo
+2. Traer lo que cambió tal cual está, sin redibujar ni regenerar assets
+3. `npm run check` → 0 errores
+4. Entrada en `CHANGELOG.md`
+5. Commit, push, PR
+6. No resincronizar el repo hacia Design hasta que este flujo termine — mientras tanto, el ajuste en Design es la única copia que existe
+
+Para el detalle de ambos, ver la skill `actualizando-ds-cdp`.
 
 ---
 
@@ -110,10 +125,15 @@ Ante conflicto entre un asset y `uploads/cdp-brand-brief-para-claude-design.md`,
 
 ## Deuda conocida
 
-El glifo `Passenger` no existe y cae en `User` vía alias. Los logos son PNG: los "SVG" que
-circulan son un `<rect>` con bitmap embebido, cero paths reales. Y quedan 9 archivos con
-`react.development.js` desde CDN — la misma clase de fragilidad que ya rompió los iconos y las
-tipografías. `npm run check` ahora los reporta como advertencia en `[5]` y `[7]`.
+Los glifos `Passenger`/`Pasajero` no existen y caen en `User` vía alias — son 2 de los 5 alias
+totales de `icons.js` (junto con `Colectivo`, `Empresa`, `Agencia`); por eso `check` reporta más
+nombres válidos (99) que glifos reales (94). Los logos son PNG: los "SVG" que circulan son un
+`<rect>` con bitmap embebido, cero paths reales.
+
+`react.development.js` desde CDN y JSX sin compilar ya no son deuda tolerada: `[5]` y `[7]` de
+`npm run check` fallan si reaparecen. `templates/presentacion-institucional-b2b/support.js` es
+la única excepción — lo genera el dc-runtime de Claude Design ("do not edit"), sus URLs de
+unpkg son un fallback con SRI que en el export la plataforma reemplaza por `window.__resources`.
 
 Lo que esté abierto se trackea en issues del repo, no en un archivo.
 

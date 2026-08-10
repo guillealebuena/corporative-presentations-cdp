@@ -1,48 +1,171 @@
 <!-- @dsCard group="Slides" viewport="1280x720" name="B2B · 06 App móvil" subtitle="Fondo oscuro + DiagonalLines, KpiSparkline con serie anual y 2 MetricCard" -->
 <!doctype html><html><head><meta charset="utf-8">
 <link rel="stylesheet" href="../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../vendor/react.production.min.js"></script>
+<script src="../../vendor/react-dom.production.min.js"></script>
 <script src="../../_ds_bundle.js"></script>
 <style>*{margin:0;box-sizing:border-box}html,body{width:100%;height:100%;overflow:hidden}</style>
 </head><body>
 <div class="slide-viewport" style="width:1280px;height:720px"><div id="root" style="width:100%;height:100%"></div></div>
-<script type="text/babel">
-const { DiagonalLines, PageNumberWatermark, KpiSparkline, Pill, MetricCard } = window.CentralDePasajesDesignSystem_152b2f;
-
-const appSeries = [50000,38000,120000,250000,403000,535000,535000,535000];
-const years = [['50.000','2019'],['38.000*','2020'],['120.000*','2021'],['250.000*','2022'],['403.000*','2023'],['535.000','2024'],['—','2025'],['—','2026']];
-function Slide(){return(
-<div className="slide" style={{background:'var(--surface-dark-alt)'}}>
-<DiagonalLines color="var(--turquoise-500)" opacity={0.06}/>
-<PageNumberWatermark number="06" color="#fff"/>
-<div className="slide-frame">
-<div className="slide-header">
-<div style={{display:'flex',alignItems:'center',gap:12}}><span style={{width:24,height:3,background:'var(--turquoise-500)',flexShrink:0}}></span><span style={{fontFamily:"'Inter',sans-serif",fontWeight:600,fontSize:24,letterSpacing:'1.6px',textTransform:'uppercase',color:'#fff'}}>APP MÓVIL</span></div>
-<div style={{fontFamily:"'Poppins',sans-serif",fontWeight:600,fontSize:72,lineHeight:'84px',color:'#fff'}}>[TÍTULO — CANAL APP]</div>
-</div>
-<div className="slide-body">
-<div className="span-7" style={{display:'flex',flexDirection:'column',gap:16}}>
-<div style={{background:'rgba(255,255,255,.04)',border:'1px solid rgba(255,255,255,.12)',borderRadius:'var(--radius-lg)',padding:40,display:'flex',flexDirection:'column',gap:32}}>
-<KpiSparkline values={appSeries} color="var(--turquoise-500)" width={780} height={160}/>
-<div style={{display:'flex',justifyContent:'space-between'}}>
-{years.map(([v,y],i)=>(<div key={i} style={{display:'flex',flexDirection:'column',alignItems:'center',gap:6}}><span style={{fontFamily:"'Inter',sans-serif",fontWeight:600,fontSize:24,color:v==='—'?'var(--text-on-dark-secondary)':'#fff'}}>{v}</span><span style={{fontFamily:"'Inter',sans-serif",fontSize:24,color:'var(--text-on-dark-secondary)'}}>{y}</span></div>))}
-</div>
-</div>
-<div><Pill tone="dark" style={{width:'fit-content'}}>* ESTIMADO — PENDIENTE DE DATO EXACTO 2020–2023 · 2025–2026 PENDIENTE DE CARGA</Pill></div>
-</div>
-<div className="span-5" style={{display:'flex',flexDirection:'column',gap:24}}>
-<MetricCard icon="Star" value="4,7" label="Calificación en stores" context="Puesto 7 en Viajes" tone="dark" accent="turquoise" width={710} height={300} metricScale="medium"/>
-<MetricCard icon="ChatCircleText" value="31.000" label="Opiniones" tone="dark" accent="violet" width={710} height={300} metricScale="medium"/>
-</div>
-</div>
-</div>
-<div className="slide-footnote" style={{color:'var(--text-on-dark-secondary)'}}>Serie histórica estimada. Datos 2025–2026 pendientes de carga.</div>
-<div className="slide-footer"><img src="../../assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style={{height:22,display:'block'}}/><span className="page-number" style={{color:'#fff'}}>06</span></div>
-</div>
-);}
-ReactDOM.createRoot(document.getElementById('root')).render(<Slide/>);
+<script>
+const {
+  DiagonalLines,
+  PageNumberWatermark,
+  KpiSparkline,
+  Pill,
+  MetricCard
+} = window.CentralDePasajesDesignSystem_152b2f;
+const appSeries = [50000, 38000, 120000, 250000, 403000, 535000, 535000, 535000];
+const years = [['50.000', '2019'], ['38.000*', '2020'], ['120.000*', '2021'], ['250.000*', '2022'], ['403.000*', '2023'], ['535.000', '2024'], ['—', '2025'], ['—', '2026']];
+function Slide() {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "slide",
+    style: {
+      background: 'var(--surface-dark-alt)'
+    }
+  }, /*#__PURE__*/React.createElement(DiagonalLines, {
+    color: "var(--turquoise-500)",
+    opacity: 0.06
+  }), /*#__PURE__*/React.createElement(PageNumberWatermark, {
+    number: "06",
+    color: "#fff"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "slide-frame"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "slide-header"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 24,
+      height: 3,
+      background: 'var(--turquoise-500)',
+      flexShrink: 0
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Inter',sans-serif",
+      fontWeight: 600,
+      fontSize: 24,
+      letterSpacing: '1.6px',
+      textTransform: 'uppercase',
+      color: '#fff'
+    }
+  }, "APP M\xD3VIL")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Poppins',sans-serif",
+      fontWeight: 600,
+      fontSize: 72,
+      lineHeight: '84px',
+      color: '#fff'
+    }
+  }, "[T\xCDTULO \u2014 CANAL APP]")), /*#__PURE__*/React.createElement("div", {
+    className: "slide-body"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "span-7",
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 16
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'rgba(255,255,255,.04)',
+      border: '1px solid rgba(255,255,255,.12)',
+      borderRadius: 'var(--radius-lg)',
+      padding: 40,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 32
+    }
+  }, /*#__PURE__*/React.createElement(KpiSparkline, {
+    values: appSeries,
+    color: "var(--turquoise-500)",
+    width: 780,
+    height: 160
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      justifyContent: 'space-between'
+    }
+  }, years.map(([v, y], i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: 6
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Inter',sans-serif",
+      fontWeight: 600,
+      fontSize: 24,
+      color: v === '—' ? 'var(--text-on-dark-secondary)' : '#fff'
+    }
+  }, v), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Inter',sans-serif",
+      fontSize: 24,
+      color: 'var(--text-on-dark-secondary)'
+    }
+  }, y))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Pill, {
+    tone: "dark",
+    style: {
+      width: 'fit-content'
+    }
+  }, "* ESTIMADO \u2014 PENDIENTE DE DATO EXACTO 2020\u20132023 \xB7 2025\u20132026 PENDIENTE DE CARGA"))), /*#__PURE__*/React.createElement("div", {
+    className: "span-5",
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 24
+    }
+  }, /*#__PURE__*/React.createElement(MetricCard, {
+    icon: "Star",
+    value: "4,7",
+    label: "Calificaci\xF3n en stores",
+    context: "Puesto 7 en Viajes",
+    tone: "dark",
+    accent: "turquoise",
+    width: 710,
+    height: 300,
+    metricScale: "medium"
+  }), /*#__PURE__*/React.createElement(MetricCard, {
+    icon: "ChatCircleText",
+    value: "31.000",
+    label: "Opiniones",
+    tone: "dark",
+    accent: "violet",
+    width: 710,
+    height: 300,
+    metricScale: "medium"
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: "slide-footnote",
+    style: {
+      color: 'var(--text-on-dark-secondary)'
+    }
+  }, "Serie hist\xF3rica estimada. Datos 2025\u20132026 pendientes de carga."), /*#__PURE__*/React.createElement("div", {
+    className: "slide-footer"
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "../../assets/logos/cdp-wordmark-blanco.png",
+    alt: "Central de Pasajes",
+    style: {
+      height: 22,
+      display: 'block'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "page-number",
+    style: {
+      color: '#fff'
+    }
+  }, "06")));
+}
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Slide, null));
 </script>
 <script src="../../slide-fit.js"></script>
 </body></html>

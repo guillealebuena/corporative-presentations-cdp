@@ -8,12 +8,20 @@ description: Metodologia para modificar, actualizar o extender el design system 
 ## El modelo
 
 ```
-  Repo GitHub  ──sync──>  Claude Design  ──>  Decks del equipo
-  fuente de verdad         org default
+  Claude Design  <──sync──>  Repo GitHub  ──>  Decks del equipo
+  se ve el resultado          gate + archivo
 ```
 
-**El repo manda.** Claude Design es superficie de consumo, no de autoría. Todo lo que se edite
-directo en Claude Design lo pisa el próximo sync.
+**Ninguno de los dos manda en abstracto — se completan.** Design es donde se diseña, porque ahí
+se ve el resultado en tiempo real. El repo es el gate: versiona, corre `npm run check`, deja
+historial. Un ajuste que solo está en Design no tiene respaldo (Design no versiona, no hay
+undo). Un cambio que solo está en el repo no tiene efecto (nadie lo ve en un deck). Un cambio no
+está terminado hasta que está en los dos.
+
+En la práctica, la mayoría de los cambios nacen en Design — es donde Guillermina trabaja el
+diseño — y se bajan al repo después. Ver "Sincronizar Design → repo" más abajo para ese caso, que
+es el más común. El caso repo → Design (algo se edita primero en código) es el que ya estaba
+documentado en el resto de esta skill.
 
 - Repo: `guillealebuena/corporative-presentations-cdp`
 - Local: `Desktop/cdp-design-system`
@@ -63,7 +71,30 @@ Detalle completo del comportamiento de la plataforma: leer `reference/claude-des
 
 ---
 
-## Flujo
+## Sincronizar Design → repo (el caso más común)
+
+El ajuste ya existe en Claude Design y todavía no en el repo. Hasta que este flujo termine, es
+la única copia — no hay historial ni undo del lado de Design, y un resync desde el repo la pisa
+sin preguntar. **No resincronizar repo → Design por ningún motivo antes de terminar esto.**
+
+```
+- [ ] 1. Listar archivos del proyecto de Design y compararlos contra design-system/, uno por
+        uno — agregados, modificados, borrados. Mostrar el diff antes de escribir nada.
+- [ ] 2. Traer lo que cambió tal cual está, sin redibujar ni regenerar assets, incremental
+        (nunca un reemplazo masivo del bundle)
+- [ ] 3. Los archivos con prefijo `_` también se traen (los genera la plataforma), pero no se
+        revisan línea por línea
+- [ ] 4. npm run check → 0 errores
+- [ ] 5. Entrada en CHANGELOG.md
+- [ ] 6. Commit, push, PR
+```
+
+Si algo en Design sustituyó un ícono/token/componente por no encontrarlo (ver "trampas
+confirmadas" en `reference/claude-design.md`), ese elemento falta en el sistema — agregarlo, no
+dejarlo sustituido. Si algo no está claro (un archivo que se movió, algo que rompe un contrato),
+parar y preguntar antes de escribir.
+
+## Flujo repo → Design
 
 ```
 - [ ] 1. Rama desde main

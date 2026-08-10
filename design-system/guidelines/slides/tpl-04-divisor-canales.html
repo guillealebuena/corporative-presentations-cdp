@@ -1,29 +1,81 @@
 <!-- @dsCard group="Slides" viewport="1280x720" name="B2B · 04 Divisor" subtitle="Fondo violeta sólido + DiagonalLines, número de sección" -->
 <!doctype html><html><head><meta charset="utf-8">
 <link rel="stylesheet" href="../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../vendor/react.production.min.js"></script>
+<script src="../../vendor/react-dom.production.min.js"></script>
 <script src="../../_ds_bundle.js"></script>
 <style>*{margin:0;box-sizing:border-box}html,body{width:100%;height:100%;overflow:hidden}</style>
 </head><body>
 <div class="slide-viewport" style="width:1280px;height:720px"><div id="root" style="width:100%;height:100%"></div></div>
-<script type="text/babel">
-const { DiagonalLines } = window.CentralDePasajesDesignSystem_152b2f;
-function Slide(){return(
-<div className="slide" style={{background:'var(--brand-primary)',position:'relative'}}>
-<DiagonalLines color="#fff" opacity={0.06}/>
-<div style={{position:'relative',display:'flex',flexDirection:'column',height:'100%',boxSizing:'border-box'}}>
-<div style={{padding:'64px 80px 0'}}><img src="../../assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style={{height:26,width:'auto',display:'block'}}/></div>
-<div style={{flex:1,display:'flex',flexDirection:'column',justifyContent:'center',padding:'0 80px',boxSizing:'border-box',gap:24}}>
-<div style={{fontFamily:"'Poppins',sans-serif",fontWeight:600,fontSize:32,color:'rgba(255,255,255,.55)'}}>01</div>
-<div style={{fontFamily:"'Poppins',sans-serif",fontWeight:600,fontSize:112,lineHeight:'118px',color:'#fff'}}>[TÍTULO DE DIVISOR DE SECCIÓN 1]</div>
-</div>
-<div className="slide-footer"><span></span><span className="page-number" style={{color:'#fff'}}>04</span></div>
-</div>
-</div>
-);}
-ReactDOM.createRoot(document.getElementById('root')).render(<Slide/>);
+<script>
+const {
+  DiagonalLines
+} = window.CentralDePasajesDesignSystem_152b2f;
+function Slide() {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "slide",
+    style: {
+      background: 'var(--brand-primary)',
+      position: 'relative'
+    }
+  }, /*#__PURE__*/React.createElement(DiagonalLines, {
+    color: "#fff",
+    opacity: 0.06
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100%',
+      boxSizing: 'border-box'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '64px 80px 0'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "../../assets/logos/cdp-wordmark-blanco.png",
+    alt: "Central de Pasajes",
+    style: {
+      height: 26,
+      width: 'auto',
+      display: 'block'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      padding: '0 80px',
+      boxSizing: 'border-box',
+      gap: 24
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Poppins',sans-serif",
+      fontWeight: 600,
+      fontSize: 32,
+      color: 'rgba(255,255,255,.55)'
+    }
+  }, "01"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Poppins',sans-serif",
+      fontWeight: 600,
+      fontSize: 112,
+      lineHeight: '118px',
+      color: '#fff'
+    }
+  }, "[T\xCDTULO DE DIVISOR DE SECCI\xD3N 1]")), /*#__PURE__*/React.createElement("div", {
+    className: "slide-footer"
+  }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", {
+    className: "page-number",
+    style: {
+      color: '#fff'
+    }
+  }, "04"))));
+}
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Slide, null));
 </script>
 <script src="../../slide-fit.js"></script>
 </body></html>

@@ -40,9 +40,9 @@ const SET = {
     'Flag'],
   'Tecnología': ['Globe', 'GlobeHemisphereWest', 'Desktop', 'GearSix', 'PlugsConnected', 'Plugs',
     'Lightning', 'RocketLaunch', 'Sparkle', 'PuzzlePiece', 'Stack', 'WifiHigh', 'Translate'],
-  'Contenido y UI': ['FileText', 'ClipboardText', 'BookBookmark', 'Note', 'ListChecks', 'Rows', 'Lightbulb',
-    'MagnifyingGlass', 'ArrowRight', 'ArrowUpRight', 'ArrowUUpLeft', 'CaretRight', 'CaretDown',
-    'Plus', 'Minus', 'X'],
+  'Contenido y UI': ['FileText', 'ClipboardText', 'BookBookmark', 'Note', 'ListChecks', 'ListBullets',
+    'Rows', 'Lightbulb', 'MagnifyingGlass', 'Eye', 'ArrowRight', 'ArrowUpRight', 'ArrowUUpLeft',
+    'CaretRight', 'CaretDown', 'Plus', 'Minus', 'X'],
 };
 
 /**
