@@ -24,7 +24,7 @@ Uso mínimo:
   <div class="slide" style="background:#fff">…</div>
 </div>
 ```
-Para un contenedor responsivo en vez de pantalla completa (como el template), usá `width:100%;max-width:1920px;aspect-ratio:16/9` en el `.slide-viewport`. Los 12 layouts en `guidelines/slides/` y el template `templates/presentacion-institucional-b2b/` ya siguen esta regla.
+Para un contenedor responsivo en vez de pantalla completa, usá `width:100%;max-width:1920px;aspect-ratio:16/9` en el `.slide-viewport`. Los layouts en `guidelines/slides/` ya siguen esta regla.
 
 ## Índice
 
@@ -35,14 +35,13 @@ Para un contenedor responsivo en vez de pantalla completa (como el template), us
 - `components/forms/` — Button.
 - `components/data-display/` — Card, ProductCard, Tag, KPIStat, ComparisonTable, Timeline, InsightBand, MetricCard, InsightCard, NumberedCard, ChartCard, ListCard, QuoteCard, KpiHero, KpiDelta, KpiRing, KpiBar, KpiSparkline, KpiCompare, FlowRings, FlowTimeline, FlowLayers, FlowBranch.
 - `guidelines/colors/`, `guidelines/type/`, `guidelines/spacing/`, `guidelines/brand/` — specimen cards (Design System tab).
-- `guidelines/slides/` — los 12 layouts de presentación (incluye tema oscuro), como referencia visual.
-- `templates/presentacion-institucional-b2b/` — único template ejecutable del sistema.
+- `guidelines/slides/` — 12 layouts genéricos de presentación (incluye tema oscuro) + 17 slides reales de la presentación institucional B2B (prefijo `tpl-`), todos como referencia visual — no hay template ejecutable por el momento; se vuelve a armar cuando haga falta.
 - `thumbnail.html` — tile del proyecto.
 - `SKILL.md` — versión portable para Claude Code / Agent Skills.
 
 ## Componentes
 
-**Chrome:** `Icon` (Phosphor Regular, fill), `Pill` (chip — variantes soft/brand/turquoise/solid/outline/dark), `Eyebrow` (label con barra de color, no guion), `Divider` (separador gráfico inline u horizontal, reemplaza el punto medio), `LogoMark`, `SlideFooter`, `Avatar`, `BadgeDot`, `ToggleSegment` (control segmentado decorativo), `DotGrid`/`DiagonalLines`/`MeshGradient`/`PageNumberWatermark` (recursos decorativos al 5–10%).
+**Chrome:** `Icon` (Phosphor Regular, fill), `Pill` (chip — variantes soft/brand/turquoise/solid/outline/dark), `Eyebrow` (label con barra de color, no guion), `Divider` (separador gráfico inline u horizontal, reemplaza el punto medio), `LogoMark`, `SlideFooter`, `Avatar`, `BadgeDot`, `ToggleSegment` (control segmentado decorativo), `DotGrid`/`DiagonalLines`/`PageNumberWatermark` (recursos decorativos al 5–10%, patrones — no degradados), `MeshGradient` (luz de guiño chica y acotada, solo para recursos gráficos pequeños como cards/badges, nunca fondo principal).
 
 **Forms:** `Button` (recreación real de la App a escala 2x — ver §Botón).
 
@@ -106,11 +105,11 @@ Variante para slides de datos e impacto: fondo `#19021C` (`--surface-dark`) o `#
 
 **Radios:** 12 (sm) · 16 (md, default de card) · 20 (lg) · 24 (xl) · 999 (pill).
 
-**Cards:** borde `#E5E5E5` de 1.5px, radio 16, padding 30, sombra suave (`y4 blur16 negro 7%`). Sin fondos con gradiente salvo portada y cierre.
+**Cards:** borde `#E5E5E5` de 1.5px, radio 16, padding 30, sombra suave (`y4 blur16 negro 7%`). Sin fondos con degradado — fondo siempre sólido.
 
 **Sombras:** card `0 4px 16px rgba(0,0,0,.07)`; tabla `0 6px 22px rgba(0,0,0,.10)`.
 
-**Fondos e imágenes:** sin fotografía de stock en este sistema todavía — las áreas de visual/producto se dejan como placeholder rotulado ("Visual de producto") hasta contar con capturas reales. Degradado violeta únicamente en portada y cierre.
+**Fondos e imágenes:** sin fotografía de stock en este sistema todavía — las áreas de visual/producto se dejan como placeholder rotulado ("Visual de producto") hasta contar con capturas reales. **Sin degradados como fondo, en ningún slide** — portada, divisores y cierre usan un color sólido (violeta de marca o `--surface-dark-alt`) más un patrón sutil (`DotGrid`/`DiagonalLines` al 5–6%). `MeshGradient` quedó reducido a una luz de guiño chica (glow circular, tamaño acotado, anclada a una esquina) para recursos gráficos pequeños — cards, badges — nunca para el fondo principal de un slide.
 
 **Animación:** no definida en el brief — este sistema es para material estático (slides, PDFs, documentos). No asumir transiciones.
 

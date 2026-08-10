@@ -19,6 +19,7 @@
               "components/chrome/**",
               "components/data-display/**",
               "components/forms/**",
+              "icons/**",
               "slide-fit.js"
             ],
             "message": "Import design-system components from 'index.js', not component internals."
@@ -113,8 +114,8 @@
         "message": "<FlowMilestone> doesn't accept that prop. Declared props: label, description."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|color|style|key|ref|className|style|children)$/]",
-        "message": "<Icon> doesn't accept that prop. Declared props: name, size, color, style."
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|color|title|style|key|ref|className|style|children)$/]",
+        "message": "<Icon> doesn't accept that prop. Declared props: name, size, color, title, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='InsightBand'] > JSXAttribute > JSXIdentifier[name!=/^(?:text|highlight|key|ref|className|style|children)$/]",
@@ -177,8 +178,12 @@
         "message": "<LogoMark> variant must be one of 'wordmark-violeta' | 'wordmark-blanco' | 'isotipo' | 'lockup-violeta' | 'lockup-blanco'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='MeshGradient'] > JSXAttribute > JSXIdentifier[name!=/^(?:opacity|style|key|ref|className|style|children)$/]",
-        "message": "<MeshGradient> doesn't accept that prop. Declared props: opacity, style."
+        "selector": "JSXOpeningElement[name.name='MeshGradient'] > JSXAttribute > JSXIdentifier[name!=/^(?:opacity|size|corner|color|style|key|ref|className|style|children)$/]",
+        "message": "<MeshGradient> doesn't accept that prop. Declared props: opacity, size, corner, color, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='MeshGradient'] > JSXAttribute[name.name='corner'] > Literal[value!=/^(?:top-right|top-left|bottom-right|bottom-left)$/]",
+        "message": "<MeshGradient> corner must be one of 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'."
       },
       {
         "selector": "JSXOpeningElement[name.name='MetricCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:icon|value|label|context|tone|accent|width|height|metricScale|key|ref|className|style|children)$/]",

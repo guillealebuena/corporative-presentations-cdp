@@ -7,7 +7,7 @@ export function InsightCard({ icon, value, trend = 'up', label, context, width =
   return React.createElement('div', {
     style: { width, height, borderRadius: 'var(--radius-md)', background: 'var(--surface-dark)', position: 'relative', overflow: 'hidden', padding: 40, display: 'flex', flexDirection: 'column', gap: 20, boxSizing: 'border-box' }
   },
-    React.createElement(MeshGradient, { opacity: .15 }),
+    React.createElement(MeshGradient, { opacity: .18, size: 260, corner: 'top-right' }),
     icon && React.createElement('div', {
       style: { position: 'relative', width: 56, height: 56, borderRadius: 'var(--radius-sm)', background: 'rgba(255,255,255,.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }
     }, React.createElement(Icon, { name: icon, size: 28, color: '#fff' })),
