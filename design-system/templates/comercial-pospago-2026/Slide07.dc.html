@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="07" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="width:24px;height:3px;background:var(--brand-primary);flex-shrink:0"></span>
+<span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;line-height:30px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand-primary)">GESTIÓN Y ACOMPAÑAMIENTO</span>
+</div>
+<div style="font-family:'Urbanist',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">Vos manejás tu cuenta, nosotros te acompañamos</div>
+</div>
+<div class="slide-body">
+<div class="span-12" style="align-self:start;display:flex;align-items:center;gap:20px;background:var(--surface-soft);border-radius:12px;padding:24px 32px">
+<div style="width:56px;height:56px;border-radius:12px;background:var(--violet-50);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="Headset" size="{{ 28 }}" color="var(--brand-primary)" hint-size="28px,28px"></x-import>
+</div>
+<span style="font-family:'Inter',sans-serif;font-size:30px;line-height:44px;color:var(--text-body)">Ejecutivo de cuentas asignado y Contact Center operativo los 365 días del año.</span>
+</div>
+<div class="span-6" style="display:flex;flex-direction:column;justify-content:center;gap:24px;font-family:'Inter',sans-serif;font-size:30px;line-height:44px;color:var(--text-body);max-width:640px">
+<p style="margin:0">Gestión propia: emitís, devolvés y anulás pasajes vos mismo desde nuestro aplicativo web.</p>
+<p style="margin:0">Tu cuenta corriente se liquida con un pago semanal, por transferencia o depósito bancario.</p>
+</div>
+<div class="span-6" style="align-self:start">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.ListCard" title="Ayuda personalizada" icon="Headset" rows="{{ helpRows }}" width="{{ 860 }}" hint-size="860px,320px"></x-import>
+</div>
+</div>
+</div>
+<div class="slide-footer">
+<img src="../../assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block">
+<span class="page-number">07</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      helpRows: [
+        { icon: 'GearSix', label: 'Ayuda técnica' },
+        { icon: 'CreditCard', label: 'Medios de pago' },
+        { icon: 'Buildings', label: 'Administración' },
+        { icon: 'Handshake', label: 'Comercial' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,18 +1,19 @@
 /* Tipografías vendorizadas en fonts/ — NO volver a un CDN.
    Los recursos externos se bloquean al exportar a HTML standalone y no existen en PPTX/PDF.
    Es la misma falla que borró la iconografía. Ver CLAUDE.md, contrato 2. */
-@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/poppins-600.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/inter-400.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/inter-500.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/inter-600.woff2') format('woff2')}
-@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/outfit-400.woff2') format('woff2')}
-@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/outfit-500.woff2') format('woff2')}
-@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/outfit-600.woff2') format('woff2')}
+@font-face{font-family:'Urbanist';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/urbanist-400.ttf') format('truetype')}
+@font-face{font-family:'Urbanist';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/urbanist-500.ttf') format('truetype')}
+@font-face{font-family:'Urbanist';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/urbanist-600.ttf') format('truetype')}
+@font-face{font-family:'Urbanist';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/urbanist-700.ttf') format('truetype')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/inter-400.ttf') format('truetype')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/inter-500.ttf') format('truetype')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/inter-600.ttf') format('truetype')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/inter-700.ttf') format('truetype')}
 :root{
---font-display:'Poppins',sans-serif;
+--font-display:'Urbanist',sans-serif;
 --font-body:'Inter',sans-serif;
---font-product:'Outfit',sans-serif;
---weight-display:600;--weight-body-regular:400;--weight-body-medium:500;--weight-body-semibold:600;
+--font-product:'Urbanist',sans-serif;
+--weight-display:600;--weight-body-regular:400;--weight-body-medium:500;--weight-body-semibold:600;--weight-bold:700;
 --text-display-size:88px;--text-display-lh:96px;
 --text-slide-title-size:48px;--text-slide-title-lh:58px;
 --text-block-title-size:32px;--text-block-title-lh:40px;
@@ -25,4 +26,5 @@
 --text-hero-number-size:76px;--text-hero-number-lh:80px;
 --text-table-value-size:26px;--text-table-value-lh:32px;
 --text-mega-number-size:144px;--text-mega-number-lh:152px;
+--text-metric-medium-size:56px;--text-metric-medium-lh:64px;
 }

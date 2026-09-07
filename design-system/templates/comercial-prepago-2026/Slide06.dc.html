@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="06" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="width:24px;height:3px;background:var(--brand-primary);flex-shrink:0"></span>
+<span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;line-height:30px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand-primary)">MÁS ALLÁ DEL PASAJE</span>
+</div>
+<div style="font-family:'Urbanist',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">Sumá productos a cada venta</div>
+</div>
+<div class="slide-body" style="display:flex;flex-direction:column;gap:16px;justify-content:center">
+<sc-for list="{{ items }}" as="it" hint-placeholder-count="4">
+<div class="span-12" style="align-self:stretch;display:flex;align-items:center;gap:24px;background:var(--surface-soft);border-radius:12px;padding:24px 32px">
+<div style="width:56px;height:56px;border-radius:12px;background:var(--violet-50);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="{{ it.icon }}" size="{{ 28 }}" color="var(--brand-primary)" hint-size="28px,28px"></x-import>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font-family:'Urbanist',sans-serif;font-weight:600;font-size:30px;color:var(--text-title)">{{ it.title }}</span>
+<span style="font-family:'Inter',sans-serif;font-size:24px;line-height:34px;color:var(--text-secondary)">{{ it.description }}</span>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+<div class="slide-footer">
+<img src="../../assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block">
+<span class="page-number">06</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      items: [
+        { icon: 'Star', title: 'Viajes especiales', description: 'Comercializá viajes especiales y el servicio exclusivo de Buenos Aires Bus.' },
+        { icon: 'Stack', title: 'Sistema dinámico', description: 'Sumá traslados a eventos deportivos, excursiones y seguros de viaje.' },
+        { icon: 'ShoppingCart', title: 'Carrito para tu web', description: 'Integrá un carrito de compras de pasajes en tu propia página.' },
+        { icon: 'Headset', title: 'Ejecutivo dedicado', description: 'Contact Center digital operativo los 365 días del año.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

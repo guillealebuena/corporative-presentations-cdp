@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div class="slide" style="background:var(--surface-dark);position:relative;display:flex">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="08" color="#fff" hint-size="240px,240px"></x-import>
+<div style="flex:0 0 960px;position:relative;box-sizing:border-box;padding:80px;display:flex;flex-direction:column;overflow:hidden">
+<div style="position:absolute;inset:0"><x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.DotGrid" color="var(--violet-200)" opacity="{{ 0.05 }}" hint-size="100%,100%"></x-import></div>
+<div style="position:relative">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="width:24px;height:3px;background:var(--turquoise-500);flex-shrink:0"></span>
+<span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;line-height:30px;letter-spacing:1.6px;text-transform:uppercase;color:#fff">CONFIANZA</span>
+</div>
+<div style="font-family:'Urbanist',sans-serif;font-weight:600;font-size:48px;line-height:58px;color:#fff;margin-top:24px">Confianza y experiencia de compra</div>
+</div>
+<div style="position:relative;display:flex;flex-direction:column;gap:16px;margin-top:48px">
+<div style="background:rgba(255,255,255,.06);border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<div style="width:56px;height:56px;border-radius:12px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="Heart" size="{{ 28 }}" color="#fff" hint-size="28px,28px"></x-import>
+</div>
+<div style="font-family:'Urbanist',sans-serif;font-weight:600;font-size:var(--text-metric-medium-size);line-height:var(--text-metric-medium-lh);color:#fff">65%</div>
+<div style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-on-dark-secondary)">NPS combinado, web y app</div>
+</div>
+<div style="background:rgba(255,255,255,.09);border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:12px">
+<div style="width:56px;height:56px;border-radius:12px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="ShieldCheck" size="{{ 28 }}" color="#fff" hint-size="28px,28px"></x-import>
+</div>
+<div style="font-family:'Urbanist',sans-serif;font-weight:600;font-size:var(--text-metric-medium-size);line-height:var(--text-metric-medium-lh);color:#fff">0,20%</div>
+<div style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-on-dark-secondary)">Tasa de fraude</div>
+</div>
+<div style="background:rgba(255,255,255,.06);border-left:4px solid var(--turquoise-500);border-radius:12px;padding:24px 28px">
+<p style="font-family:'Inter',sans-serif;font-size:24px;line-height:34px;color:rgba(255,255,255,.8);margin:0"><span style="font-weight:600;color:var(--turquoise-500)">El NPS combinado de web y app</span> mide qué tan probable es que un pasajero recomiende comprar en Central de Pasajes.</p>
+</div>
+</div>
+</div>
+<div style="flex:1;border-left:2px dashed var(--border-on-dark);overflow:hidden">
+<img src="../../assets/institucional/confianza-photo.png" alt="Pasajeros en un bus de larga distancia" style="width:100%;height:100%;object-fit:cover;display:block">
+</div>
+<div class="slide-footer">
+<img src="../../assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="height:22px;display:block">
+<span class="page-number" style="color:#fff">08</span>
+</div>
+</div>
+</x-dc>
+</body>
+</html>

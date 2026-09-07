@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"CentralDePasajesDesignSystem_152b2f","components":[{"name":"Avatar","sourcePath":"components/chrome/Avatar.jsx"},{"name":"BadgeDot","sourcePath":"components/chrome/BadgeDot.jsx"},{"name":"DiagonalLines","sourcePath":"components/chrome/DiagonalLines.jsx"},{"name":"Divider","sourcePath":"components/chrome/Divider.jsx"},{"name":"DotGrid","sourcePath":"components/chrome/DotGrid.jsx"},{"name":"Eyebrow","sourcePath":"components/chrome/Eyebrow.jsx"},{"name":"Icon","sourcePath":"components/chrome/Icon.jsx"},{"name":"LogoMark","sourcePath":"components/chrome/LogoMark.jsx"},{"name":"MeshGradient","sourcePath":"components/chrome/MeshGradient.jsx"},{"name":"PageNumberWatermark","sourcePath":"components/chrome/PageNumberWatermark.jsx"},{"name":"Pill","sourcePath":"components/chrome/Pill.jsx"},{"name":"SlideFooter","sourcePath":"components/chrome/SlideFooter.jsx"},{"name":"ToggleSegment","sourcePath":"components/chrome/ToggleSegment.jsx"},{"name":"Card","sourcePath":"components/data-display/Card.jsx"},{"name":"ChartCard","sourcePath":"components/data-display/ChartCard.jsx"},{"name":"ComparisonTable","sourcePath":"components/data-display/ComparisonTable.jsx"},{"name":"FlowBranch","sourcePath":"components/data-display/FlowBranch.jsx"},{"name":"FlowLayers","sourcePath":"components/data-display/FlowLayers.jsx"},{"name":"FlowRings","sourcePath":"components/data-display/FlowRings.jsx"},{"name":"FlowTimeline","sourcePath":"components/data-display/FlowTimeline.jsx"},{"name":"InsightBand","sourcePath":"components/data-display/InsightBand.jsx"},{"name":"InsightCard","sourcePath":"components/data-display/InsightCard.jsx"},{"name":"KPIStat","sourcePath":"components/data-display/KPIStat.jsx"},{"name":"KpiBar","sourcePath":"components/data-display/KpiBar.jsx"},{"name":"KpiCompare","sourcePath":"components/data-display/KpiCompare.jsx"},{"name":"KpiDelta","sourcePath":"components/data-display/KpiDelta.jsx"},{"name":"KpiHero","sourcePath":"components/data-display/KpiHero.jsx"},{"name":"KpiRing","sourcePath":"components/data-display/KpiRing.jsx"},{"name":"KpiSparkline","sourcePath":"components/data-display/KpiSparkline.jsx"},{"name":"ListCard","sourcePath":"components/data-display/ListCard.jsx"},{"name":"MetricCard","sourcePath":"components/data-display/MetricCard.jsx"},{"name":"NumberedCard","sourcePath":"components/data-display/NumberedCard.jsx"},{"name":"ProductCard","sourcePath":"components/data-display/ProductCard.jsx"},{"name":"QuoteCard","sourcePath":"components/data-display/QuoteCard.jsx"},{"name":"Tag","sourcePath":"components/data-display/Tag.jsx"},{"name":"Timeline","sourcePath":"components/data-display/Timeline.jsx"},{"name":"Button","sourcePath":"components/forms/Button.jsx"}],"sourceHashes":{"components/chrome/Avatar.jsx":"82f16f546dd7","components/chrome/BadgeDot.jsx":"a59ca0cbadbe","components/chrome/DiagonalLines.jsx":"da8b7d5e93f2","components/chrome/Divider.jsx":"3a105685fdb5","components/chrome/DotGrid.jsx":"91c0fd73de42","components/chrome/Eyebrow.jsx":"5af8fe3285c8","components/chrome/Icon.jsx":"22d6f5d34bf0","components/chrome/LogoMark.jsx":"d80b0dd7bbee","components/chrome/MeshGradient.jsx":"1bc58e8ae08e","components/chrome/PageNumberWatermark.jsx":"50f853b9901d","components/chrome/Pill.jsx":"8f55d2cda75d","components/chrome/SlideFooter.jsx":"2e342f9b4b5d","components/chrome/ToggleSegment.jsx":"ff4734e641b5","components/data-display/Card.jsx":"21ac22274682","components/data-display/ChartCard.jsx":"f49a33ac3950","components/data-display/ComparisonTable.jsx":"272629d552cc","components/data-display/FlowBranch.jsx":"c7d239c77ad9","components/data-display/FlowLayers.jsx":"ab367926820e","components/data-display/FlowRings.jsx":"db3fee278f89","components/data-display/FlowTimeline.jsx":"5083e11380b9","components/data-display/InsightBand.jsx":"f0a06066bee4","components/data-display/InsightCard.jsx":"b90ef16431f1","components/data-display/KPIStat.jsx":"8f87c599833e","components/data-display/KpiBar.jsx":"a944a7025ba6","components/data-display/KpiCompare.jsx":"211d7de675db","components/data-display/KpiDelta.jsx":"d2dd2c691265","components/data-display/KpiHero.jsx":"93b501dd5cc5","components/data-display/KpiRing.jsx":"613f4eb015fb","components/data-display/KpiSparkline.jsx":"bf6322317236","components/data-display/ListCard.jsx":"de2129cb32c8","components/data-display/MetricCard.jsx":"cf5df8c0577e","components/data-display/NumberedCard.jsx":"4f2926530f45","components/data-display/ProductCard.jsx":"3bcf79c4e4e6","components/data-display/QuoteCard.jsx":"c2184a752e36","components/data-display/Tag.jsx":"0a5b39eef216","components/data-display/Timeline.jsx":"e2e60f017d63","components/forms/Button.jsx":"21e551fb371f","slide-fit.js":"ebd40ed4b4de"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"CentralDePasajesDesignSystem_152b2f","components":[{"name":"Avatar","sourcePath":"components/chrome/Avatar.jsx"},{"name":"BadgeDot","sourcePath":"components/chrome/BadgeDot.jsx"},{"name":"DiagonalLines","sourcePath":"components/chrome/DiagonalLines.jsx"},{"name":"Divider","sourcePath":"components/chrome/Divider.jsx"},{"name":"DotGrid","sourcePath":"components/chrome/DotGrid.jsx"},{"name":"Eyebrow","sourcePath":"components/chrome/Eyebrow.jsx"},{"name":"Icon","sourcePath":"components/chrome/Icon.jsx"},{"name":"LogoMark","sourcePath":"components/chrome/LogoMark.jsx"},{"name":"MeshGradient","sourcePath":"components/chrome/MeshGradient.jsx"},{"name":"PageNumberWatermark","sourcePath":"components/chrome/PageNumberWatermark.jsx"},{"name":"Pill","sourcePath":"components/chrome/Pill.jsx"},{"name":"SlideFooter","sourcePath":"components/chrome/SlideFooter.jsx"},{"name":"ToggleSegment","sourcePath":"components/chrome/ToggleSegment.jsx"},{"name":"Card","sourcePath":"components/data-display/Card.jsx"},{"name":"ChartCard","sourcePath":"components/data-display/ChartCard.jsx"},{"name":"ComparisonTable","sourcePath":"components/data-display/ComparisonTable.jsx"},{"name":"FlowBranch","sourcePath":"components/data-display/FlowBranch.jsx"},{"name":"FlowLayers","sourcePath":"components/data-display/FlowLayers.jsx"},{"name":"FlowRings","sourcePath":"components/data-display/FlowRings.jsx"},{"name":"FlowTimeline","sourcePath":"components/data-display/FlowTimeline.jsx"},{"name":"InsightBand","sourcePath":"components/data-display/InsightBand.jsx"},{"name":"InsightCard","sourcePath":"components/data-display/InsightCard.jsx"},{"name":"KPIStat","sourcePath":"components/data-display/KPIStat.jsx"},{"name":"KpiBar","sourcePath":"components/data-display/KpiBar.jsx"},{"name":"KpiCompare","sourcePath":"components/data-display/KpiCompare.jsx"},{"name":"KpiDelta","sourcePath":"components/data-display/KpiDelta.jsx"},{"name":"KpiHero","sourcePath":"components/data-display/KpiHero.jsx"},{"name":"KpiRing","sourcePath":"components/data-display/KpiRing.jsx"},{"name":"KpiSparkline","sourcePath":"components/data-display/KpiSparkline.jsx"},{"name":"ListCard","sourcePath":"components/data-display/ListCard.jsx"},{"name":"MetricCard","sourcePath":"components/data-display/MetricCard.jsx"},{"name":"NumberedCard","sourcePath":"components/data-display/NumberedCard.jsx"},{"name":"ProductCard","sourcePath":"components/data-display/ProductCard.jsx"},{"name":"QuoteCard","sourcePath":"components/data-display/QuoteCard.jsx"},{"name":"Tag","sourcePath":"components/data-display/Tag.jsx"},{"name":"Timeline","sourcePath":"components/data-display/Timeline.jsx"},{"name":"Button","sourcePath":"components/forms/Button.jsx"},{"name":"ICONS","sourcePath":"icons/icons.js"},{"name":"ALIASES","sourcePath":"icons/icons.js"},{"name":"ICON_NAMES","sourcePath":"icons/icons.js"}],"sourceHashes":{"components/chrome/Avatar.jsx":"8644676f8f0d","components/chrome/BadgeDot.jsx":"a59ca0cbadbe","components/chrome/DiagonalLines.jsx":"da8b7d5e93f2","components/chrome/Divider.jsx":"3a105685fdb5","components/chrome/DotGrid.jsx":"91c0fd73de42","components/chrome/Eyebrow.jsx":"5af8fe3285c8","components/chrome/Icon.jsx":"3b77683211de","components/chrome/LogoMark.jsx":"47307c290207","components/chrome/MeshGradient.jsx":"ee9b29f18d6a","components/chrome/PageNumberWatermark.jsx":"50f853b9901d","components/chrome/Pill.jsx":"8f55d2cda75d","components/chrome/SlideFooter.jsx":"2e342f9b4b5d","components/chrome/ToggleSegment.jsx":"ff4734e641b5","components/data-display/Card.jsx":"21ac22274682","components/data-display/ChartCard.jsx":"f49a33ac3950","components/data-display/ComparisonTable.jsx":"45360079326d","components/data-display/FlowBranch.jsx":"c7d239c77ad9","components/data-display/FlowLayers.jsx":"ab367926820e","components/data-display/FlowRings.jsx":"db3fee278f89","components/data-display/FlowTimeline.jsx":"5083e11380b9","components/data-display/InsightBand.jsx":"f0a06066bee4","components/data-display/InsightCard.jsx":"3bfb8c8750cd","components/data-display/KPIStat.jsx":"8f87c599833e","components/data-display/KpiBar.jsx":"a944a7025ba6","components/data-display/KpiCompare.jsx":"211d7de675db","components/data-display/KpiDelta.jsx":"d2dd2c691265","components/data-display/KpiHero.jsx":"93b501dd5cc5","components/data-display/KpiRing.jsx":"613f4eb015fb","components/data-display/KpiSparkline.jsx":"bf6322317236","components/data-display/ListCard.jsx":"de2129cb32c8","components/data-display/MetricCard.jsx":"cf5df8c0577e","components/data-display/NumberedCard.jsx":"4f2926530f45","components/data-display/ProductCard.jsx":"748c8195e6ab","components/data-display/QuoteCard.jsx":"c2184a752e36","components/data-display/Tag.jsx":"6409e4aa3e03","components/data-display/Timeline.jsx":"e2e60f017d63","components/forms/Button.jsx":"21294b3743ab","icons/icons.js":"7d24f34417b9","slide-fit.js":"ebd40ed4b4de"},"inlinedExternals":[],"unexposedExports":[{"name":"hasIcon","sourcePath":"icons/icons.js"}]} */
 
 (() => {
 
@@ -135,101 +135,16 @@ function Eyebrow({
 Object.assign(__ds_scope, { Eyebrow });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/chrome/Eyebrow.jsx", error: String((e && e.message) || e) }); }
 
-// components/chrome/Icon.jsx
-try { (() => {
-const KNOWN = {
-  ArrowUUpLeft: ['arrow-u-up-left', 'regular'],
-  User: ['user', 'regular'],
-  Question: ['question', 'regular'],
-  Lightbulb: ['lightbulb', 'regular'],
-  Phone: ['phone', 'regular'],
-  FileText: ['file-text', 'regular'],
-  MagnifyingGlass: ['magnifying-glass', 'regular'],
-  Heart: ['heart', 'regular'],
-  HeartFill: ['heart', 'fill'],
-  CalendarDots: ['calendar-dots', 'regular'],
-  BookBookmark: ['book-bookmark', 'regular'],
-  CheckCircle: ['check-circle', 'regular'],
-  Check: ['check', 'regular'],
-  Globe: ['globe', 'regular'],
-  GlobeHemisphereWest: ['globe-hemisphere-west', 'regular'],
-  DotsThreeCircle: ['dots-three-circle', 'regular'],
-  WarningCircle: ['warning-circle', 'regular'],
-  Passenger: ['user', 'regular'] // sin equivalente en Phosphor — sustitución provisoria (ver readme)
-};
-function toSlug(name) {
-  return name.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
-}
-function Icon({
-  name,
-  size = 24,
-  color = 'currentColor',
-  style
-}) {
-  const [slug, weight] = KNOWN[name] || [toSlug(name), 'regular'];
-  const cls = weight === 'fill' ? 'ph-fill' : 'ph';
-  const s = Number(size) || size;
-  return React.createElement('i', {
-    className: cls + ' ph-' + slug,
-    style: {
-      fontSize: s,
-      color,
-      lineHeight: 1,
-      display: 'inline-flex',
-      ...style
-    }
-  });
-}
-Object.assign(__ds_scope, { Icon });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/chrome/Icon.jsx", error: String((e && e.message) || e) }); }
-
-// components/chrome/Avatar.jsx
-try { (() => {
-function Avatar({
-  size = 80,
-  src,
-  initials
-}) {
-  return React.createElement('div', {
-    style: {
-      width: size,
-      height: size,
-      borderRadius: 9999,
-      background: '#F9F4FA',
-      overflow: 'hidden',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: '#872191',
-      fontFamily: 'var(--font-body)',
-      fontWeight: 600,
-      fontSize: size * .35
-    }
-  }, src ? React.createElement('img', {
-    src,
-    alt: '',
-    style: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover'
-    }
-  }) : initials || React.createElement(__ds_scope.Icon, {
-    name: 'User',
-    size: size * .5,
-    color: '#872191'
-  }));
-}
-Object.assign(__ds_scope, { Avatar });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/chrome/Avatar.jsx", error: String((e && e.message) || e) }); }
-
 // components/chrome/LogoMark.jsx
 try { (() => {
 const SRC = {
-  'wordmark-violeta': '../../assets/logos/cdp-wordmark-violeta.png',
-  'wordmark-blanco': '../../assets/logos/cdp-wordmark-blanco.png',
-  'isotipo': '../../assets/logos/cdp-isotipo-violeta.png',
-  'lockup-violeta': '../../assets/logos/cdp-lockup-bajada-violeta.png',
-  'lockup-blanco': '../../assets/logos/cdp-lockup-bajada-blanco.png'
+  'wordmark-violeta': '../../assets/logos/cdp-wordmark-violeta.svg',
+  'wordmark-blanco': '../../assets/logos/cdp-wordmark-blanco.svg',
+  'wordmark-stacked': '../../assets/logos/cdp-wordmark-stacked-violeta.svg',
+  'isotipo': '../../assets/logos/cdp-isotipo-violeta.svg',
+  'lockup-violeta': '../../assets/logos/cdp-lockup-bajada-violeta.svg',
+  'lockup-blanco': '../../assets/logos/cdp-lockup-bajada-blanco.svg',
+  'lockup-badge': '../../assets/logos/cdp-lockup-badge-violeta.svg'
 };
 function LogoMark({
   variant = 'wordmark-violeta',
@@ -254,16 +169,44 @@ Object.assign(__ds_scope, { LogoMark });
 try { (() => {
 function MeshGradient({
   opacity = 1,
+  size = 480,
+  corner = 'top-right',
+  color = 'var(--violet-500)',
   style
 }) {
+  const half = size / 2;
+  const pos = {
+    'top-right': {
+      top: -half,
+      right: -half
+    },
+    'top-left': {
+      top: -half,
+      left: -half
+    },
+    'bottom-right': {
+      bottom: -half,
+      right: -half
+    },
+    'bottom-left': {
+      bottom: -half,
+      left: -half
+    }
+  }[corner] || {
+    top: -half,
+    right: -half
+  };
   return React.createElement('div', {
     style: {
       position: 'absolute',
-      inset: 0,
+      width: size,
+      height: size,
+      borderRadius: '50%',
       opacity,
       pointerEvents: 'none',
-      background: 'radial-gradient(circle at 15% 20%, var(--violet-500) 0%, transparent 45%), radial-gradient(circle at 85% 75%, var(--turquoise-500) 0%, transparent 50%)',
-      filter: 'blur(60px)',
+      background: `radial-gradient(circle, ${color} 0%, transparent 70%)`,
+      filter: 'blur(50px)',
+      ...pos,
       ...style
     }
   });
@@ -408,6 +351,757 @@ function ToggleSegment({
 Object.assign(__ds_scope, { ToggleSegment });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/chrome/ToggleSegment.jsx", error: String((e && e.message) || e) }); }
 
+// components/data-display/FlowBranch.jsx
+try { (() => {
+function FlowBranch({
+  root,
+  branches = []
+}) {
+  return React.createElement('div', {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 40
+    }
+  }, React.createElement('div', {
+    style: {
+      alignSelf: 'flex-start',
+      padding: '20px 32px',
+      background: 'var(--brand-primary)',
+      color: '#fff',
+      borderRadius: 'var(--radius-sm)',
+      fontFamily: 'var(--font-body)',
+      fontWeight: 600,
+      fontSize: 24
+    }
+  }, root), React.createElement('div', {
+    style: {
+      display: 'flex',
+      gap: 40,
+      paddingLeft: 20,
+      position: 'relative'
+    }
+  }, React.createElement('div', {
+    style: {
+      position: 'absolute',
+      left: 20,
+      top: -16,
+      width: 2,
+      height: 16,
+      background: 'var(--violet-100)'
+    }
+  }), branches.map((b, i) => React.createElement('div', {
+    key: i,
+    style: {
+      flex: 1,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 8,
+      borderTop: '2px solid var(--violet-100)',
+      paddingTop: 16
+    }
+  }, React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontWeight: 600,
+      fontSize: 24,
+      color: 'var(--text-title)'
+    }
+  }, b.label), b.description && React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 24,
+      lineHeight: '32px',
+      color: 'var(--text-secondary)'
+    }
+  }, b.description)))));
+}
+Object.assign(__ds_scope, { FlowBranch });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/FlowBranch.jsx", error: String((e && e.message) || e) }); }
+
+// components/data-display/FlowLayers.jsx
+try { (() => {
+function FlowLayers({
+  layers = []
+}) {
+  return React.createElement('div', {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 8,
+      width: '100%'
+    }
+  }, layers.map((l, i) => React.createElement('div', {
+    key: i,
+    style: {
+      padding: '24px 32px',
+      background: i === 0 ? 'var(--brand-primary)' : '#fff',
+      border: i === 0 ? 'none' : 'var(--border-card)',
+      borderRadius: 'var(--radius-sm)',
+      color: i === 0 ? '#fff' : 'var(--text-title)',
+      fontFamily: 'var(--font-body)',
+      fontWeight: 600,
+      fontSize: 24,
+      display: 'flex',
+      justifyContent: 'space-between'
+    }
+  }, React.createElement('span', null, l.label), l.detail && React.createElement('span', {
+    style: {
+      fontWeight: 400,
+      opacity: .8,
+      fontSize: 24
+    }
+  }, l.detail))));
+}
+Object.assign(__ds_scope, { FlowLayers });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/FlowLayers.jsx", error: String((e && e.message) || e) }); }
+
+// components/data-display/FlowTimeline.jsx
+try { (() => {
+function FlowTimeline({
+  milestones = []
+}) {
+  return React.createElement('div', {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      position: 'relative',
+      paddingLeft: 40
+    }
+  }, React.createElement('div', {
+    style: {
+      position: 'absolute',
+      left: 7,
+      top: 8,
+      bottom: 8,
+      width: 2,
+      background: 'var(--violet-100)'
+    }
+  }), milestones.map((m, i) => React.createElement('div', {
+    key: i,
+    style: {
+      position: 'relative',
+      paddingBottom: i < milestones.length - 1 ? 40 : 0
+    }
+  }, React.createElement('div', {
+    style: {
+      position: 'absolute',
+      left: -40,
+      top: 4,
+      width: 16,
+      height: 16,
+      borderRadius: '50%',
+      background: 'var(--brand-primary)',
+      border: '3px solid #fff',
+      boxShadow: '0 0 0 2px var(--violet-100)'
+    }
+  }), React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontWeight: 600,
+      fontSize: 30,
+      color: 'var(--text-title)'
+    }
+  }, m.label), m.description && React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 24,
+      lineHeight: '32px',
+      color: 'var(--text-secondary)',
+      marginTop: 8
+    }
+  }, m.description))));
+}
+Object.assign(__ds_scope, { FlowTimeline });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/FlowTimeline.jsx", error: String((e && e.message) || e) }); }
+
+// components/data-display/InsightBand.jsx
+try { (() => {
+function InsightBand({
+  text,
+  highlight
+}) {
+  const parts = highlight ? text.split(highlight) : [text];
+  return React.createElement('div', {
+    style: {
+      background: 'var(--surface-soft)',
+      borderLeft: '4px solid var(--brand-primary)',
+      borderRadius: 'var(--radius-sm)',
+      padding: '40px 48px',
+      display: 'flex',
+      alignItems: 'center'
+    }
+  }, React.createElement('p', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontWeight: 400,
+      fontSize: 'var(--text-body-size)',
+      lineHeight: 'var(--text-body-lh)',
+      color: 'var(--text-title)',
+      margin: 0
+    }
+  }, highlight ? [parts[0], React.createElement('span', {
+    key: 'h',
+    style: {
+      fontWeight: 600,
+      color: 'var(--brand-primary)'
+    }
+  }, highlight), parts[1]] : text));
+}
+Object.assign(__ds_scope, { InsightBand });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/InsightBand.jsx", error: String((e && e.message) || e) }); }
+
+// components/data-display/KpiCompare.jsx
+try { (() => {
+function KpiCompare({
+  leftValue,
+  leftLabel,
+  rightValue,
+  rightLabel,
+  delta
+}) {
+  return React.createElement('div', {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 40
+    }
+  }, React.createElement('div', {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 8,
+      textAlign: 'right'
+    }
+  }, React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 600,
+      fontSize: 'var(--text-metric-medium-size)',
+      lineHeight: 'var(--text-metric-medium-lh)',
+      color: 'var(--text-secondary)'
+    }
+  }, leftValue), React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 24,
+      color: 'var(--text-secondary)'
+    }
+  }, leftLabel)), React.createElement('div', {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: 8
+    }
+  }, React.createElement('div', {
+    style: {
+      width: 32,
+      height: 1,
+      background: 'var(--divider-line)'
+    }
+  }), delta && React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontWeight: 600,
+      fontSize: 24,
+      color: 'var(--brand-primary)'
+    }
+  }, delta)), React.createElement('div', {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 8
+    }
+  }, React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 600,
+      fontSize: 'var(--text-metric-medium-size)',
+      lineHeight: 'var(--text-metric-medium-lh)',
+      color: 'var(--brand-primary)'
+    }
+  }, rightValue), React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 24,
+      color: 'var(--text-secondary)'
+    }
+  }, rightLabel)));
+}
+Object.assign(__ds_scope, { KpiCompare });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/KpiCompare.jsx", error: String((e && e.message) || e) }); }
+
+// components/data-display/KpiRing.jsx
+try { (() => {
+function KpiRing({
+  percent = 0,
+  size = 160,
+  color = 'var(--brand-primary)'
+}) {
+  const r = (size - 8) / 2,
+    c = 2 * Math.PI * r;
+  return React.createElement('div', {
+    style: {
+      position: 'relative',
+      width: size,
+      height: size
+    }
+  }, React.createElement('svg', {
+    width: size,
+    height: size,
+    style: {
+      transform: 'rotate(-90deg)'
+    }
+  }, React.createElement('circle', {
+    cx: size / 2,
+    cy: size / 2,
+    r,
+    fill: 'none',
+    stroke: 'var(--violet-50)',
+    strokeWidth: 8
+  }), React.createElement('circle', {
+    cx: size / 2,
+    cy: size / 2,
+    r,
+    fill: 'none',
+    stroke: color,
+    strokeWidth: 8,
+    strokeDasharray: c,
+    strokeDashoffset: c * (1 - percent / 100),
+    strokeLinecap: 'round'
+  })), React.createElement('div', {
+    style: {
+      position: 'absolute',
+      inset: 0,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 600,
+      fontSize: 36,
+      color: 'var(--text-title)'
+    }
+  }, percent + '%'));
+}
+Object.assign(__ds_scope, { KpiRing });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/KpiRing.jsx", error: String((e && e.message) || e) }); }
+
+// components/data-display/KpiSparkline.jsx
+try { (() => {
+function KpiSparkline({
+  values = [],
+  color = 'var(--brand-primary)',
+  width = 160,
+  height = 48
+}) {
+  const max = Math.max(...values, 1),
+    min = Math.min(...values, 0);
+  const pts = values.map((v, i) => i / (values.length - 1) * width + ',' + (height - (v - min) / (max - min || 1) * height)).join(' ');
+  return React.createElement('svg', {
+    width,
+    height,
+    viewBox: `0 0 ${width} ${height}`
+  }, React.createElement('polyline', {
+    points: pts,
+    fill: 'none',
+    stroke: color,
+    strokeWidth: 2,
+    strokeLinecap: 'round',
+    strokeLinejoin: 'round'
+  }));
+}
+Object.assign(__ds_scope, { KpiSparkline });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/KpiSparkline.jsx", error: String((e && e.message) || e) }); }
+
+// components/data-display/NumberedCard.jsx
+try { (() => {
+function NumberedCard({
+  order,
+  title,
+  description,
+  tone = 'violet',
+  width = 410,
+  height = 260
+}) {
+  const accent = tone === 'turquoise' ? 'var(--turquoise-500)' : 'var(--brand-primary)';
+  return React.createElement('div', {
+    style: {
+      width,
+      height,
+      borderRadius: 'var(--radius-md)',
+      border: 'var(--border-card)',
+      background: '#fff',
+      position: 'relative',
+      overflow: 'hidden',
+      padding: 40,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-end',
+      gap: 20,
+      boxSizing: 'border-box'
+    }
+  }, React.createElement('div', {
+    style: {
+      position: 'absolute',
+      top: -20,
+      right: 10,
+      fontFamily: 'var(--font-display)',
+      fontWeight: 600,
+      fontSize: 160,
+      lineHeight: 1,
+      color: accent,
+      opacity: .08
+    }
+  }, order), React.createElement('div', {
+    style: {
+      position: 'relative',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 600,
+      fontSize: 24,
+      color: 'var(--text-title)'
+    }
+  }, title), React.createElement('div', {
+    style: {
+      position: 'relative',
+      fontFamily: 'var(--font-body)',
+      fontSize: 24,
+      lineHeight: '32px',
+      color: 'var(--text-secondary)'
+    }
+  }, description));
+}
+Object.assign(__ds_scope, { NumberedCard });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/NumberedCard.jsx", error: String((e && e.message) || e) }); }
+
+// components/data-display/ProductCard.jsx
+try { (() => {
+function ProductCard({
+  badge = 'none',
+  title,
+  children
+}) {
+  return React.createElement('div', {
+    style: {
+      width: 480,
+      borderRadius: 24,
+      border: '1px solid #BABABA',
+      background: '#FFFFFF',
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column'
+    }
+  }, badge === 'destacado' && React.createElement('div', {
+    style: {
+      height: 80,
+      background: 'var(--brand-primary)',
+      color: '#fff',
+      display: 'flex',
+      alignItems: 'center',
+      padding: '0 24px',
+      fontFamily: 'var(--font-body)',
+      fontWeight: 600,
+      fontSize: 14
+    }
+  }, 'Destacado'), React.createElement('div', {
+    style: {
+      padding: 40,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 16
+    }
+  }, badge === 'promo' && React.createElement('span', {
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      alignSelf: 'flex-start',
+      height: 64,
+      padding: '0 32px',
+      background: 'var(--brand-accent)',
+      color: '#fff',
+      fontFamily: 'var(--font-body)',
+      fontSize: 16,
+      borderRadius: 8
+    }
+  }, 'Promo'), title && React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontWeight: 600,
+      fontSize: 16,
+      color: '#1D1E20'
+    }
+  }, title), React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontWeight: 400,
+      fontSize: 16,
+      color: '#1D1E20',
+      lineHeight: '22px'
+    }
+  }, children)));
+}
+Object.assign(__ds_scope, { ProductCard });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/ProductCard.jsx", error: String((e && e.message) || e) }); }
+
+// components/data-display/QuoteCard.jsx
+try { (() => {
+function QuoteCard({
+  quote,
+  author
+}) {
+  return React.createElement('div', {
+    style: {
+      width: 410,
+      height: 260,
+      borderRadius: 'var(--radius-md)',
+      border: 'var(--border-card)',
+      boxShadow: 'var(--shadow-card)',
+      background: '#fff',
+      padding: 30,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 16,
+      boxSizing: 'border-box'
+    }
+  }, React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 600,
+      fontSize: 56,
+      lineHeight: 1,
+      color: 'var(--violet-100)'
+    }
+  }, '\u201C'), React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontWeight: 400,
+      fontSize: 24,
+      lineHeight: '32px',
+      color: 'var(--text-title)',
+      flex: 1
+    }
+  }, quote), author && React.createElement('div', {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontWeight: 600,
+      fontSize: 24,
+      color: 'var(--text-secondary)'
+    }
+  }, author));
+}
+Object.assign(__ds_scope, { QuoteCard });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/QuoteCard.jsx", error: String((e && e.message) || e) }); }
+
+// icons/icons.js
+try { (() => {
+// Central de Pasajes — Design System · Iconografía
+// Glifos Phosphor Regular embebidos como SVG inline. Sin CDN, sin webfont.
+// GENERADO — no editar a mano. Regenerar con: npm run build:icons
+// viewBox 0 0 256 256 · fill currentColor · paths rellenos, sin stroke
+
+const ICONS = {
+  AirplaneTilt: '<path d="M185.33,114.21l29.14-27.42.17-.17a32,32,0,0,0-45.26-45.26c0,.06-.11.11-.17.17L141.79,70.67l-83-30.2a8,8,0,0,0-8.39,1.86l-24,24a8,8,0,0,0,1.22,12.31l63.89,42.59L76.69,136H56a8,8,0,0,0-5.65,2.34l-24,24A8,8,0,0,0,29,175.42l36.82,14.73,14.7,36.75.06.16a8,8,0,0,0,13.18,2.47l23.87-23.88A8,8,0,0,0,120,200V179.31l14.76-14.76,42.59,63.89a8,8,0,0,0,12.31,1.22l24-24a8,8,0,0,0,1.86-8.39Zm-.07,97.23-42.59-63.88A8,8,0,0,0,136.8,144c-.27,0-.53,0-.79,0a8,8,0,0,0-5.66,2.35l-24,24A8,8,0,0,0,104,176v20.69L90.93,209.76,79.43,181A8,8,0,0,0,75,176.57l-28.74-11.5L59.32,152H80a8,8,0,0,0,5.66-2.34l24-24a8,8,0,0,0-1.22-12.32L44.56,70.74l13.5-13.49,83.22,30.26a8,8,0,0,0,8.56-2L180.78,52.6A16,16,0,0,1,203.4,75.23l-32.87,30.93a8,8,0,0,0-2,8.56l30.26,83.22Z"/>',
+  Armchair: '<path d="M216,88.8V72a40,40,0,0,0-40-40H80A40,40,0,0,0,40,72V88.8a40,40,0,0,0,0,78.4V200a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V167.2a40,40,0,0,0,0-78.4ZM80,48h96a24,24,0,0,1,24,24V88.8A40.07,40.07,0,0,0,168,128H88A40.07,40.07,0,0,0,56,88.8V72A24,24,0,0,1,80,48ZM208.39,152H208a8,8,0,0,0-8,8v40H56V160a8,8,0,0,0-8-8h-.39A24,24,0,1,1,72,128v40a8,8,0,0,0,16,0V144h80v24a8,8,0,0,0,16,0V128a24,24,0,1,1,24.39,24Z"/>',
+  ArrowRight: '<path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>',
+  ArrowUUpLeft: '<path d="M232,144a64.07,64.07,0,0,1-64,64H80a8,8,0,0,1,0-16h88a48,48,0,0,0,0-96H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,45.66L51.31,80H168A64.07,64.07,0,0,1,232,144Z"/>',
+  ArrowUpRight: '<path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/>',
+  BookBookmark: '<path d="M208,24H72A32,32,0,0,0,40,56V224a8,8,0,0,0,8,8H192a8,8,0,0,0,0-16H56a16,16,0,0,1,16-16H208a8,8,0,0,0,8-8V32A8,8,0,0,0,208,24ZM120,40h48v72L148.79,97.6a8,8,0,0,0-9.6,0L120,112Zm80,144H72a31.82,31.82,0,0,0-16,4.29V56A16,16,0,0,1,72,40h32v88a8,8,0,0,0,12.8,6.4L144,114l27.21,20.4A8,8,0,0,0,176,136a8,8,0,0,0,8-8V40h16Z"/>',
+  Briefcase: '<path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"/>',
+  Buildings: '<path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"/>',
+  Bus: '<path d="M184,32H72A32,32,0,0,0,40,64V208a16,16,0,0,0,16,16H80a16,16,0,0,0,16-16V192h64v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V64A32,32,0,0,0,184,32ZM56,176V120H200v56Zm0-96H200v24H56ZM72,48H184a16,16,0,0,1,16,16H56A16,16,0,0,1,72,48Zm8,160H56V192H80Zm96,0V192h24v16Zm-72-60a12,12,0,1,1-12-12A12,12,0,0,1,104,148Zm72,0a12,12,0,1,1-12-12A12,12,0,0,1,176,148Zm72-68v24a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0ZM24,80v24a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Z"/>',
+  CalendarCheck: '<path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"/>',
+  CalendarDots: '<path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-68-76a12,12,0,1,1-12-12A12,12,0,0,1,140,132Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,132ZM96,172a12,12,0,1,1-12-12A12,12,0,0,1,96,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,140,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,172Z"/>',
+  CaretDown: '<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>',
+  CaretRight: '<path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/>',
+  Certificate: '<path d="M128,136a8,8,0,0,1-8,8H72a8,8,0,0,1,0-16h48A8,8,0,0,1,128,136Zm-8-40H72a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Zm112,65.47V224A8,8,0,0,1,220,231l-24-13.74L172,231A8,8,0,0,1,160,224V200H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216a16,16,0,0,1,16,16V86.53a51.88,51.88,0,0,1,0,74.94ZM160,184V161.47A52,52,0,0,1,216,76V56H40V184Zm56-12a51.88,51.88,0,0,1-40,0v38.22l16-9.16a8,8,0,0,1,7.94,0l16,9.16Zm16-48a36,36,0,1,0-36,36A36,36,0,0,0,232,124Z"/>',
+  ChartBar: '<path d="M224,200h-8V40a8,8,0,0,0-8-8H152a8,8,0,0,0-8,8V80H96a8,8,0,0,0-8,8v40H48a8,8,0,0,0-8,8v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16ZM160,48h40V200H160ZM104,96h40V200H104ZM56,144H88v56H56Z"/>',
+  ChartLineUp: '<path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0V156.69l50.34-50.35a8,8,0,0,1,11.32,0L128,132.69,180.69,80H160a8,8,0,0,1,0-16h40a8,8,0,0,1,8,8v40a8,8,0,0,1-16,0V91.31l-58.34,58.35a8,8,0,0,1-11.32,0L96,123.31l-56,56V200H224A8,8,0,0,1,232,208Z"/>',
+  ChartPieSlice: '<path d="M100,116.43a8,8,0,0,0,4-6.93v-72A8,8,0,0,0,93.34,30,104.06,104.06,0,0,0,25.73,147a8,8,0,0,0,4.52,5.81,7.86,7.86,0,0,0,3.35.74,8,8,0,0,0,4-1.07ZM88,49.62v55.26L40.12,132.51C40,131,40,129.48,40,128A88.12,88.12,0,0,1,88,49.62ZM128,24a8,8,0,0,0-8,8v91.82L41.19,169.73a8,8,0,0,0-2.87,11A104,104,0,1,0,128,24Zm0,192a88.47,88.47,0,0,1-71.49-36.68l75.52-44a8,8,0,0,0,4-6.92V40.36A88,88,0,0,1,128,216Z"/>',
+  ChatCircleText: '<path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/>',
+  Check: '<path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/>',
+  CheckCircle: '<path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/>',
+  ClipboardText: '<path d="M168,152a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,152Zm-8-40H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm56-64V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V48A16,16,0,0,1,56,32H92.26a47.92,47.92,0,0,1,71.48,0H200A16,16,0,0,1,216,48ZM96,64h64a32,32,0,0,0-64,0ZM200,48H173.25A47.93,47.93,0,0,1,176,64v8a8,8,0,0,1-8,8H88a8,8,0,0,1-8-8V64a47.93,47.93,0,0,1,2.75-16H56V216H200Z"/>',
+  Clock: '<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/>',
+  Coins: '<path d="M184,89.57V84c0-25.08-37.83-44-88-44S8,58.92,8,84v40c0,20.89,26.25,37.49,64,42.46V172c0,25.08,37.83,44,88,44s88-18.92,88-44V132C248,111.3,222.58,94.68,184,89.57ZM232,132c0,13.22-30.79,28-72,28-3.73,0-7.43-.13-11.08-.37C170.49,151.77,184,139,184,124V105.74C213.87,110.19,232,122.27,232,132ZM72,150.25V126.46A183.74,183.74,0,0,0,96,128a183.74,183.74,0,0,0,24-1.54v23.79A163,163,0,0,1,96,152,163,163,0,0,1,72,150.25Zm96-40.32V124c0,8.39-12.41,17.4-32,22.87V123.5C148.91,120.37,159.84,115.71,168,109.93ZM96,56c41.21,0,72,14.78,72,28s-30.79,28-72,28S24,97.22,24,84,54.79,56,96,56ZM24,124V109.93c8.16,5.78,19.09,10.44,32,13.57v23.37C36.41,141.4,24,132.39,24,124Zm64,48v-4.17c2.63.1,5.29.17,8,.17,3.88,0,7.67-.13,11.39-.35A121.92,121.92,0,0,0,120,171.41v23.46C100.41,189.4,88,180.39,88,172Zm48,26.25V174.4a179.48,179.48,0,0,0,24,1.6,183.74,183.74,0,0,0,24-1.54v23.79a165.45,165.45,0,0,1-48,0Zm64-3.38V171.5c12.91-3.13,23.84-7.79,32-13.57V172C232,180.39,219.59,189.4,200,194.87Z"/>',
+  CreditCard: '<path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z"/>',
+  CurrencyCircleDollar: '<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm40-68a28,28,0,0,1-28,28h-4v8a8,8,0,0,1-16,0v-8H104a8,8,0,0,1,0-16h36a12,12,0,0,0,0-24H116a28,28,0,0,1,0-56h4V72a8,8,0,0,1,16,0v8h16a8,8,0,0,1,0,16H116a12,12,0,0,0,0,24h24A28,28,0,0,1,168,148Z"/>',
+  Desktop: '<path d="M208,40H48A24,24,0,0,0,24,64V176a24,24,0,0,0,24,24h72v16H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V200h72a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40ZM48,56H208a8,8,0,0,1,8,8v80H40V64A8,8,0,0,1,48,56ZM208,184H48a8,8,0,0,1-8-8V160H216v16A8,8,0,0,1,208,184Z"/>',
+  DeviceMobile: '<path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/>',
+  DotsThreeCircle: '<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm12-88a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,128Zm-88,0a12,12,0,1,1-12-12A12,12,0,0,1,96,128Z"/>',
+  Envelope: '<path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/>',
+  EnvelopeSimple: '<path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/>',
+  Eye: '<path d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.34c18.83-18.83,27.3-37.61,27.65-38.4A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.47,133.47,0,0,1,25,128,133.33,133.33,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A133.46,133.46,0,0,1,231.05,128C223.84,141.46,192.43,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z"/>',
+  FileText: '<path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/>',
+  Flag: '<path d="M42.76,50A8,8,0,0,0,40,56V224a8,8,0,0,0,16,0V179.77c26.79-21.16,49.87-9.75,76.45,3.41,16.4,8.11,34.06,16.85,53,16.85,13.93,0,28.54-4.75,43.82-18a8,8,0,0,0,2.76-6V56A8,8,0,0,0,218.76,50c-28,24.23-51.72,12.49-79.21-1.12C111.07,34.76,78.78,18.79,42.76,50ZM216,172.25c-26.79,21.16-49.87,9.74-76.45-3.41-25-12.35-52.81-26.13-83.55-8.4V59.79c26.79-21.16,49.87-9.75,76.45,3.4,25,12.35,52.82,26.13,83.55,8.4Z"/>',
+  Gauge: '<path d="M207.06,72.67A111.24,111.24,0,0,0,128,40h-.4C66.07,40.21,16,91,16,153.13V176a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V152A111.25,111.25,0,0,0,207.06,72.67ZM224,176H119.71l54.76-75.3a8,8,0,0,0-12.94-9.42L99.92,176H32V153.13c0-3.08.15-6.12.43-9.13H56a8,8,0,0,0,0-16H35.27c10.32-38.86,44-68.24,84.73-71.66V80a8,8,0,0,0,16,0V56.33A96.14,96.14,0,0,1,221,128H200a8,8,0,0,0,0,16h23.67c.21,2.65.33,5.31.33,8Z"/>',
+  GearSix: '<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm109.94-52.79a8,8,0,0,0-3.89-5.4l-29.83-17-.12-33.62a8,8,0,0,0-2.83-6.08,111.91,111.91,0,0,0-36.72-20.67,8,8,0,0,0-6.46.59L128,41.85,97.88,25a8,8,0,0,0-6.47-.6A112.1,112.1,0,0,0,54.73,45.15a8,8,0,0,0-2.83,6.07l-.15,33.65-29.83,17a8,8,0,0,0-3.89,5.4,106.47,106.47,0,0,0,0,41.56,8,8,0,0,0,3.89,5.4l29.83,17,.12,33.62a8,8,0,0,0,2.83,6.08,111.91,111.91,0,0,0,36.72,20.67,8,8,0,0,0,6.46-.59L128,214.15,158.12,231a7.91,7.91,0,0,0,3.9,1,8.09,8.09,0,0,0,2.57-.42,112.1,112.1,0,0,0,36.68-20.73,8,8,0,0,0,2.83-6.07l.15-33.65,29.83-17a8,8,0,0,0,3.89-5.4A106.47,106.47,0,0,0,237.94,107.21Zm-15,34.91-28.57,16.25a8,8,0,0,0-3,3c-.58,1-1.19,2.06-1.81,3.06a7.94,7.94,0,0,0-1.22,4.21l-.15,32.25a95.89,95.89,0,0,1-25.37,14.3L134,199.13a8,8,0,0,0-3.91-1h-.19c-1.21,0-2.43,0-3.64,0a8.08,8.08,0,0,0-4.1,1l-28.84,16.1A96,96,0,0,1,67.88,201l-.11-32.2a8,8,0,0,0-1.22-4.22c-.62-1-1.23-2-1.8-3.06a8.09,8.09,0,0,0-3-3.06l-28.6-16.29a90.49,90.49,0,0,1,0-28.26L61.67,97.63a8,8,0,0,0,3-3c.58-1,1.19-2.06,1.81-3.06a7.94,7.94,0,0,0,1.22-4.21l.15-32.25a95.89,95.89,0,0,1,25.37-14.3L122,56.87a8,8,0,0,0,4.1,1c1.21,0,2.43,0,3.64,0a8.08,8.08,0,0,0,4.1-1l28.84-16.1A96,96,0,0,1,188.12,55l.11,32.2a8,8,0,0,0,1.22,4.22c.62,1,1.23,2,1.8,3.06a8.09,8.09,0,0,0,3,3.06l28.6,16.29A90.49,90.49,0,0,1,222.9,142.12Z"/>',
+  Globe: '<path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm88,104a87.61,87.61,0,0,1-3.33,24H174.16a157.44,157.44,0,0,0,0-48h38.51A87.61,87.61,0,0,1,216,128ZM102,168H154a115.11,115.11,0,0,1-26,45A115.27,115.27,0,0,1,102,168Zm-3.9-16a140.84,140.84,0,0,1,0-48h59.88a140.84,140.84,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.84a157.44,157.44,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154,88H102a115.11,115.11,0,0,1,26-45A115.27,115.27,0,0,1,154,88Zm52.33,0H170.71a135.28,135.28,0,0,0-22.3-45.6A88.29,88.29,0,0,1,206.37,88ZM107.59,42.4A135.28,135.28,0,0,0,85.29,88H49.63A88.29,88.29,0,0,1,107.59,42.4ZM49.63,168H85.29a135.28,135.28,0,0,0,22.3,45.6A88.29,88.29,0,0,1,49.63,168Zm98.78,45.6a135.28,135.28,0,0,0,22.3-45.6h35.66A88.29,88.29,0,0,1,148.41,213.6Z"/>',
+  GlobeHemisphereWest: '<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm88,104a87.62,87.62,0,0,1-6.4,32.94l-44.7-27.49a15.92,15.92,0,0,0-6.24-2.23l-22.82-3.08a16.11,16.11,0,0,0-16,7.86h-8.72l-3.8-7.86a15.91,15.91,0,0,0-11-8.67l-8-1.73L96.14,104h16.71a16.06,16.06,0,0,0,7.73-2l12.25-6.76a16.62,16.62,0,0,0,3-2.14l26.91-24.34A15.93,15.93,0,0,0,166,49.1l-.36-.65A88.11,88.11,0,0,1,216,128ZM143.31,41.34,152,56.9,125.09,81.24,112.85,88H96.14a16,16,0,0,0-13.88,8l-8.73,15.23L63.38,84.19,74.32,58.32a87.87,87.87,0,0,1,69-17ZM40,128a87.53,87.53,0,0,1,8.54-37.8l11.34,30.27a16,16,0,0,0,11.62,10l21.43,4.61L96.74,143a16.09,16.09,0,0,0,14.4,9h1.48l-7.23,16.23a16,16,0,0,0,2.86,17.37l.14.14L128,205.94l-1.94,10A88.11,88.11,0,0,1,40,128Zm102.58,86.78,1.13-5.81a16.09,16.09,0,0,0-4-13.9,1.85,1.85,0,0,1-.14-.14L120,174.74,133.7,144l22.82,3.08,45.72,28.12A88.18,88.18,0,0,1,142.58,214.78Z"/>',
+  Handshake: '<path d="M254.3,107.91,228.78,56.85a16,16,0,0,0-21.47-7.15L182.44,62.13,130.05,48.27a8.14,8.14,0,0,0-4.1,0L73.56,62.13,48.69,49.7a16,16,0,0,0-21.47,7.15L1.7,107.9a16,16,0,0,0,7.15,21.47l27,13.51,55.49,39.63a8.06,8.06,0,0,0,2.71,1.25l64,16a8,8,0,0,0,7.6-2.1l55.07-55.08,26.42-13.21a16,16,0,0,0,7.15-21.46Zm-54.89,33.37L165,113.72a8,8,0,0,0-10.68.61C136.51,132.27,116.66,130,104,122L147.24,80h31.81l27.21,54.41ZM41.53,64,62,74.22,36.43,125.27,16,115.06Zm116,119.13L99.42,168.61l-49.2-35.14,28-56L128,64.28l9.8,2.59-45,43.68-.08.09a16,16,0,0,0,2.72,24.81c20.56,13.13,45.37,11,64.91-5L188,152.66Zm62-57.87-25.52-51L214.47,64,240,115.06Zm-87.75,92.67a8,8,0,0,1-7.75,6.06,8.13,8.13,0,0,1-1.95-.24L80.41,213.33a7.89,7.89,0,0,1-2.71-1.25L51.35,193.26a8,8,0,0,1,9.3-13l25.11,17.94L126,208.24A8,8,0,0,1,131.82,217.94Z"/>',
+  Headset: '<path d="M201.89,54.66A103.43,103.43,0,0,0,128.79,24H128A104,104,0,0,0,24,128v56a24,24,0,0,0,24,24H64a24,24,0,0,0,24-24V144a24,24,0,0,0-24-24H40.36A88.12,88.12,0,0,1,190.54,65.93,87.39,87.39,0,0,1,215.65,120H192a24,24,0,0,0-24,24v40a24,24,0,0,0,24,24h24a24,24,0,0,1-24,24H136a8,8,0,0,0,0,16h56a40,40,0,0,0,40-40V128A103.41,103.41,0,0,0,201.89,54.66ZM64,136a8,8,0,0,1,8,8v40a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V136Zm128,56a8,8,0,0,1-8-8V144a8,8,0,0,1,8-8h24v56Z"/>',
+  Heart: '<path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z"/>',
+  HeartFill: '<path d="M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"/>',
+  Hourglass: '<path d="M200,75.64V40a16,16,0,0,0-16-16H72A16,16,0,0,0,56,40V76a16.07,16.07,0,0,0,6.4,12.8L114.67,128,62.4,167.2A16.07,16.07,0,0,0,56,180v36a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V180.36a16.09,16.09,0,0,0-6.35-12.77L141.27,128l52.38-39.6A16.05,16.05,0,0,0,200,75.64ZM184,216H72V180l56-42,56,42.35Zm0-140.36L128,118,72,76V40H184Z"/>',
+  Info: '<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"/>',
+  Lightbulb: '<path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"/>',
+  Lightning: '<path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/>',
+  ListBullets: '<path d="M80,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H88A8,8,0,0,1,80,64Zm136,56H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,64H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM44,52A12,12,0,1,0,56,64,12,12,0,0,0,44,52Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,116Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,180Z"/>',
+  ListChecks: '<path d="M224,128a8,8,0,0,1-8,8H128a8,8,0,0,1,0-16h88A8,8,0,0,1,224,128ZM128,72h88a8,8,0,0,0,0-16H128a8,8,0,0,0,0,16Zm88,112H128a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16ZM82.34,42.34,56,68.69,45.66,58.34A8,8,0,0,0,34.34,69.66l16,16a8,8,0,0,0,11.32,0l32-32A8,8,0,0,0,82.34,42.34Zm0,64L56,132.69,45.66,122.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Zm0,64L56,196.69,45.66,186.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Z"/>',
+  LockKey: '<path d="M128,112a28,28,0,0,0-8,54.83V184a8,8,0,0,0,16,0V166.83A28,28,0,0,0,128,112Zm0,40a12,12,0,1,1,12-12A12,12,0,0,1,128,152Zm80-72H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Z"/>',
+  MagnifyingGlass: '<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/>',
+  MapPin: '<path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/>',
+  MapTrifold: '<path d="M228.92,49.69a8,8,0,0,0-6.86-1.45L160.93,63.52,99.58,32.84a8,8,0,0,0-5.52-.6l-64,16A8,8,0,0,0,24,56V200a8,8,0,0,0,9.94,7.76l61.13-15.28,61.35,30.68A8.15,8.15,0,0,0,160,224a8,8,0,0,0,1.94-.24l64-16A8,8,0,0,0,232,200V56A8,8,0,0,0,228.92,49.69ZM104,52.94l48,24V203.06l-48-24ZM40,62.25l48-12v127.5l-48,12Zm176,131.5-48,12V78.25l48-12Z"/>',
+  Medal: '<path d="M216,96A88,88,0,1,0,72,163.83V240a8,8,0,0,0,11.58,7.16L128,225l44.43,22.21A8.07,8.07,0,0,0,176,248a8,8,0,0,0,8-8V163.83A87.85,87.85,0,0,0,216,96ZM56,96a72,72,0,1,1,72,72A72.08,72.08,0,0,1,56,96ZM168,227.06l-36.43-18.21a8,8,0,0,0-7.16,0L88,227.06V174.37a87.89,87.89,0,0,0,80,0ZM128,152A56,56,0,1,0,72,96,56.06,56.06,0,0,0,128,152Zm0-96A40,40,0,1,1,88,96,40,40,0,0,1,128,56Z"/>',
+  Megaphone: '<path d="M248,120a48.05,48.05,0,0,0-48-48H160.2c-2.91-.17-53.62-3.74-101.91-44.24A16,16,0,0,0,32,40V200a16,16,0,0,0,26.29,12.25c37.77-31.68,77-40.76,93.71-43.3v31.72A16,16,0,0,0,159.12,214l11,7.33A16,16,0,0,0,194.5,212l11.77-44.36A48.07,48.07,0,0,0,248,120ZM48,199.93V40h0c42.81,35.91,86.63,45,104,47.24v65.48C134.65,155,90.84,164.07,48,199.93Zm131,8,0,.11-11-7.33V168h21.6ZM200,152H168V88h32a32,32,0,1,1,0,64Z"/>',
+  Minus: '<path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/>',
+  Note: '<path d="M88,96a8,8,0,0,1,8-8h64a8,8,0,0,1,0,16H96A8,8,0,0,1,88,96Zm8,40h64a8,8,0,0,0,0-16H96a8,8,0,0,0,0,16Zm32,16H96a8,8,0,0,0,0,16h32a8,8,0,0,0,0-16ZM224,48V156.69A15.86,15.86,0,0,1,219.31,168L168,219.31A15.86,15.86,0,0,1,156.69,224H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32H208A16,16,0,0,1,224,48ZM48,208H152V160a8,8,0,0,1,8-8h48V48H48Zm120-40v28.7L196.69,168Z"/>',
+  Path: '<path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/>',
+  Percent: '<path d="M205.66,61.64l-144,144a8,8,0,0,1-11.32-11.32l144-144a8,8,0,0,1,11.32,11.31ZM50.54,101.44a36,36,0,0,1,50.92-50.91h0a36,36,0,0,1-50.92,50.91ZM56,76A20,20,0,1,0,90.14,61.84h0A20,20,0,0,0,56,76ZM216,180a36,36,0,1,1-10.54-25.46h0A35.76,35.76,0,0,1,216,180Zm-16,0a20,20,0,1,0-5.86,14.14A19.87,19.87,0,0,0,200,180Z"/>',
+  Phone: '<path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/>',
+  Plugs: '<path d="M149.66,138.34a8,8,0,0,0-11.32,0L120,156.69,99.31,136l18.35-18.34a8,8,0,0,0-11.32-11.32L88,124.69,69.66,106.34a8,8,0,0,0-11.32,11.32L64.69,124,41.37,147.31a32,32,0,0,0,0,45.26l5.38,5.37-28.41,28.4a8,8,0,0,0,11.32,11.32l28.4-28.41,5.37,5.38a32,32,0,0,0,45.26,0L132,191.31l6.34,6.35a8,8,0,0,0,11.32-11.32L131.31,168l18.35-18.34A8,8,0,0,0,149.66,138.34Zm-52.29,65a16,16,0,0,1-22.62,0L52.69,181.25a16,16,0,0,1,0-22.62L76,135.31,120.69,180Zm140.29-185a8,8,0,0,0-11.32,0l-28.4,28.41-5.37-5.38a32.05,32.05,0,0,0-45.26,0L124,64.69l-6.34-6.35a8,8,0,0,0-11.32,11.32l80,80a8,8,0,0,0,11.32-11.32L191.31,132l23.32-23.31a32,32,0,0,0,0-45.26l-5.38-5.37,28.41-28.4A8,8,0,0,0,237.66,18.34Zm-34.35,79L180,120.69,135.31,76l23.32-23.31a16,16,0,0,1,22.62,0l22.06,22A16,16,0,0,1,203.31,97.37Z"/>',
+  PlugsConnected: '<path d="M237.66,18.34a8,8,0,0,0-11.32,0l-52.4,52.41-5.37-5.38a32.05,32.05,0,0,0-45.26,0L100,88.69l-6.34-6.35A8,8,0,0,0,82.34,93.66L88.69,100,65.37,123.31a32,32,0,0,0,0,45.26l5.38,5.37-52.41,52.4a8,8,0,0,0,11.32,11.32l52.4-52.41,5.37,5.38a32,32,0,0,0,45.26,0L156,167.31l6.34,6.35a8,8,0,0,0,11.32-11.32L167.31,156l23.32-23.31a32,32,0,0,0,0-45.26l-5.38-5.37,52.41-52.4A8,8,0,0,0,237.66,18.34Zm-116.29,161a16,16,0,0,1-22.62,0L76.69,157.25a16,16,0,0,1,0-22.62L100,111.31,144.69,156Zm57.94-57.94L156,144.69,111.31,100l23.32-23.31a16,16,0,0,1,22.62,0l22.06,22A16,16,0,0,1,179.31,121.37ZM88.57,35A8,8,0,0,1,103.43,29l8,20A8,8,0,0,1,96.57,55ZM24.57,93A8,8,0,0,1,35,88.57l20,8A8,8,0,0,1,49,111.43l-20-8A8,8,0,0,1,24.57,93ZM231.43,163a8,8,0,0,1-10.4,4.46l-20-8A8,8,0,1,1,207,144.57l20,8A8,8,0,0,1,231.43,163Zm-64,58.06A8,8,0,0,1,152.57,227l-8-20A8,8,0,0,1,159.43,201Z"/>',
+  Plus: '<path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/>',
+  PresentationChart: '<path d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"/>',
+  PuzzlePiece: '<path d="M220.27,158.54a8,8,0,0,0-7.7-.46,20,20,0,1,1,0-36.16A8,8,0,0,0,224,114.69V72a16,16,0,0,0-16-16H171.78a35.36,35.36,0,0,0,.22-4,36.11,36.11,0,0,0-11.36-26.24,36,36,0,0,0-60.55,23.62,36.56,36.56,0,0,0,.14,6.62H64A16,16,0,0,0,48,72v32.22a35.36,35.36,0,0,0-4-.22,36.12,36.12,0,0,0-26.24,11.36,35.7,35.7,0,0,0-9.69,27,36.08,36.08,0,0,0,33.31,33.6,35.68,35.68,0,0,0,6.62-.14V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V165.31A8,8,0,0,0,220.27,158.54ZM208,208H64V165.31a8,8,0,0,0-11.43-7.23,20,20,0,1,1,0-36.16A8,8,0,0,0,64,114.69V72h46.69a8,8,0,0,0,7.23-11.43,20,20,0,1,1,36.16,0A8,8,0,0,0,161.31,72H208v32.23a35.68,35.68,0,0,0-6.62-.14A36,36,0,0,0,204,176a35.36,35.36,0,0,0,4-.22Z"/>',
+  Question: '<path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/>',
+  Receipt: '<path d="M72,104a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm8,40h96a8,8,0,0,0,0-16H80a8,8,0,0,0,0,16ZM232,56V208a8,8,0,0,1-11.58,7.15L192,200.94l-28.42,14.21a8,8,0,0,1-7.16,0L128,200.94,99.58,215.15a8,8,0,0,1-7.16,0L64,200.94,35.58,215.15A8,8,0,0,1,24,208V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-16,0H40V195.06l20.42-10.22a8,8,0,0,1,7.16,0L96,199.06l28.42-14.22a8,8,0,0,1,7.16,0L160,199.06l28.42-14.22a8,8,0,0,1,7.16,0L216,195.06Z"/>',
+  RocketLaunch: '<path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"/>',
+  Rows: '<path d="M208,136H48a16,16,0,0,0-16,16v40a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V152A16,16,0,0,0,208,136Zm0,56H48V152H208v40Zm0-144H48A16,16,0,0,0,32,64v40a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V64A16,16,0,0,0,208,48Zm0,56H48V64H208v40Z"/>',
+  SealCheck: '<path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-11.55,39.29c-4.79,5-9.75,10.17-12.38,16.52-2.52,6.1-2.63,13.07-2.73,19.82-.1,7-.21,14.33-3.32,17.43s-10.39,3.22-17.43,3.32c-6.75.1-13.72.21-19.82,2.73-6.35,2.63-11.52,7.59-16.52,12.38S132,224,128,224s-9.15-4.92-14.11-9.69-10.17-9.75-16.52-12.38c-6.1-2.52-13.07-2.63-19.82-2.73-7-.1-14.33-.21-17.43-3.32s-3.22-10.39-3.32-17.43c-.1-6.75-.21-13.72-2.73-19.82-2.63-6.35-7.59-11.52-12.38-16.52S32,132,32,128s4.92-9.15,9.69-14.11,9.75-10.17,12.38-16.52c2.52-6.1,2.63-13.07,2.73-19.82.1-7,.21-14.33,3.32-17.43S70.51,56.9,77.55,56.8c6.75-.1,13.72-.21,19.82-2.73,6.35-2.63,11.52-7.59,16.52-12.38S124,32,128,32s9.15,4.92,14.11,9.69,10.17,9.75,16.52,12.38c6.1,2.52,13.07,2.63,19.82,2.73,7,.1,14.33.21,17.43,3.32s3.22,10.39,3.32,17.43c.1,6.75.21,13.72,2.73,19.82,2.63,6.35,7.59,11.52,12.38,16.52S224,124,224,128,219.08,137.15,214.31,142.11ZM173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34Z"/>',
+  ShieldCheck: '<path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/>',
+  ShoppingCart: '<path d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z"/>',
+  Sparkle: '<path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/>',
+  Stack: '<path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/>',
+  Star: '<path d="M239.18,97.26A16.38,16.38,0,0,0,224.92,86l-59-4.76L143.14,26.15a16.36,16.36,0,0,0-30.27,0L90.11,81.23,31.08,86a16.46,16.46,0,0,0-9.37,28.86l45,38.83L53,211.75a16.38,16.38,0,0,0,24.5,17.82L128,198.49l50.53,31.08A16.4,16.4,0,0,0,203,211.75l-13.76-58.07,45-38.83A16.43,16.43,0,0,0,239.18,97.26Zm-15.34,5.47-48.7,42a8,8,0,0,0-2.56,7.91l14.88,62.8a.37.37,0,0,1-.17.48c-.18.14-.23.11-.38,0l-54.72-33.65a8,8,0,0,0-8.38,0L69.09,215.94c-.15.09-.19.12-.38,0a.37.37,0,0,1-.17-.48l14.88-62.8a8,8,0,0,0-2.56-7.91l-48.7-42c-.12-.1-.23-.19-.13-.5s.18-.27.33-.29l63.92-5.16A8,8,0,0,0,103,91.86l24.62-59.61c.08-.17.11-.25.35-.25s.27.08.35.25L153,91.86a8,8,0,0,0,6.75,4.92l63.92,5.16c.15,0,.24,0,.33.29S224,102.63,223.84,102.73Z"/>',
+  Storefront: '<path d="M232,96a7.89,7.89,0,0,0-.3-2.2L217.35,43.6A16.07,16.07,0,0,0,202,32H54A16.07,16.07,0,0,0,38.65,43.6L24.31,93.8A7.89,7.89,0,0,0,24,96h0v16a40,40,0,0,0,16,32v72a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V144a40,40,0,0,0,16-32V96ZM54,48H202l11.42,40H42.61Zm50,56h48v8a24,24,0,0,1-48,0Zm-16,0v8a24,24,0,0,1-35.12,21.26,7.88,7.88,0,0,0-1.82-1.06A24,24,0,0,1,40,112v-8ZM200,208H56V151.2a40.57,40.57,0,0,0,8,.8,40,40,0,0,0,32-16,40,40,0,0,0,64,0,40,40,0,0,0,32,16,40.57,40.57,0,0,0,8-.8Zm4.93-75.8a8.08,8.08,0,0,0-1.8,1.05A24,24,0,0,1,168,112v-8h48v8A24,24,0,0,1,204.93,132.2Z"/>',
+  Suitcase: '<path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm64,24V200H96V72ZM40,72H80V200H40ZM216,200H176V72h40V200Z"/>',
+  SuitcaseRolling: '<path d="M104,88v96a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Zm24-8a8,8,0,0,0-8,8v96a8,8,0,0,0,16,0V88A8,8,0,0,0,128,80Zm32,0a8,8,0,0,0-8,8v96a8,8,0,0,0,16,0V88A8,8,0,0,0,160,80Zm48-16V208a16,16,0,0,1-16,16H176v16a8,8,0,0,1-16,0V224H96v16a8,8,0,0,1-16,0V224H64a16,16,0,0,1-16-16V64A16,16,0,0,1,64,48H88V24A24,24,0,0,1,112,0h32a24,24,0,0,1,24,24V48h24A16,16,0,0,1,208,64ZM104,48h48V24a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8Zm88,160V64H64V208H192Z"/>',
+  Target: '<path d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"/>',
+  ThumbsUp: '<path d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"/>',
+  Ticket: '<path d="M232,104a8,8,0,0,0,8-8V64a16,16,0,0,0-16-16H32A16,16,0,0,0,16,64V96a8,8,0,0,0,8,8,24,24,0,0,1,0,48,8,8,0,0,0-8,8v32a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V160a8,8,0,0,0-8-8,24,24,0,0,1,0-48ZM32,167.2a40,40,0,0,0,0-78.4V64H88V192H32Zm192,0V192H104V64H224V88.8a40,40,0,0,0,0,78.4Z"/>',
+  Timer: '<path d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z"/>',
+  Train: '<path d="M184,24H72A32,32,0,0,0,40,56V184a32,32,0,0,0,32,32h8L65.6,235.2a8,8,0,1,0,12.8,9.6L100,216h56l21.6,28.8a8,8,0,1,0,12.8-9.6L176,216h8a32,32,0,0,0,32-32V56A32,32,0,0,0,184,24ZM56,120V80h64v40Zm80-40h64v40H136ZM72,40H184a16,16,0,0,1,16,16v8H56V56A16,16,0,0,1,72,40ZM184,200H72a16,16,0,0,1-16-16V136H200v48A16,16,0,0,1,184,200ZM96,172a12,12,0,1,1-12-12A12,12,0,0,1,96,172Zm88,0a12,12,0,1,1-12-12A12,12,0,0,1,184,172Z"/>',
+  Translate: '<path d="M247.15,212.42l-56-112a8,8,0,0,0-14.31,0l-21.71,43.43A88,88,0,0,1,108,126.93,103.65,103.65,0,0,0,135.69,64H160a8,8,0,0,0,0-16H104V32a8,8,0,0,0-16,0V48H32a8,8,0,0,0,0,16h87.63A87.76,87.76,0,0,1,96,116.35a87.74,87.74,0,0,1-19-31,8,8,0,1,0-15.08,5.34A103.63,103.63,0,0,0,84,127a87.55,87.55,0,0,1-52,17,8,8,0,0,0,0,16,103.46,103.46,0,0,0,64-22.08,104.18,104.18,0,0,0,51.44,21.31l-26.6,53.19a8,8,0,0,0,14.31,7.16L148.94,192h70.11l13.79,27.58A8,8,0,0,0,240,224a8,8,0,0,0,7.15-11.58ZM156.94,176,184,121.89,211.05,176Z"/>',
+  TrendDown: '<path d="M240,128v64a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h44.69L136,107.31l-34.34,34.35a8,8,0,0,1-11.32,0l-72-72A8,8,0,0,1,29.66,58.34L96,124.69l34.34-34.35a8,8,0,0,1,11.32,0L224,172.69V128a8,8,0,0,1,16,0Z"/>',
+  TrendUp: '<path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/>',
+  Trophy: '<path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/>',
+  User: '<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"/>',
+  UserCircle: '<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM74.08,197.5a64,64,0,0,1,107.84,0,87.83,87.83,0,0,1-107.84,0ZM96,120a32,32,0,1,1,32,32A32,32,0,0,1,96,120Zm97.76,66.41a79.66,79.66,0,0,0-36.06-28.75,48,48,0,1,0-59.4,0,79.66,79.66,0,0,0-36.06,28.75,88,88,0,1,1,131.52,0Z"/>',
+  Users: '<path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/>',
+  UsersThree: '<path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"/>',
+  WarningCircle: '<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/>',
+  WhatsappLogo: '<path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/>',
+  WifiHigh: '<path d="M140,204a12,12,0,1,1-12-12A12,12,0,0,1,140,204ZM237.08,87A172,172,0,0,0,18.92,87,8,8,0,0,0,29.08,99.37a156,156,0,0,1,197.84,0A8,8,0,0,0,237.08,87ZM205,122.77a124,124,0,0,0-153.94,0A8,8,0,0,0,61,135.31a108,108,0,0,1,134.06,0,8,8,0,0,0,11.24-1.3A8,8,0,0,0,205,122.77Zm-32.26,35.76a76.05,76.05,0,0,0-89.42,0,8,8,0,0,0,9.42,12.94,60,60,0,0,1,70.58,0,8,8,0,1,0,9.42-12.94Z"/>',
+  X: '<path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/>',
+  XCircle: '<path d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/>'
+};
+
+// Alias: nombres propios de CDP mapeados a su glifo. Documentar toda sustitución acá.
+const ALIASES = {
+  Passenger: 'User',
+  // SUSTITUCIÓN: sin equivalente Phosphor. Pendiente glifo propio de CDP.
+  Pasajero: 'User',
+  Colectivo: 'Bus',
+  Empresa: 'Buildings',
+  Agencia: 'Storefront'
+};
+const ICON_NAMES = Object.keys(ICONS).sort();
+const hasIcon = n => Boolean(ICONS[n] || ICONS[ALIASES[n]]);
+Object.assign(__ds_scope, { ICONS, ALIASES, ICON_NAMES, hasIcon });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "icons/icons.js", error: String((e && e.message) || e) }); }
+
+// components/chrome/Icon.jsx
+try { (() => {
+/**
+ * Icono del DS de Central de Pasajes.
+ * Reemplazo drop-in del Icon anterior: misma API (name, size, color, style).
+ *
+ * Diferencia clave: renderiza SVG inline en vez de <i class="ph">, así que
+ * NO depende del webfont de Phosphor vía CDN. Funciona en exports standalone,
+ * PPTX, PDF y offline.
+ *
+ * Tamaños del sistema: 22 filas de tabla · 24 texto inline · 28 badges de card · 32 suelto.
+ */
+function Icon({
+  name,
+  size = 24,
+  color = 'currentColor',
+  style,
+  title,
+  ...rest
+}) {
+  const resolved = __ds_scope.ICONS[name] ? name : __ds_scope.ALIASES[name];
+  const body = __ds_scope.ICONS[resolved];
+  if (!body) {
+    if (typeof console !== 'undefined') {
+      console.warn(`[CDP DS] Icono desconocido: "${name}". Ver ICON_NAMES en icons.js.`);
+    }
+    return null;
+  }
+  return React.createElement('svg', {
+    xmlns: 'http://www.w3.org/2000/svg',
+    viewBox: '0 0 256 256',
+    width: size,
+    height: size,
+    fill: color,
+    role: title ? 'img' : 'presentation',
+    'aria-label': title || undefined,
+    'aria-hidden': title ? undefined : 'true',
+    focusable: 'false',
+    style: {
+      display: 'inline-block',
+      flexShrink: 0,
+      verticalAlign: 'middle',
+      ...style
+    },
+    dangerouslySetInnerHTML: {
+      __html: (title ? `<title>${title}</title>` : '') + body
+    },
+    ...rest
+  });
+}
+Object.assign(__ds_scope, { Icon, __ds_default_components_chrome_Icon_9c2pg0: Icon });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/chrome/Icon.jsx", error: String((e && e.message) || e) }); }
+
+// components/chrome/Avatar.jsx
+try { (() => {
+function Avatar({
+  size = 80,
+  src,
+  initials
+}) {
+  return React.createElement('div', {
+    style: {
+      width: size,
+      height: size,
+      borderRadius: 9999,
+      background: '#FCF4FB',
+      overflow: 'hidden',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: '#9E1A96',
+      fontFamily: 'var(--font-body)',
+      fontWeight: 600,
+      fontSize: size * .35
+    }
+  }, src ? React.createElement('img', {
+    src,
+    alt: '',
+    style: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover'
+    }
+  }) : initials || React.createElement(__ds_scope.Icon, {
+    name: 'User',
+    size: size * .5,
+    color: '#9E1A96'
+  }));
+}
+Object.assign(__ds_scope, { Avatar });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/chrome/Avatar.jsx", error: String((e && e.message) || e) }); }
+
 // components/data-display/Card.jsx
 try { (() => {
 function Card({
@@ -543,12 +1237,27 @@ Object.assign(__ds_scope, { ChartCard });
 
 // components/data-display/ComparisonTable.jsx
 try { (() => {
+/**
+ * Tabla comparativa de tres columnas: concepto · situación actual · propuesta CDP.
+ *
+ * variant="semantic" (default) — par ámbar/turquesa. Comunica "malo vs. bueno".
+ *   Para cuando el eje es la mejora en sí: ahorro, reducción de costos, riesgo que baja.
+ *
+ * variant="brand" — violeta de marca, columna de propuesta destacada de punta a punta.
+ *   Para cuando el eje es "ellos vs. nosotros": propuestas comerciales donde la comparación
+ *   es contra la situación del cliente o un competidor, y lo que se refuerza es CDP.
+ */
 function ComparisonTable({
   currentLabel = 'Situación actual',
   proposedLabel = 'Propuesta CDP',
+  currentSubtitle,
+  proposedSubtitle,
   rows,
-  total
+  total,
+  variant = 'semantic'
 }) {
+  const brand = variant === 'brand';
+  const valueAlign = brand ? 'center' : 'right';
   const th = {
     textAlign: 'left',
     padding: '24px 28px',
@@ -564,6 +1273,58 @@ function ComparisonTable({
     fontSize: 'var(--text-footnote-size)',
     lineHeight: 'var(--text-footnote-lh)'
   };
+  const sub = color => ({
+    display: 'block',
+    marginTop: 4,
+    fontSize: 'var(--text-footnote-size)',
+    fontWeight: 400,
+    color
+  });
+
+  // Encabezados: en brand, la columna de propuesta es un bloque violeta sólido.
+  const thCurrent = brand ? {
+    ...th,
+    textAlign: 'center'
+  } : {
+    ...th,
+    background: 'var(--surface-risk-soft)',
+    color: 'var(--text-risk)'
+  };
+  const thProposed = brand ? {
+    ...th,
+    textAlign: 'center',
+    background: 'var(--brand-primary)',
+    color: 'var(--text-on-brand)'
+  } : {
+    ...th,
+    background: 'var(--surface-positive-soft)',
+    color: 'var(--text-positive)'
+  };
+  const header = (label, subtitle, style, subColor) => React.createElement('th', {
+    style
+  }, label, subtitle && React.createElement('span', {
+    style: sub(subColor)
+  }, subtitle));
+
+  // Celdas de valor
+  const cellCurrent = {
+    ...td,
+    textAlign: valueAlign,
+    fontWeight: 600,
+    fontSize: 'var(--text-table-value-size)',
+    color: brand ? 'var(--text-body)' : 'var(--text-risk)'
+  };
+  const cellProposed = {
+    ...td,
+    textAlign: valueAlign,
+    fontWeight: 600,
+    fontSize: 'var(--text-table-value-size)',
+    color: brand ? 'var(--brand-primary)' : 'var(--text-positive)',
+    // En brand la columna ganadora se tiñe entera, no solo el encabezado.
+    ...(brand ? {
+      background: 'var(--violet-50)'
+    } : null)
+  };
   return React.createElement('table', {
     style: {
       width: '100%',
@@ -574,19 +1335,7 @@ function ComparisonTable({
     }
   }, React.createElement('thead', null, React.createElement('tr', null, React.createElement('th', {
     style: th
-  }, 'Concepto'), React.createElement('th', {
-    style: {
-      ...th,
-      background: 'var(--surface-risk-soft)',
-      color: 'var(--text-risk)'
-    }
-  }, currentLabel), React.createElement('th', {
-    style: {
-      ...th,
-      background: 'var(--surface-positive-soft)',
-      color: 'var(--text-positive)'
-    }
-  }, proposedLabel))), React.createElement('tbody', null, (rows || []).map((r, i) => React.createElement('tr', {
+  }, brand ? 'Métrica' : 'Concepto'), header(currentLabel, currentSubtitle, thCurrent, 'var(--text-secondary)'), header(proposedLabel, proposedSubtitle, thProposed, brand ? 'rgba(255,255,255,.75)' : 'var(--text-positive)'))), React.createElement('tbody', null, (rows || []).map((r, i) => React.createElement('tr', {
     key: i,
     style: {
       background: i % 2 ? 'var(--surface-table-alt)' : 'var(--surface-default)'
@@ -604,156 +1353,52 @@ function ComparisonTable({
     size: 22,
     color: 'var(--text-secondary)'
   }), r.label), React.createElement('td', {
-    style: {
-      ...td,
-      color: 'var(--text-risk)',
-      fontWeight: 600,
-      fontSize: 'var(--text-table-value-size)',
-      textAlign: 'right'
-    }
+    style: cellCurrent
   }, r.current), React.createElement('td', {
-    style: {
-      ...td,
-      color: 'var(--text-positive)',
-      fontWeight: 600,
-      fontSize: 'var(--text-table-value-size)',
-      textAlign: 'right'
-    }
+    style: cellProposed
   }, r.proposed))), total && React.createElement('tr', {
-    style: {
+    // En brand el énfasis va solo en la celda ganadora; en semantic, en toda la fila.
+    style: brand ? null : {
       background: 'var(--surface-total)'
     }
   }, React.createElement('td', {
     style: {
       ...td,
-      color: 'var(--text-on-total)',
-      fontWeight: 600
+      fontWeight: 600,
+      color: brand ? 'var(--text-title)' : 'var(--text-on-total)'
     }
-  }, total.label), React.createElement('td', {
+  }, total.label, total.note && React.createElement('span', {
+    style: {
+      marginLeft: 10,
+      fontSize: 'var(--text-footnote-size)',
+      fontWeight: 400,
+      color: brand ? 'var(--text-muted)' : 'rgba(255,255,255,.7)'
+    }
+  }, total.note)), React.createElement('td', {
     style: {
       ...td,
-      color: 'var(--text-on-total)',
+      textAlign: valueAlign,
       fontWeight: 600,
       fontSize: 'var(--text-table-value-size)',
-      textAlign: 'right'
+      color: brand ? 'var(--text-body)' : 'var(--text-on-total)'
     }
   }, total.current), React.createElement('td', {
     style: {
       ...td,
-      color: 'var(--text-on-total)',
+      textAlign: valueAlign,
       fontWeight: 600,
       fontSize: 'var(--text-table-value-size)',
-      textAlign: 'right'
+      ...(brand ? {
+        background: 'var(--violet-600)',
+        color: 'var(--text-on-brand)'
+      } : {
+        color: 'var(--text-on-total)'
+      })
     }
   }, total.proposed))));
 }
 Object.assign(__ds_scope, { ComparisonTable });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/ComparisonTable.jsx", error: String((e && e.message) || e) }); }
-
-// components/data-display/FlowBranch.jsx
-try { (() => {
-function FlowBranch({
-  root,
-  branches = []
-}) {
-  return React.createElement('div', {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 40
-    }
-  }, React.createElement('div', {
-    style: {
-      alignSelf: 'flex-start',
-      padding: '20px 32px',
-      background: 'var(--brand-primary)',
-      color: '#fff',
-      borderRadius: 'var(--radius-sm)',
-      fontFamily: 'var(--font-body)',
-      fontWeight: 600,
-      fontSize: 24
-    }
-  }, root), React.createElement('div', {
-    style: {
-      display: 'flex',
-      gap: 40,
-      paddingLeft: 20,
-      position: 'relative'
-    }
-  }, React.createElement('div', {
-    style: {
-      position: 'absolute',
-      left: 20,
-      top: -16,
-      width: 2,
-      height: 16,
-      background: 'var(--violet-100)'
-    }
-  }), branches.map((b, i) => React.createElement('div', {
-    key: i,
-    style: {
-      flex: 1,
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 8,
-      borderTop: '2px solid var(--violet-100)',
-      paddingTop: 16
-    }
-  }, React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontWeight: 600,
-      fontSize: 24,
-      color: 'var(--text-title)'
-    }
-  }, b.label), b.description && React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontSize: 24,
-      lineHeight: '32px',
-      color: 'var(--text-secondary)'
-    }
-  }, b.description)))));
-}
-Object.assign(__ds_scope, { FlowBranch });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/FlowBranch.jsx", error: String((e && e.message) || e) }); }
-
-// components/data-display/FlowLayers.jsx
-try { (() => {
-function FlowLayers({
-  layers = []
-}) {
-  return React.createElement('div', {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 8,
-      width: '100%'
-    }
-  }, layers.map((l, i) => React.createElement('div', {
-    key: i,
-    style: {
-      padding: '24px 32px',
-      background: i === 0 ? 'var(--brand-primary)' : '#fff',
-      border: i === 0 ? 'none' : 'var(--border-card)',
-      borderRadius: 'var(--radius-sm)',
-      color: i === 0 ? '#fff' : 'var(--text-title)',
-      fontFamily: 'var(--font-body)',
-      fontWeight: 600,
-      fontSize: 24,
-      display: 'flex',
-      justifyContent: 'space-between'
-    }
-  }, React.createElement('span', null, l.label), l.detail && React.createElement('span', {
-    style: {
-      fontWeight: 400,
-      opacity: .8,
-      fontSize: 24
-    }
-  }, l.detail))));
-}
-Object.assign(__ds_scope, { FlowLayers });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/FlowLayers.jsx", error: String((e && e.message) || e) }); }
 
 // components/data-display/FlowRings.jsx
 try { (() => {
@@ -817,101 +1462,6 @@ function FlowRings({
 Object.assign(__ds_scope, { FlowRings });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/FlowRings.jsx", error: String((e && e.message) || e) }); }
 
-// components/data-display/FlowTimeline.jsx
-try { (() => {
-function FlowTimeline({
-  milestones = []
-}) {
-  return React.createElement('div', {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      position: 'relative',
-      paddingLeft: 40
-    }
-  }, React.createElement('div', {
-    style: {
-      position: 'absolute',
-      left: 7,
-      top: 8,
-      bottom: 8,
-      width: 2,
-      background: 'var(--violet-100)'
-    }
-  }), milestones.map((m, i) => React.createElement('div', {
-    key: i,
-    style: {
-      position: 'relative',
-      paddingBottom: i < milestones.length - 1 ? 40 : 0
-    }
-  }, React.createElement('div', {
-    style: {
-      position: 'absolute',
-      left: -40,
-      top: 4,
-      width: 16,
-      height: 16,
-      borderRadius: '50%',
-      background: 'var(--brand-primary)',
-      border: '3px solid #fff',
-      boxShadow: '0 0 0 2px var(--violet-100)'
-    }
-  }), React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontWeight: 600,
-      fontSize: 30,
-      color: 'var(--text-title)'
-    }
-  }, m.label), m.description && React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontSize: 24,
-      lineHeight: '32px',
-      color: 'var(--text-secondary)',
-      marginTop: 8
-    }
-  }, m.description))));
-}
-Object.assign(__ds_scope, { FlowTimeline });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/FlowTimeline.jsx", error: String((e && e.message) || e) }); }
-
-// components/data-display/InsightBand.jsx
-try { (() => {
-function InsightBand({
-  text,
-  highlight
-}) {
-  const parts = highlight ? text.split(highlight) : [text];
-  return React.createElement('div', {
-    style: {
-      background: 'var(--surface-soft)',
-      borderLeft: '4px solid var(--brand-primary)',
-      borderRadius: 'var(--radius-sm)',
-      padding: '40px 48px',
-      display: 'flex',
-      alignItems: 'center'
-    }
-  }, React.createElement('p', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontWeight: 400,
-      fontSize: 'var(--text-body-size)',
-      lineHeight: 'var(--text-body-lh)',
-      color: 'var(--text-title)',
-      margin: 0
-    }
-  }, highlight ? [parts[0], React.createElement('span', {
-    key: 'h',
-    style: {
-      fontWeight: 600,
-      color: 'var(--brand-primary)'
-    }
-  }, highlight), parts[1]] : text));
-}
-Object.assign(__ds_scope, { InsightBand });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/InsightBand.jsx", error: String((e && e.message) || e) }); }
-
 // components/data-display/InsightCard.jsx
 try { (() => {
 function InsightCard({
@@ -940,7 +1490,9 @@ function InsightCard({
       boxSizing: 'border-box'
     }
   }, React.createElement(__ds_scope.MeshGradient, {
-    opacity: .15
+    opacity: .18,
+    size: 260,
+    corner: 'top-right'
   }), icon && React.createElement('div', {
     style: {
       position: 'relative',
@@ -1113,87 +1665,6 @@ function KpiBar({
 Object.assign(__ds_scope, { KpiBar });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/KpiBar.jsx", error: String((e && e.message) || e) }); }
 
-// components/data-display/KpiCompare.jsx
-try { (() => {
-function KpiCompare({
-  leftValue,
-  leftLabel,
-  rightValue,
-  rightLabel,
-  delta
-}) {
-  return React.createElement('div', {
-    style: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 40
-    }
-  }, React.createElement('div', {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 8,
-      textAlign: 'right'
-    }
-  }, React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-display)',
-      fontWeight: 600,
-      fontSize: 'var(--text-metric-medium-size)',
-      lineHeight: 'var(--text-metric-medium-lh)',
-      color: 'var(--text-secondary)'
-    }
-  }, leftValue), React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontSize: 24,
-      color: 'var(--text-secondary)'
-    }
-  }, leftLabel)), React.createElement('div', {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      gap: 8
-    }
-  }, React.createElement('div', {
-    style: {
-      width: 32,
-      height: 1,
-      background: 'var(--divider-line)'
-    }
-  }), delta && React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontWeight: 600,
-      fontSize: 24,
-      color: 'var(--brand-primary)'
-    }
-  }, delta)), React.createElement('div', {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 8
-    }
-  }, React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-display)',
-      fontWeight: 600,
-      fontSize: 'var(--text-metric-medium-size)',
-      lineHeight: 'var(--text-metric-medium-lh)',
-      color: 'var(--brand-primary)'
-    }
-  }, rightValue), React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontSize: 24,
-      color: 'var(--text-secondary)'
-    }
-  }, rightLabel)));
-}
-Object.assign(__ds_scope, { KpiCompare });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/KpiCompare.jsx", error: String((e && e.message) || e) }); }
-
 // components/data-display/KpiDelta.jsx
 try { (() => {
 function KpiDelta({
@@ -1294,88 +1765,6 @@ function KpiHero({
 }
 Object.assign(__ds_scope, { KpiHero });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/KpiHero.jsx", error: String((e && e.message) || e) }); }
-
-// components/data-display/KpiRing.jsx
-try { (() => {
-function KpiRing({
-  percent = 0,
-  size = 160,
-  color = 'var(--brand-primary)'
-}) {
-  const r = (size - 8) / 2,
-    c = 2 * Math.PI * r;
-  return React.createElement('div', {
-    style: {
-      position: 'relative',
-      width: size,
-      height: size
-    }
-  }, React.createElement('svg', {
-    width: size,
-    height: size,
-    style: {
-      transform: 'rotate(-90deg)'
-    }
-  }, React.createElement('circle', {
-    cx: size / 2,
-    cy: size / 2,
-    r,
-    fill: 'none',
-    stroke: 'var(--violet-50)',
-    strokeWidth: 8
-  }), React.createElement('circle', {
-    cx: size / 2,
-    cy: size / 2,
-    r,
-    fill: 'none',
-    stroke: color,
-    strokeWidth: 8,
-    strokeDasharray: c,
-    strokeDashoffset: c * (1 - percent / 100),
-    strokeLinecap: 'round'
-  })), React.createElement('div', {
-    style: {
-      position: 'absolute',
-      inset: 0,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontFamily: 'var(--font-display)',
-      fontWeight: 600,
-      fontSize: 36,
-      color: 'var(--text-title)'
-    }
-  }, percent + '%'));
-}
-Object.assign(__ds_scope, { KpiRing });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/KpiRing.jsx", error: String((e && e.message) || e) }); }
-
-// components/data-display/KpiSparkline.jsx
-try { (() => {
-function KpiSparkline({
-  values = [],
-  color = 'var(--brand-primary)',
-  width = 160,
-  height = 48
-}) {
-  const max = Math.max(...values, 1),
-    min = Math.min(...values, 0);
-  const pts = values.map((v, i) => i / (values.length - 1) * width + ',' + (height - (v - min) / (max - min || 1) * height)).join(' ');
-  return React.createElement('svg', {
-    width,
-    height,
-    viewBox: `0 0 ${width} ${height}`
-  }, React.createElement('polyline', {
-    points: pts,
-    fill: 'none',
-    stroke: color,
-    strokeWidth: 2,
-    strokeLinecap: 'round',
-    strokeLinejoin: 'round'
-  }));
-}
-Object.assign(__ds_scope, { KpiSparkline });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/KpiSparkline.jsx", error: String((e && e.message) || e) }); }
 
 // components/data-display/ListCard.jsx
 try { (() => {
@@ -1538,201 +1927,23 @@ function MetricCard({
 Object.assign(__ds_scope, { MetricCard });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/MetricCard.jsx", error: String((e && e.message) || e) }); }
 
-// components/data-display/NumberedCard.jsx
-try { (() => {
-function NumberedCard({
-  order,
-  title,
-  description,
-  tone = 'violet',
-  width = 410,
-  height = 260
-}) {
-  const accent = tone === 'turquoise' ? 'var(--turquoise-500)' : 'var(--brand-primary)';
-  return React.createElement('div', {
-    style: {
-      width,
-      height,
-      borderRadius: 'var(--radius-md)',
-      border: 'var(--border-card)',
-      background: '#fff',
-      position: 'relative',
-      overflow: 'hidden',
-      padding: 40,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'flex-end',
-      gap: 20,
-      boxSizing: 'border-box'
-    }
-  }, React.createElement('div', {
-    style: {
-      position: 'absolute',
-      top: -20,
-      right: 10,
-      fontFamily: 'var(--font-display)',
-      fontWeight: 600,
-      fontSize: 160,
-      lineHeight: 1,
-      color: accent,
-      opacity: .08
-    }
-  }, order), React.createElement('div', {
-    style: {
-      position: 'relative',
-      fontFamily: 'var(--font-display)',
-      fontWeight: 600,
-      fontSize: 24,
-      color: 'var(--text-title)'
-    }
-  }, title), React.createElement('div', {
-    style: {
-      position: 'relative',
-      fontFamily: 'var(--font-body)',
-      fontSize: 24,
-      lineHeight: '32px',
-      color: 'var(--text-secondary)'
-    }
-  }, description));
-}
-Object.assign(__ds_scope, { NumberedCard });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/NumberedCard.jsx", error: String((e && e.message) || e) }); }
-
-// components/data-display/ProductCard.jsx
-try { (() => {
-function ProductCard({
-  badge = 'none',
-  title,
-  children
-}) {
-  return React.createElement('div', {
-    style: {
-      width: 480,
-      borderRadius: 24,
-      border: '1px solid #BABABA',
-      background: '#FFFFFF',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column'
-    }
-  }, badge === 'destacado' && React.createElement('div', {
-    style: {
-      height: 80,
-      background: 'var(--brand-primary)',
-      color: '#fff',
-      display: 'flex',
-      alignItems: 'center',
-      padding: '0 24px',
-      fontFamily: 'var(--font-body)',
-      fontWeight: 600,
-      fontSize: 14
-    }
-  }, 'Destacado'), React.createElement('div', {
-    style: {
-      padding: 40,
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 16
-    }
-  }, badge === 'promo' && React.createElement('span', {
-    style: {
-      display: 'inline-flex',
-      alignItems: 'center',
-      alignSelf: 'flex-start',
-      height: 64,
-      padding: '0 32px',
-      background: 'var(--brand-accent)',
-      color: '#fff',
-      fontFamily: 'var(--font-body)',
-      fontSize: 16,
-      borderRadius: 8
-    }
-  }, 'Promo'), title && React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontWeight: 600,
-      fontSize: 16,
-      color: '#252525'
-    }
-  }, title), React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontWeight: 400,
-      fontSize: 16,
-      color: '#252525',
-      lineHeight: '22px'
-    }
-  }, children)));
-}
-Object.assign(__ds_scope, { ProductCard });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/ProductCard.jsx", error: String((e && e.message) || e) }); }
-
-// components/data-display/QuoteCard.jsx
-try { (() => {
-function QuoteCard({
-  quote,
-  author
-}) {
-  return React.createElement('div', {
-    style: {
-      width: 410,
-      height: 260,
-      borderRadius: 'var(--radius-md)',
-      border: 'var(--border-card)',
-      boxShadow: 'var(--shadow-card)',
-      background: '#fff',
-      padding: 30,
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 16,
-      boxSizing: 'border-box'
-    }
-  }, React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-display)',
-      fontWeight: 600,
-      fontSize: 56,
-      lineHeight: 1,
-      color: 'var(--violet-100)'
-    }
-  }, '\u201C'), React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontWeight: 400,
-      fontSize: 24,
-      lineHeight: '32px',
-      color: 'var(--text-title)',
-      flex: 1
-    }
-  }, quote), author && React.createElement('div', {
-    style: {
-      fontFamily: 'var(--font-body)',
-      fontWeight: 600,
-      fontSize: 24,
-      color: 'var(--text-secondary)'
-    }
-  }, author));
-}
-Object.assign(__ds_scope, { QuoteCard });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/data-display/QuoteCard.jsx", error: String((e && e.message) || e) }); }
-
 // components/data-display/Tag.jsx
 try { (() => {
 const VARIANTS = {
   default: {
     background: '#FFFFFF',
-    border: '1px solid #E5E5E5',
-    color: '#252525'
+    border: '1px solid #EBEDEF',
+    color: '#1D1E20'
   },
   outline: {
     background: 'transparent',
-    border: '1px solid #252525',
-    color: '#252525'
+    border: '1px solid #1D1E20',
+    color: '#1D1E20'
   },
   secondary: {
     background: '#FFFFFF',
-    border: '1px solid #1BCEC8',
-    color: '#1BCEC8'
+    border: '1px solid #1BCFC9',
+    color: '#1BCFC9'
   },
   expired: {
     background: '#A7A7A7',
@@ -1740,9 +1951,9 @@ const VARIANTS = {
     color: '#FFFFFF'
   },
   'primary-soft': {
-    background: '#F9F4F9',
-    border: '1px solid #F9F4F9',
-    color: '#872191'
+    background: '#FCF4FB',
+    border: '1px solid #FCF4FB',
+    color: '#9E1A96'
   }
 };
 function Tag({
@@ -1760,8 +1971,8 @@ function Tag({
         height: 48,
         padding: '0 20px',
         borderRadius: 9999,
-        border: '1px solid #252525',
-        color: '#252525',
+        border: '1px solid #1D1E20',
+        color: '#1D1E20',
         fontFamily: 'var(--font-body)',
         fontWeight: 400,
         fontSize: 24
@@ -1769,7 +1980,7 @@ function Tag({
     }, icon && React.createElement(__ds_scope.Icon, {
       name: icon,
       size: 24,
-      color: '#252525'
+      color: '#1D1E20'
     }), children);
   }
   const v = VARIANTS[variant] || VARIANTS.default;
@@ -1875,21 +2086,21 @@ Object.assign(__ds_scope, { Timeline });
 try { (() => {
 const VARIANTS = {
   default: {
-    background: '#872191',
-    border: '2px solid #872191',
+    background: '#9E1A96',
+    border: '2px solid #9E1A96',
     color: '#FFFFFF',
     fontWeight: 600
   },
   secondary: {
-    background: '#1BCEC8',
-    border: '2px solid #1BCEC8',
+    background: '#1BCFC9',
+    border: '2px solid #1BCFC9',
     color: '#FFFFFF',
     fontWeight: 400
   },
   outline: {
     background: 'transparent',
-    border: '2px solid #872191',
-    color: '#872191',
+    border: '2px solid #9E1A96',
+    color: '#9E1A96',
     fontWeight: 400
   },
   'white-outline': {
@@ -1900,8 +2111,8 @@ const VARIANTS = {
   },
   'gray-outline': {
     background: 'transparent',
-    border: '2px solid #2E2E2E',
-    color: '#2E2E2E',
+    border: '2px solid #2A2B2D',
+    color: '#2A2B2D',
     fontWeight: 400
   },
   ghost: {
@@ -1930,8 +2141,8 @@ const VARIANTS = {
   },
   filter: {
     background: 'transparent',
-    border: '2px solid #424242',
-    color: '#2E2E2E',
+    border: '2px solid #414344',
+    color: '#2A2B2D',
     fontWeight: 400
   }
 };
@@ -2081,5 +2292,11 @@ __ds_ns.Tag = __ds_scope.Tag;
 __ds_ns.Timeline = __ds_scope.Timeline;
 
 __ds_ns.Button = __ds_scope.Button;
+
+__ds_ns.ICONS = __ds_scope.ICONS;
+
+__ds_ns.ALIASES = __ds_scope.ALIASES;
+
+__ds_ns.ICON_NAMES = __ds_scope.ICON_NAMES;
 
 })();

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><script src="./image-slot.js"></script></helmet>
+<div class="slide" style="background:#fff;position:relative;display:flex">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="09" hint-size="240px,240px"></x-import>
+<div style="flex:0 0 960px;position:relative;box-sizing:border-box;padding:80px;display:flex;flex-direction:column;overflow:hidden">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="width:24px;height:3px;background:var(--brand-primary);flex-shrink:0"></span>
+<span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;line-height:30px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand-primary)">SUMATE A LA RED</span>
+</div>
+<div style="font-family:'Urbanist',sans-serif;font-weight:600;font-size:48px;line-height:58px;color:var(--text-title);margin-top:24px">Acompañamiento y alta en dos pasos</div>
+<div style="display:flex;flex-direction:column;gap:16px;margin-top:40px">
+<div style="display:flex;align-items:center;gap:20px;background:var(--surface-soft);border-radius:12px;padding:24px 32px">
+<div style="width:56px;height:56px;border-radius:12px;background:var(--violet-50);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.Icon" name="Headset" size="{{ 28 }}" color="var(--brand-primary)" hint-size="28px,28px"></x-import>
+</div>
+<span style="font-family:'Inter',sans-serif;font-size:24px;line-height:34px;color:var(--text-body)">Ejecutivo de cuentas asignado y Contact Center digital operativo los 365 días del año.</span>
+</div>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.NumberedCard" order="01" title="Completá el formulario" description="Ingresá a www.aiv.tur.ar/aiv/tusdatos/ y dejá tus datos." tone="violet" width="{{ 800 }}" height="{{ 190 }}" hint-size="800px,190px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.NumberedCard" order="02" title="Firmá y enviá la documentación" description="Te enviamos una Carta Oferta: la firmás y la devolvés por e-mail con la documentación adicional." tone="turquoise" width="{{ 800 }}" height="{{ 190 }}" hint-size="800px,190px"></x-import>
+</div>
+</div>
+<div style="flex:1;border-left:2px dashed var(--border-card,#EBEDEF);overflow:hidden">
+<image-slot id="sumate-red-prepago" shape="rect" placeholder="Imagen del aplicativo o red de agencias" style="width:100%;height:100%"></image-slot>
+</div>
+<div class="slide-footer">
+<img src="../../assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block">
+<span class="page-number">09</span>
+</div>
+</div>
+</x-dc>
+</body>
+</html>

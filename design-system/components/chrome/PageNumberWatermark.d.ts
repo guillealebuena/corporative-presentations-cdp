@@ -1,4 +1,4 @@
-/** Giant faint slide number anchored bottom-right — 240px Poppins SemiBold at 6% opacity. Purely decorative; the real page number still goes in SlideFooter. */
+/** Giant faint slide number anchored bottom-right — 240px Urbanist SemiBold at 6% opacity. Purely decorative; the real page number still goes in SlideFooter. */
 export interface PageNumberWatermarkProps {
   number: string | number;
   color?: string;

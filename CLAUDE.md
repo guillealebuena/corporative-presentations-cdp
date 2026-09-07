@@ -7,7 +7,7 @@ el `CHANGELOG`. Ninguno de los dos manda en abstracto: lo que está en Design y 
 tiene respaldo (Design no versiona), lo que está en el repo y no en Design no tiene efecto.
 
 **No es** el design system del producto (app React Native / web checkout). Eso vive en Figma
-y usa Outfit. Si un pedido es sobre la UI del producto, decilo y no toques nada acá.
+y tiene su propia tipografía. Si un pedido es sobre la UI del producto, decilo y no toques nada acá.
 
 ---
 
@@ -16,7 +16,7 @@ y usa Outfit. Si un pedido es sobre la UI del producto, decilo y no toques nada 
 ### 1. La estructura interna de `design-system/` es un contrato
 
 `_ds_manifest.json` referencia rutas absolutas (`tokens/colors.css`, `components/chrome/Avatar.jsx`)
-y las 47 guidelines usan relativas (`../../styles.css`, `../../_ds_bundle.js`).
+y las 31 guidelines usan relativas (`../../styles.css`, `../../_ds_bundle.js`).
 
 **Mover o renombrar un archivo ahí adentro no da error: deja de aplicar estilos en silencio.**
 Agregar archivos nuevos es seguro.
@@ -131,9 +131,11 @@ nombres válidos (99) que glifos reales (94). Los logos son PNG: los "SVG" que c
 `<rect>` con bitmap embebido, cero paths reales.
 
 `react.development.js` desde CDN y JSX sin compilar ya no son deuda tolerada: `[5]` y `[7]` de
-`npm run check` fallan si reaparecen. `templates/presentacion-institucional-b2b/support.js` es
-la única excepción — lo genera el dc-runtime de Claude Design ("do not edit"), sus URLs de
-unpkg son un fallback con SRI que en el export la plataforma reemplaza por `window.__resources`.
+`npm run check` fallan si reaparecen.
+
+Las tipografías dejaron de ser woff2 subset latin: hoy son los TTF completos de Inter y Urbanist
+que trae Claude Design (1,5 MB contra 128 KB). Es lo que realmente renderiza, así que es lo que
+respalda el repo — pero la optimización a subset quedó pendiente de rehacer.
 
 Lo que esté abierto se trackea en issues del repo, no en un archivo.
 

@@ -1,27 +1,18 @@
-# Tipografías vendorizadas
+# Fuentes vendorizadas
 
-Subconjunto **latin** en woff2, extraído de los paquetes `@fontsource` (los mismos binarios
-que sirve Google Fonts, redistribuidos bajo SIL Open Font License 1.1).
+Archivos `.ttf` provistos por el equipo de marca (Google Fonts, licencia OFL). Copiados desde `uploads/Inter,Urbanist (1)/`.
 
 | Archivo | Familia | Peso | Token |
 |---|---|---|---|
-| `poppins-600.woff2` | Poppins | 600 | `--font-display` |
-| `inter-400.woff2` | Inter | 400 | `--font-body` · `--weight-body-regular` |
-| `inter-500.woff2` | Inter | 500 | `--weight-body-medium` |
-| `inter-600.woff2` | Inter | 600 | `--weight-body-semibold` |
-| `outfit-400/500/600.woff2` | Outfit | 400/500/600 | `--font-product` |
+| `urbanist-400.ttf` | Urbanist | 400 | `--font-display` |
+| `urbanist-500.ttf` | Urbanist | 500 | — |
+| `urbanist-600.ttf` | Urbanist | 600 | `--weight-display` |
+| `urbanist-700.ttf` | Urbanist | 700 | `--weight-bold` |
+| `inter-400.ttf` | Inter | 400 | `--font-body` · `--weight-body-regular` |
+| `inter-500.ttf` | Inter | 500 | `--weight-body-medium` |
+| `inter-600.ttf` | Inter | 600 | `--weight-body-semibold` |
+| `inter-700.ttf` | Inter | 700 | — |
 
-128 KB en total.
+Los `@font-face` viven en `tokens/typography.css`. **No volver a un CDN:** los recursos externos se bloquean al exportar a HTML standalone y no existen en PPTX/PDF.
 
-**Por qué están acá y no en un CDN.** Claude Design bloquea los recursos externos al exportar
-a HTML standalone, y en PPTX y PDF directamente no hay runtime. Un `@import` a
-`fonts.googleapis.com` renderiza perfecto en pantalla y cae a la sans-serif del sistema en
-cada export, sin dar ningún error. Es la misma falla que borró la iconografía completa.
-
-**Solo el subconjunto latin.** Cubre español incluidos acentos y ñ. Si algún día hace falta
-otro alfabeto, se agrega el subset y un `unicode-range`, no se vuelve al CDN.
-
-**Para agregar un peso:** `npm i @fontsource/<familia>` en una carpeta temporal, copiar
-`files/<familia>-latin-<peso>-normal.woff2` acá con el nombre `<familia>-<peso>.woff2`, y
-sumar el `@font-face` en `tokens/typography.css`. No instalar `@fontsource` como dependencia
-del repo: son cientos de archivos para usar siete.
+Los archivos Inter provistos son de la familia óptica `Inter_18pt`.

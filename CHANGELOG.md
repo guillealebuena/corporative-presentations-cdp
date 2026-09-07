@@ -5,6 +5,56 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado 
 Para un design system: **MAJOR** = breaking (token o componente eliminado/renombrado),
 **MINOR** = agregado compatible, **PATCH** = fix visual o de documentación.
 
+## [5.0.0] — 2026-09-07
+
+Sincronización completa **Claude Design → repo**. Desde agosto el diseño avanzó solo en Claude
+Design y el repo quedó con la paleta y las tipografías viejas: servía de poco como respaldo y
+confundía a quien lo leyera. Esta entrada lo vuelve a alinear archivo por archivo. Es MAJOR
+porque se eliminan y renombran componentes, tokens y templates que alguien podía estar usando.
+
+### Cambiado
+
+- **Paleta.** Violeta `#872191` → `#9E1A96`, turquesa `#1BCEC8` → `#1BCFC9`, tinta `#2A052D` →
+  `#30002D`. Los tres ahora vienen con escalas de 11 pasos (50 a 950), más grises, semánticos y
+  orden de series de gráfico. **Breaking:** cualquier hardcodeo de los hex viejos ya no coincide.
+- **Tipografía.** Poppins → **Urbanist** para títulos, display y números héroe. Inter sigue en
+  cuerpo. Outfit sale del sistema.
+- **Formato de las tipografías: woff2 subset latin → TTF completos** (128 KB → 1,5 MB). Es lo que
+  Claude Design tiene y renderiza, así que es lo que respalda el repo. **Deuda:** rehacer el
+  subset woff2 sin volver a desincronizar Design.
+- `guidelines/` pasa de 47 a 31 specimens, todos con la paleta nueva.
+- `readme.md` y `SKILL.md` ahora son los de Claude Design, con la regla de no generar notas del
+  orador que entró en 4.2.0.
+
+### Agregado
+
+- **5 templates comerciales ejecutables** en `templates/`: carrito web, cuenta corriente,
+  institucional, pospago 2026 y prepago 2026.
+- `guidelines/imagery/` — sección de fotografía e ilustración, todavía sin material real.
+- `assets/` — logos nuevos, capturas del carrito web, material institucional y de producto.
+- `screenshots/` — capturas de verificación de los templates.
+
+### Eliminado
+
+- `guidelines/slides/tpl-01..17.html` — los 17 slides sueltos, ya reconstruidos como el template
+  `comercial-institucional`.
+- `templates/presentacion-institucional-b2b/` — superado por los 5 templates comerciales.
+- Los woff2 de Poppins, Outfit e Inter.
+
+### No traído a propósito
+
+`uploads/` en Claude Design junta material crudo que no es el sistema: el zip de Inter+Urbanist
+descomprimido (150 archivos, 38 MB, duplicando `fonts/`), una carpeta de logos sueltos y el PDF de
+Códigos repetido. En el repo `uploads/` queda solo con fuente autoritativa: brand brief, notas de
+uso y el PDF de códigos de color. Un respaldo que arrastra 38 MB duplicados es justo lo que
+estorba.
+
+### Corregido
+
+- `readme.md` se contradecía: decía Urbanist en "Fundamentos visuales" y seguía diciendo Poppins
+  en "Niveles de lectura", resto del cambio de tipografía. Se corrigió primero en Claude Design
+  —que es la fuente— y de ahí bajó al repo, para que las dos copias sigan idénticas.
+
 ## [4.2.0] — 2026-09-07
 
 Alinea el Kit con el tutorial de uso del equipo: durante las pruebas del prompt guiado, Claude Design generaba notas del orador por default en cada slide sin que se hubieran pedido.

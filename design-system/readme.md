@@ -2,7 +2,7 @@
 
 Central de Pasajes opera la infraestructura de e-commerce líder de transporte terrestre en Argentina: vende pasajes de micro de larga distancia y provee la tecnología de carrito web a empresas operadoras.
 
-**Este design system es para material de presentación corporativa** — propuestas comerciales a operadores, reportes de producto/diseño, documentos institucionales y marketing. No es el design system del producto digital (app/web de compra), que vive en Figma por separado y usa tipografía Outfit.
+**Este design system es para material de presentación corporativa** — propuestas comerciales a operadores, reportes de producto/diseño, documentos institucionales y marketing. No es el design system del producto digital (app/web de compra), que vive en Figma por separado y usa tipografía su propia tipografía.
 
 ## Fuentes
 
@@ -10,7 +10,7 @@ Central de Pasajes opera la infraestructura de e-commerce líder de transporte t
 - Los 5 logos originales viven en `assets/logos/` (`cdp-wordmark-violeta.png`, `cdp-wordmark-blanco.png`, `cdp-isotipo-violeta.png`, `cdp-lockup-bajada-violeta.png`, `cdp-lockup-bajada-blanco.png`). `uploads/` ya no guarda una copia duplicada.
 - No se recibió Figma ni codebase del producto digital para este sistema — los componentes de abajo son primitivas de presentación construidas desde cero a partir del brief, no una extracción de un inventario existente (ver "Adiciones intencionales").
 
-**Nota crítica de color:** los archivos de logo contienen `#9B278F`/`#39C0C0` por una deriva histórica de los assets. Los colores de marca reales, usados en todo este sistema, están en `tokens/colors.css` y son los del brief: violeta `#872191`, turquesa `#1BCEC8`, tinta `#2A052D`.
+**Nota crítica de color:** los archivos de logo contienen `#9B278F`/`#39C0C0` por una deriva histórica de los assets. Los colores de marca reales, usados en todo este sistema, están en `tokens/colors.css` y son los del brief: violeta `#9E1A96`, turquesa `#1BCFC9`, tinta `#30002D`.
 
 ## Escalado de presentación (REGLA CRÍTICA)
 
@@ -35,7 +35,9 @@ Para un contenedor responsivo en vez de pantalla completa, usá `width:100%;max-
 - `components/forms/` — Button.
 - `components/data-display/` — Card, ProductCard, Tag, KPIStat, ComparisonTable, Timeline, InsightBand, MetricCard, InsightCard, NumberedCard, ChartCard, ListCard, QuoteCard, KpiHero, KpiDelta, KpiRing, KpiBar, KpiSparkline, KpiCompare, FlowRings, FlowTimeline, FlowLayers, FlowBranch.
 - `guidelines/colors/`, `guidelines/type/`, `guidelines/spacing/`, `guidelines/brand/` — specimen cards (Design System tab).
-- `guidelines/slides/` — 12 layouts genéricos de presentación (incluye tema oscuro) + 17 slides reales de la presentación institucional B2B (prefijo `tpl-`), todos como referencia visual — no hay template ejecutable por el momento; se vuelve a armar cuando haga falta.
+- `guidelines/slides/` — 12 layouts genéricos de presentación (incluye tema oscuro), reutilizables en cualquier deck, no restringidos a un formato o audiencia particular.
+- `guidelines/imagery/` — sección reservada para fotografía e ilustración (ver más abajo).
+- `templates/` — templates ejecutables, sectorizados por área de empresa (ver "Templates" más abajo).
 - `thumbnail.html` — tile del proyecto.
 - `SKILL.md` — versión portable para Claude Code / Agent Skills.
 
@@ -75,13 +77,13 @@ Estas construcciones están prohibidas en toda copy generada porque delatan text
 
 ## Sistema de tema oscuro
 
-Variante para slides de datos e impacto: fondo `#19021C` (`--surface-dark`) o `#2A052D` (`--surface-dark-alt`), texto `#FFFFFF`, texto secundario `#EA98F6` al 70% (`--text-on-dark-secondary`), bordes `#400A45` (`--border-on-dark`). No inventa colores nuevos: son los mismos tokens violeta en sus variantes más oscuras. Ver specimen “12 · Tema oscuro” en Slides.
+Variante para slides de datos e impacto: fondo `#1D001B` (`--surface-dark`) o `#30002D` (`--surface-dark-alt`), texto `#FFFFFF`, texto secundario `#EFC2E8` al 70% (`--text-on-dark-secondary`), bordes `#480044` (`--border-on-dark`). No inventa colores nuevos: son los mismos tokens violeta en sus variantes más oscuras. Ver specimen “12 · Tema oscuro” en Slides.
 
 ## Fundamentos visuales
 
-**Color:** violeta `#872191` es el color principal (fondos de marca, títulos, acentos de tabla). Turquesa `#1BCEC8` es acento puntual — datos destacados, íconos, columna positiva de tabla — **nunca fondo de slide completo**. Fondo por defecto de contenido: blanco. Máximo dos colores de fondo por deck (blanco + violeta de marca).
+**Color:** violeta `#9E1A96` es el color principal (fondos de marca, títulos, acentos de tabla). Turquesa `#1BCFC9` es acento puntual — datos destacados, íconos, columna positiva de tabla — **nunca fondo de slide completo**. Fondo por defecto de contenido: blanco. Máximo dos colores de fondo por deck (blanco + violeta de marca).
 
-**Tipografía:** Poppins SemiBold para títulos/display/números héroe. Inter Regular/Medium/SemiBold para cuerpo, tablas, eyebrows. **No se usa Bold ni Light** — la jerarquía se resuelve con tamaño y color. Outfit queda reservado a mockups de producto insertados tal cual (no se re-tipografían).
+**Tipografía:** Urbanist SemiBold para títulos/display/números héroe. Inter Regular/Medium/SemiBold para cuerpo, tablas, eyebrows. **No se usa Bold ni Light** — la jerarquía se resuelve con tamaño y color. Outfit queda reservado a mockups de producto insertados tal cual (no se re-tipografían).
 
 **Escala tipográfica (1920×1080, para proyección — REGLA DURA: 24px es el mínimo absoluto, sin excepciones: notas al pie, etiquetas de eje de gráfico y legales también van en 24px o más):**
 
@@ -98,7 +100,7 @@ Variante para slides de datos e impacto: fondo `#19021C` (`--surface-dark`) o `#
 | Métrica héroe | 140/140 | KPI dominante, card-metric, card-insight |
 | Métrica media | 48/56 | KpiDelta, KpiCompare |
 
-**Niveles de lectura:** con esta escala la diferencia numérica entre cuerpo (30) y título de card (32) es chica a propósito — la jerarquía real la dan el peso y el color, no solo el tamaño: títulos en Poppins SemiBold `#2A052D` (tinta), cuerpo en Inter Regular `#2E2E2E`, texto secundario Inter Regular `#6D6D6D`, notas `#9B9B9B`. Nunca más de tres niveles de lectura visibles en un mismo bloque.
+**Niveles de lectura:** con esta escala la diferencia numérica entre cuerpo (30) y título de card (32) es chica a propósito — la jerarquía real la dan el peso y el color, no solo el tamaño: títulos en Urbanist SemiBold `#30002D` (tinta), cuerpo en Inter Regular `#2A2B2D`, texto secundario Inter Regular `#737577`, notas `#A6A8AA`. Nunca más de tres niveles de lectura visibles en un mismo bloque.
 
 **Grid:** canvas 1920×1080, margen 80, 12 columnas de 110px con gutter 40, área segura 1760×920. Grillas de card: 4 cards de 410px.
 
@@ -106,7 +108,7 @@ Variante para slides de datos e impacto: fondo `#19021C` (`--surface-dark`) o `#
 
 **Radios:** 12 (sm) · 16 (md, default de card) · 20 (lg) · 24 (xl) · 999 (pill).
 
-**Cards:** borde `#E5E5E5` de 1.5px, radio 16, padding 30, sombra suave (`y4 blur16 negro 7%`). Sin fondos con degradado — fondo siempre sólido.
+**Cards:** borde `#EBEDEF` de 1.5px, radio 16, padding 30, sombra suave (`y4 blur16 negro 7%`). Sin fondos con degradado — fondo siempre sólido.
 
 **Sombras:** card `0 4px 16px rgba(0,0,0,.07)`; tabla `0 6px 22px rgba(0,0,0,.10)`.
 
@@ -141,7 +143,7 @@ Toda slide de contenido (03–10; portada/divisores/cierre quedan exentas) usa `
 6. Hay al menos 48px entre el fin del contenido y el footer (y=978).
 7. Todo espaciado vertical usa la escala 16/24/32/48/64/80.
 8. Se respetan los límites de densidad: ≤3 bloques de primer nivel en el body, ≤8 cards, ≤10 filas de tabla + total, ≤2 KPIs héroe, ≤2 niveles de jerarquía por bloque.
-9. El footer está en y=978 (logo x=80, número de página x=1815, Inter SemiBold 24 `#872191`); una nota al pie va 24px arriba del logo, nunca pegada.
+9. El footer está en y=978 (logo x=80, número de página x=1815, Inter SemiBold 24 `#9E1A96`); una nota al pie va 24px arriba del logo, nunca pegada.
 10. Ningún texto — ni notas, ni etiquetas de eje, ni legales — está por debajo de 24px.
 11. Toda card, todo ítem de lista, toda fila de tabla que representa una categoría y todo KPI lleva un ícono Phosphor Regular en el color de acento del bloque, en el tamaño que corresponde (ver tabla de tamaños abajo).
 
@@ -160,7 +162,7 @@ El contenedor de badge (56×56, radio `--radius-sm`, fondo `violet-50`/`turquois
 
 ## Recursos decorativos y estructuras
 
-**Tema oscuro:** fondo `#19021C` (`--surface-dark`) o `#2A052D` (`--surface-dark-alt`), texto `#FFFFFF`, texto secundario `#EA98F6` al 70% (`--text-on-dark-secondary`), bordes `#400A45` (`--border-on-dark`). Mismos tokens violeta en variante oscura, ningún color nuevo. Ver “12 · Tema oscuro” en Slides.
+**Tema oscuro:** fondo `#1D001B` (`--surface-dark`) o `#30002D` (`--surface-dark-alt`), texto `#FFFFFF`, texto secundario `#EFC2E8` al 70% (`--text-on-dark-secondary`), bordes `#480044` (`--border-on-dark`). Mismos tokens violeta en variante oscura, ningún color nuevo. Ver “12 · Tema oscuro” en Slides.
 
 **Cards de métrica** (`MetricCard`, `InsightCard`, y las demás variantes de card en `components/data-display/`): badge de ícono 56×56 arriba, cifra en métrica héroe (140px, el elemento dominante) alineada al inicio del bloque (nunca `justify-content:flex-end`, que deja un hueco vacío antes del valor), etiqueta en overline mayúsculas, línea de contexto opcional en caption. Padding 40px, gap 20px entre badge y contenido — comparten esta medida `Card`, `MetricCard`, `InsightCard` y `NumberedCard`. Todas aceptan `width`/`height` para ajustarse al `.span-n` real que ocupan en la grilla; el default 410×260 asume span-3 y no debe asumirse válido para cualquier combinación.
 
@@ -172,6 +174,18 @@ El contenedor de badge (56×56, radio `--radius-sm`, fondo `violet-50`/`turquois
 
 **Tablas densas:** con 10-11 filas + header, el padding vertical por fila no puede exceder ~12px si el texto es 24px (piso mínimo) — verificar siempre contra la altura real disponible (930 menos el inicio del body) antes de fijar el padding.
 
+## Templates (por área de empresa)
+
+Los templates viven en `templates/<área>-<nombre>/`, cada uno un deck o documento ejecutable y clicable. Se organizan por área de empresa — cada área tiene su propio tono dentro del mismo sistema de marca: Comercial es la más "potente" visualmente (fondos violeta sólidos, KPIs héroe, MeshGradient puntual); un reporte de eCommerce o un documento de Administración usa el mismo sistema pero más sobrio y neutro (fondo blanco, sin recursos decorativos, tablas y texto por delante de KPIs grandes). Áreas previstas: **Marketing, Producto, eCommerce, Documentos generales, People, Comercial, Administración, IT**. Se van poblando a medida que se piden o crean nuevos entregables — hoy solo Comercial tiene contenido.
+
+- **`templates/comercial-institucional/`** — deck institucional de 17 slides (portada, quiénes somos, KPIs, divisores de sección, canales — web/app/agencias, productos, por qué elegirnos, cierre, 2 slides utilitarias de repuesto). Reemplaza los antiguos specimens sueltos `tpl-01..17`, ahora es un template real navegable (Anterior/Siguiente) construido con los componentes del sistema. Nomenclatura de slides generalizada — sirve de base para cualquier presentación comercial (no solo B2B): los eyebrows y títulos quedan como placeholders `[TÍTULO — …]` para completar según el cliente o segmento.
+
+Al crear el próximo template de otra área, seguí la convención de nombre `Área · Nombre` en el tag `@template` y ajustá el tono (recursos gráficos, densidad, paleta) al criterio de arriba — no copiar el look potente de Comercial en áreas que piden algo más neutro.
+
+## Fotografía e ilustración
+
+Sección reservada en `guidelines/imagery/` — todavía sin material real. Hoy no hay fotografía de flota/terminales, ilustraciones de marca ni banco de imágenes cargado; los templates usan placeholders rotulados ("Visual de producto") donde iría un visual real. Se completa cuando el usuario aporte material.
+
 ## Caveats
 
 - No hubo Figma ni codebase del producto digital adjuntos a este sistema — por eso no hay UI kit de producto (app/web de compra), solo primitivas de presentación. Si querés que este sistema también cubra pantallas de producto, adjuntá el Figma o repo correspondiente.
@@ -182,10 +196,10 @@ El contenedor de badge (56×56, radio `--radius-sm`, fondo `violet-50`/`turquois
 
 Estos tres primitivos ya no son inventados: son la recreación exacta de los componentes reales de la App, escalados 2x para el canvas de presentación (1920×1080 es 2x la escala de la App). **Excepción: la tipografía no escala 2x** — duplicar un cuerpo de 16px daría 32px, ilegible en tablas densas; el texto de estos componentes usa los valores de la App tal cual.
 
-**Botón** — alto 56/36 (App) → 112/72 (deck), radio 10→20, padding 16/14→32/28, gap 6→12, borde 1→2. Variantes: `default` (fondo/borde violeta, texto blanco SemiBold), `secondary` (fondo/borde turquesa, texto blanco Regular), `outline` (borde violeta, texto violeta Regular), `white-outline`, `gray-outline`, `ghost` (sin fondo ni borde, texto negro), `success`/`error`/`warning` (fondos semánticos, texto blanco SemiBold), `filter` (pill, radio 999, alto 36→72, borde `#424242`, texto `#2E2E2E`). Disabled solo se nota en la familia outline: texto y borde pasan a `#A7A7A7`.
+**Botón** — alto 56/36 (App) → 112/72 (deck), radio 10→20, padding 16/14→32/28, gap 6→12, borde 1→2. Variantes: `default` (fondo/borde violeta, texto blanco SemiBold), `secondary` (fondo/borde turquesa, texto blanco Regular), `outline` (borde violeta, texto violeta Regular), `white-outline`, `gray-outline`, `ghost` (sin fondo ni borde, texto negro), `success`/`error`/`warning` (fondos semánticos, texto blanco SemiBold), `filter` (pill, radio 999, alto 36→72, borde `#414344`, texto `#2A2B2D`). Disabled solo se nota en la familia outline: texto y borde pasan a `#A7A7A7`.
 
-**Tag/Chip** — alto 20/16→40/32, texto 14 Regular/12 Medium (sin escalar). Variantes `default`, `outline`, `secondary`, `expired` (gris sólido), `primary-soft` (violeta suave). `Tag/ServiceClass` (cama, semicama) es una pill aparte: radio 9999, alto 24→48, borde `#252525`, texto 12 Regular.
+**Tag/Chip** — alto 20/16→40/32, texto 14 Regular/12 Medium (sin escalar). Variantes `default`, `outline`, `secondary`, `expired` (gris sólido), `primary-soft` (violeta suave). `Tag/ServiceClass` (cama, semicama) es una pill aparte: radio 9999, alto 24→48, borde `#1D1E20`, texto 12 Regular.
 
-**Card real (`ProductCard`)** — radio 12→24, padding 20→40, borde `#BABABA` 0.5px→1px, texto 16 Regular `#252525` (sin escalar). Distinta de `Card` (la card de beneficio inventada para grillas de slides, que sigue con su propio borde `#E5E5E5` 1.5px y radio 16 del brief original). `Card/Badge Promo` (fondo turquesa, texto blanco) y `Card/Badge Destacado` (banda superior violeta) son `badge="promo"`/`"destacado"` en `ProductCard`.
+**Card real (`ProductCard`)** — radio 12→24, padding 20→40, borde `#BABABA` 0.5px→1px, texto 16 Regular `#1D1E20` (sin escalar). Distinta de `Card` (la card de beneficio inventada para grillas de slides, que sigue con su propio borde `#EBEDEF` 1.5px y radio 16 del brief original). `Card/Badge Promo` (fondo turquesa, texto blanco) y `Card/Badge Destacado` (banda superior violeta) son `badge="promo"`/`"destacado"` en `ProductCard`.
 
-Los colores de marca no cambian (`#872191`, `#1BCEC8`, `#2A052D`); el deck sigue en Poppins+Inter y el producto en Outfit — un mockup de producto insertado en un deck conserva Outfit.
+Los colores de marca no cambian (`#9E1A96`, `#1BCFC9`, `#30002D`); el deck usa Urbanist (títulos) + Inter (cuerpo). Un mockup de producto insertado en un deck conserva la tipografía original del producto y no se re-tipografía.
