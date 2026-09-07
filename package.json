@@ -1,6 +1,6 @@
 {
   "name": "cdp-design-system",
-    "version": "4.2.0",
+  "version": "4.2.0",
   "private": true,
   "description": "Design system de presentaciones y material institucional de Central de Pasajes",
   "scripts": {
