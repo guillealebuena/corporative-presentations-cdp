@@ -60,6 +60,7 @@ Para un contenedor responsivo en vez de pantalla completa, usá `width:100%;max-
 - **Los datos van en tabla, no en bullets** cuando hay más de tres pares dato-valor.
 - El eyebrow lleva una barra de color de 24×3px a la izquierda (12px de separación) — nunca un guion largo delante.
 - Sin emoji.
+- **No generar notas del orador (speaker notes) en ningún slide por default.** Solo si el pedido las pide explícitamente.
 
 ## Voz y redacción — tics de IA prohibidos
 

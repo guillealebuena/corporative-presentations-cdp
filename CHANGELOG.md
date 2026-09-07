@@ -5,6 +5,13 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado 
 Para un design system: **MAJOR** = breaking (token o componente eliminado/renombrado),
 **MINOR** = agregado compatible, **PATCH** = fix visual o de documentación.
 
+## [4.2.0] — 2026-09-07
+
+Alinea el Kit con el tutorial de uso del equipo: durante las pruebas del prompt guiado, Claude Design generaba notas del orador por default en cada slide sin que se hubieran pedido.
+
+### Agregado
+- Regla de contenido en `readme.md` y `SKILL.md`: no generar notas del orador (speaker notes) en ningún slide por default, solo si el pedido las pide explícitamente.
+
 ## [4.1.0] — 2026-08-10
 
 Prioridad 2: limpieza y mejoras planeadas aparte del pull de la entrada anterior. Ningún token
