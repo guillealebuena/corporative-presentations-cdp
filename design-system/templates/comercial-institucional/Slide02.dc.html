@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="02" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="width:24px;height:3px;background:var(--brand-primary);flex-shrink:0"></span>
+<span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;line-height:30px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand-primary)">QUIÉNES SOMOS</span>
+</div>
+<div style="font-family:'Urbanist',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">La infraestructura líder del transporte terrestre en Argentina</div>
+</div>
+<div class="slide-body">
+<div class="span-6" style="display:flex;flex-direction:column;justify-content:center;font-family:'Inter',sans-serif;font-size:30px;line-height:44px;color:var(--text-body);max-width:640px">Central de Pasajes es la empresa líder de Argentina en la comercialización de pasajes de larga distancia en bus. Tiene más de 20 años de trayectoria en el mercado. Pertenece al grupo de empresas de transporte de larga distancia más importante del país.</div>
+<div class="span-6" style="display:flex;flex-wrap:wrap;gap:12px;align-content:center">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="UsersThree" value="24 M" label="Pasajeros transportados por año" context="2024" tone="light" accent="violet" width="{{ 410 }}" metric-scale="medium" hint-size="410px,220px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Bus" value="1.100" label="Buses" context="2024" tone="light" accent="turquoise" width="{{ 410 }}" metric-scale="medium" hint-size="410px,220px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Storefront" value="1.500" label="Puntos de venta" context="2024" tone="light" accent="violet" width="{{ 410 }}" metric-scale="medium" hint-size="410px,220px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Users" value="5.400" label="Personas en el equipo" context="2024" tone="light" accent="turquoise" width="{{ 410 }}" metric-scale="medium" hint-size="410px,220px"></x-import>
+</div>
+</div>
+</div>
+<div class="slide-footer">
+<img src="../../assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block">
+<span class="page-number">02</span>
+</div>
+</div>
+</x-dc>
+</body>
+</html>

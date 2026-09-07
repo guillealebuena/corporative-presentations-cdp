@@ -9,4 +9,4 @@ If creating visual artifacts (slides, documents, mocks), copy assets out and cre
 If the user invokes this skill without any other guidance, ask them what they want to build (slide, one-pager, deck) and act as an expert designer who outputs HTML artifacts.
 Do not generate speaker notes for any slide by default — only if explicitly requested.
 
-This is a presentation-only design system — it covers decks, docs and marketing, not the CDP product UI (app/web checkout), which uses a separate Figma system and Outfit typeface.
+This is a presentation-only design system — it covers decks, docs and marketing, not the CDP product UI (app/web checkout), which uses a separate Figma system and its own typeface.

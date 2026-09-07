@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="02" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="width:24px;height:3px;background:var(--brand-primary);flex-shrink:0"></span>
+<span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;line-height:30px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand-primary)">QUIÉNES SOMOS</span>
+</div>
+<div style="font-family:'Urbanist',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">20 años impulsando la venta de pasajes</div>
+</div>
+<div class="slide-body">
+<div class="span-6" style="display:flex;flex-direction:column;justify-content:center;font-family:'Inter',sans-serif;font-size:30px;line-height:44px;color:var(--text-body);max-width:640px">Central de Pasajes es una empresa con 20 años de experiencia en la comercialización de pasajes de larga distancia en micro. Mediante acuerdos con empresas de transporte, ofrecemos miles de destinos en Argentina y también en Brasil, Bolivia, Chile, Paraguay y Perú.</div>
+<div class="span-6" style="display:flex;flex-wrap:wrap;gap:12px;align-content:center">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Clock" value="20 años" label="De trayectoria en el mercado" tone="light" accent="violet" width="{{ 410 }}" height="{{ 300 }}" metric-scale="medium" hint-size="410px,300px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Handshake" value="+140" label="Empresas de transporte asociadas" tone="light" accent="turquoise" width="{{ 410 }}" height="{{ 300 }}" metric-scale="medium" hint-size="410px,300px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="MapPin" value="+3.000" label="Destinos en Argentina" tone="light" accent="violet" width="{{ 410 }}" height="{{ 300 }}" metric-scale="medium" hint-size="410px,300px"></x-import>
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.MetricCard" icon="Globe" value="6" label="Países con presencia" context="AR · BR · BO · CL · PY · PE" tone="light" accent="turquoise" width="{{ 410 }}" height="{{ 300 }}" metric-scale="medium" hint-size="410px,300px"></x-import>
+</div>
+</div>
+</div>
+<div class="slide-footer">
+<img src="../../assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block">
+<span class="page-number">02</span>
+</div>
+</div>
+</x-dc>
+</body>
+</html>

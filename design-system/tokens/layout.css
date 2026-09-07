@@ -21,4 +21,4 @@
 /* Rule 7: footer fixed at y=978 — never part of the flow, never shifts with body content. */
 .slide-footer{position:absolute;left:var(--slide-margin);right:var(--slide-margin);top:978px;display:flex;align-items:center;justify-content:space-between}
 .slide-footer .page-number{font-family:var(--font-body);font-weight:600;font-size:24px;color:var(--brand-primary);line-height:1}
-.slide-footnote{position:absolute;left:var(--slide-margin);right:var(--slide-margin);top:930px;font-family:var(--font-body);font-weight:400;font-size:24px;line-height:34px;color:#9B9B9B}
+.slide-footnote{position:absolute;left:var(--slide-margin);right:var(--slide-margin);top:930px;font-family:var(--font-body);font-weight:400;font-size:24px;line-height:34px;color:#A6A8AA}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div class="slide" style="background:#fff;position:relative">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.PageNumberWatermark" number="06" hint-size="240px,240px"></x-import>
+<div class="slide-frame">
+<div class="slide-header">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="width:24px;height:3px;background:var(--brand-primary);flex-shrink:0"></span>
+<span style="font-family:'Inter',sans-serif;font-weight:600;font-size:24px;line-height:30px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brand-primary)">CANALES DE VENTA</span>
+</div>
+<div style="font-family:'Urbanist',sans-serif;font-weight:600;font-size:72px;line-height:84px;color:var(--text-title)">Web y app comparadas</div>
+</div>
+<div class="slide-body">
+<div class="span-12" style="align-self:start">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.ComparisonTable" rows="{{ comparisonRows }}" current-label="Web" proposed-label="App" variant="brand" hint-size="1760px,420px"></x-import>
+</div>
+</div>
+</div>
+<div class="slide-footer">
+<img src="../../assets/logos/cdp-wordmark-violeta.png" alt="Central de Pasajes" style="height:22px;display:block">
+<span class="page-number">06</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      comparisonRows: [
+        { label: 'Sesiones', current: '38.800.000', proposed: '9.900.000', icon: 'Globe' },
+        { label: 'Tasa de conversión', current: '5,80%', proposed: '9,00%', icon: 'Target' },
+        { label: 'Tasa de aprobación', current: '94%', proposed: '93%', icon: 'ShieldCheck' },
+        { label: 'Apps activas', current: '—', proposed: '813.000 (750.000 Android, 63.000 iOS)', icon: 'DeviceMobile' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

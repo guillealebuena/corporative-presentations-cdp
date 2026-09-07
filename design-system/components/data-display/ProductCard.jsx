@@ -10,8 +10,8 @@ export function ProductCard({ badge = 'none', title, children }) {
       badge === 'promo' && React.createElement('span', {
         style: { display: 'inline-flex', alignItems: 'center', alignSelf: 'flex-start', height: 64, padding: '0 32px', background: 'var(--brand-accent)', color: '#fff', fontFamily: 'var(--font-body)', fontSize: 16, borderRadius: 8 }
       }, 'Promo'),
-      title && React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 16, color: '#252525' } }, title),
-      React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontWeight: 400, fontSize: 16, color: '#252525', lineHeight: '22px' } }, children)
+      title && React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 16, color: '#1D1E20' } }, title),
+      React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontWeight: 400, fontSize: 16, color: '#1D1E20', lineHeight: '22px' } }, children)
     )
   );
 }

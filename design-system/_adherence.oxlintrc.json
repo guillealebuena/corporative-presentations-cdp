@@ -38,8 +38,8 @@
         "message": "Raw px value — use a design-system spacing token via var()."
       },
       {
-        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Poppins|Inter|Outfit))/i]",
-        "message": "Font not provided by the design system. Available: Poppins, Inter, Outfit."
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Urbanist|Inter))/i]",
+        "message": "Font not provided by the design system. Available: Urbanist, Inter."
       },
       {
         "selector": "JSXOpeningElement[name.name='Avatar'] > JSXAttribute > JSXIdentifier[name!=/^(?:size|src|initials|key|ref|className|style|children)$/]",
@@ -174,8 +174,8 @@
         "message": "<LogoMark> doesn't accept that prop. Declared props: variant, height, style."
       },
       {
-        "selector": "JSXOpeningElement[name.name='LogoMark'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:wordmark-violeta|wordmark-blanco|isotipo|lockup-violeta|lockup-blanco)$/]",
-        "message": "<LogoMark> variant must be one of 'wordmark-violeta' | 'wordmark-blanco' | 'isotipo' | 'lockup-violeta' | 'lockup-blanco'."
+        "selector": "JSXOpeningElement[name.name='LogoMark'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:wordmark-violeta|wordmark-blanco|wordmark-stacked|isotipo|lockup-violeta|lockup-blanco|lockup-badge)$/]",
+        "message": "<LogoMark> variant must be one of 'wordmark-violeta' | 'wordmark-blanco' | 'wordmark-stacked' | 'isotipo' | 'lockup-violeta' | 'lockup-blanco' | 'lockup-badge'."
       },
       {
         "selector": "JSXOpeningElement[name.name='MeshGradient'] > JSXAttribute > JSXIdentifier[name!=/^(?:opacity|size|corner|color|style|key|ref|className|style|children)$/]",
@@ -480,6 +480,8 @@
       "--text-hero-number-size",
       "--text-mega-number-lh",
       "--text-mega-number-size",
+      "--text-metric-medium-lh",
+      "--text-metric-medium-size",
       "--text-muted",
       "--text-on-brand",
       "--text-on-dark",
@@ -505,6 +507,7 @@
       "--turquoise-700",
       "--turquoise-800",
       "--turquoise-900",
+      "--turquoise-950",
       "--violet-100",
       "--violet-200",
       "--violet-300",
@@ -530,6 +533,7 @@
       "--weight-body-medium",
       "--weight-body-regular",
       "--weight-body-semibold",
+      "--weight-bold",
       "--weight-display"
     ],
     "tokenKinds": {
@@ -554,6 +558,7 @@
       "--turquoise-700": "color",
       "--turquoise-800": "color",
       "--turquoise-900": "color",
+      "--turquoise-950": "color",
       "--gray-50": "color",
       "--gray-100": "color",
       "--gray-200": "color",
@@ -609,6 +614,7 @@
       "--weight-body-regular": "font",
       "--weight-body-medium": "font",
       "--weight-body-semibold": "font",
+      "--weight-bold": "font",
       "--text-display-size": "font",
       "--text-display-lh": "font",
       "--text-slide-title-size": "font",
@@ -634,6 +640,8 @@
       "--text-table-value-lh": "font",
       "--text-mega-number-size": "font",
       "--text-mega-number-lh": "font",
+      "--text-metric-medium-size": "font",
+      "--text-metric-medium-lh": "font",
       "--space-1": "spacing",
       "--space-2": "spacing",
       "--space-3": "spacing",
@@ -683,8 +691,7 @@
     },
     "fontFamilies": [
       "Inter",
-      "Outfit",
-      "Poppins"
+      "Urbanist"
     ]
   }
 }

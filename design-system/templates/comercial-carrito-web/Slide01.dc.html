@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script><script src="./image-slot.js"></script></helmet>
+<div class="slide" style="background:var(--brand-primary);position:relative" data-screen-label="Portada">
+<x-import component-from-global-scope="CentralDePasajesDesignSystem_152b2f.DotGrid" color="#fff" opacity="{{ 0.1 }}" hint-size="100%,100%"></x-import>
+<img src="../../assets/logos/cdp-wordmark-blanco.png" alt="Central de Pasajes" style="position:absolute;left:80px;top:978px;height:22px;display:block">
+<div style="position:absolute;top:80px;left:120px;display:inline-flex;padding:20px 32px;border-radius:20px;background:rgba(255,255,255,.14)">
+<img src="../../assets/logos/raybus-white.png" alt="Ray Bus" style="height:60px;display:block">
+</div>
+<div style="position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-start;padding:240px 120px 0;gap:40px">
+<div style="font-family:'Urbanist',sans-serif;font-weight:600;font-size:112px;line-height:118px;color:#fff">Carrito Web<br>Ray Bus</div>
+<div style="font-family:'Inter',sans-serif;font-weight:400;font-size:36px;line-height:52px;color:rgba(255,255,255,.85);max-width:1100px">Nueva experiencia de compra</div>
+</div>
+</div>
+</x-dc>
+</body>
+</html>
