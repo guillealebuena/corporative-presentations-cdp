@@ -154,6 +154,24 @@ for (const f of files.filter((f) => /\.(html|css|jsx|js)$/.test(f))) {
 }
 if (!extStyle && !extScript) ok('sin CSS, tipografías ni scripts externos');
 
+// ── 8. Pie en las slides de contenido ─────────────────────────────────────────
+// Una slide de contenido se reconoce por .slide-frame. El pie con logo y numero de
+// pagina no es decorativo: es lo que hace que un slide suelto se lea como de CDP.
+// Ya paso que un deck entero saliera sin logo en ninguna slide y nada lo detecto,
+// porque en pantalla se veia bien. El logo va como asset, nunca escrito como texto.
+console.log('\n[8] Pie en las slides de contenido');
+const slideFiles = files.filter((f) => /\.(html)$/.test(f) && /(templates|guidelines[/\\]slides)[/\\]/.test(f));
+let sinPie = 0, pieSinLogo = 0, nombreEscrito = 0;
+for (const f of slideFiles) {
+  const src = fs.readFileSync(f, 'utf8');
+  if (!/class="[^"]*slide-frame/.test(src)) continue;   // portada, divisor y cierre no llevan pie
+  if (!/class="[^"]*slide-footer/.test(src)) { fail(`${rel(f)} es una slide de contenido y no tiene .slide-footer — va a salir sin logo ni numero de pagina`); sinPie++; continue; }
+  const footer = src.slice(src.search(/class="[^"]*slide-footer/));
+  if (!/assets[/\\]logos[/\\]|LogoMark|SlideFooter/.test(footer)) { fail(`${rel(f)} tiene pie pero sin logo — el logo es un asset, no una palabra`); pieSinLogo++; }
+  if (/>\s*CENTRAL\s*DE\s*PASAJES\s*</i.test(footer)) { fail(`${rel(f)} escribe "Central de Pasajes" como texto en el pie — tiene que ser el logo`); nombreEscrito++; }
+}
+if (!sinPie && !pieSinLogo && !nombreEscrito) ok(`${slideFiles.length} slides revisadas, todas las de contenido con pie y logo`);
+
 // ── Resumen ───────────────────────────────────────────────────────────────────
 console.log(`\n${errors ? '✗' : '✓'} ${errors} errores · ${warns} advertencias\n`);
 process.exit(errors ? 1 : 0);
