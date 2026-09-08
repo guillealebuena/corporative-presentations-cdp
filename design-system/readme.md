@@ -35,7 +35,16 @@ Para un contenedor responsivo en vez de pantalla completa, usá `width:100%;max-
 - `components/forms/` — Button.
 - `components/data-display/` — Card, ProductCard, Tag, KPIStat, ComparisonTable, Timeline, InsightBand, MetricCard, InsightCard, NumberedCard, ChartCard, ListCard, QuoteCard, KpiHero, KpiDelta, KpiRing, KpiBar, KpiSparkline, KpiCompare, FlowRings, FlowTimeline, FlowLayers, FlowBranch.
 - `guidelines/colors/`, `guidelines/type/`, `guidelines/spacing/`, `guidelines/brand/` — specimen cards (Design System tab).
-- `guidelines/slides/` — 12 layouts genéricos de presentación (incluye tema oscuro), reutilizables en cualquier deck, no restringidos a un formato o audiencia particular.
+- `guidelines/slides/` — **el catálogo de layouts de slide: 20 fichas, y es el vocabulario completo.** Cualquier slide que se arme sale de
+  una de estas 18, elegida según lo que el contenido pide. Son genéricas y reutilizables en cualquier deck, sin atarse a un formato o
+  audiencia. El tema oscuro (ficha 12) no es un layout: es una variante de fondo aplicable a cualquiera de las otras, reservada para el
+  cierre o el slide de mayor impacto.
+  Los anchos disponibles son span-3, span-4, span-5, span-6, span-7 y span-12, y cada uno tiene al menos una ficha que lo muestra.
+  **Si un deck necesita un armado que no está en el catálogo, la ficha se agrega al apartado Slides. Siempre, y antes de usarlo.** Un layout
+  que vive solo adentro de un template es invisible: no se puede pedir por nombre y no entra en el vocabulario con el que se elige. La
+  validación [9] de `npm run check` compara las composiciones de los templates contra las fichas y falla si alguna no está representada.
+  La [10] falla si un `.slide-body` pisa `grid-template-columns` o `column-gap`: dimensionar con algo que no sea `span-n` produce anchos que
+  no existen en el sistema y saca esa slide del catálogo.
 - `guidelines/imagery/` — sección reservada para fotografía e ilustración (ver más abajo).
 - `templates/` — templates ejecutables, sectorizados por área de empresa (ver "Templates" más abajo).
 - `thumbnail.html` — tile del proyecto.
@@ -63,6 +72,14 @@ Para un contenedor responsivo en vez de pantalla completa, usá `width:100%;max-
 - El eyebrow lleva una barra de color de 24×3px a la izquierda (12px de separación) — nunca un guion largo delante.
 - Sin emoji.
 - **No generar notas del orador (speaker notes) en ningún slide por default.** Solo si el pedido las pide explícitamente.
+- **El logo es un asset, nunca una palabra.** El pie de las slides de contenido se arma con `SlideFooter`, que ya lleva el wordmark a la
+  izquierda y el número de página a la derecha. Portada, divisores y cierre llevan el lockup con `LogoMark`. Escribir «Central de Pasajes»
+  como texto en el pie en lugar de poner el logo es un error: el nombre en tipografía de cuerpo no es la marca. Ningún deck puede terminar
+  sin el logo a la vista.
+- **Ritmo del deck.** Ningún tipo de slide se repite más de dos veces en un mismo deck. Alterná densidad: después de un slide cargado va uno
+  de respiro. El dato más importante del deck va solo, en escala héroe. Una comparación entre dos situaciones va en tabla comparativa, y una
+  secuencia va en línea de tiempo. El tema oscuro se reserva para el cierre o el slide de mayor impacto. Los topes de densidad siguen
+  valiendo: variar no es llenar.
 
 ## Voz y redacción — tics de IA prohibidos
 

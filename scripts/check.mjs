@@ -154,6 +154,70 @@ for (const f of files.filter((f) => /\.(html|css|jsx|js)$/.test(f))) {
 }
 if (!extStyle && !extScript) ok('sin CSS, tipografías ni scripts externos');
 
+// ── 8. Pie en las slides de contenido ─────────────────────────────────────────
+// Una slide de contenido se reconoce por .slide-frame. El pie con logo y numero de
+// pagina no es decorativo: es lo que hace que un slide suelto se lea como de CDP.
+// Ya paso que un deck entero saliera sin logo en ninguna slide y nada lo detecto,
+// porque en pantalla se veia bien. El logo va como asset, nunca escrito como texto.
+console.log('\n[8] Pie en las slides de contenido');
+const slideFiles = files.filter((f) => /\.(html)$/.test(f) && /(templates|guidelines[/\\]slides)[/\\]/.test(f));
+let sinPie = 0, pieSinLogo = 0, nombreEscrito = 0;
+for (const f of slideFiles) {
+  const src = fs.readFileSync(f, 'utf8');
+  if (!/class="[^"]*slide-frame/.test(src)) continue;   // portada, divisor y cierre no llevan pie
+  if (!/class="[^"]*slide-footer/.test(src)) { fail(`${rel(f)} es una slide de contenido y no tiene .slide-footer — va a salir sin logo ni numero de pagina`); sinPie++; continue; }
+  const footer = src.slice(src.search(/class="[^"]*slide-footer/));
+  if (!/assets[/\\]logos[/\\]|LogoMark|SlideFooter/.test(footer)) { fail(`${rel(f)} tiene pie pero sin logo — el logo es un asset, no una palabra`); pieSinLogo++; }
+  if (/>\s*CENTRAL\s*DE\s*PASAJES\s*</i.test(footer)) { fail(`${rel(f)} escribe "Central de Pasajes" como texto en el pie — tiene que ser el logo`); nombreEscrito++; }
+}
+if (!sinPie && !pieSinLogo && !nombreEscrito) ok(`${slideFiles.length} slides revisadas, todas las de contenido con pie y logo`);
+
+// ── 9. El catalogo de Slides cubre lo que usan los templates ─────────────────
+// El panel del DS solo muestra lo que tiene @dsCard, y ese tag se lee unicamente
+// dentro de guidelines/. Un layout inventado adentro de un template queda invisible
+// por construccion: nadie lo puede pedir por nombre y no entra en el vocabulario
+// con el que se elige el tipo de slide. Regla: la ficha se agrega primero.
+//
+// Se compara la COMPOSICION (que anchos y cuantos de cada uno), no el fondo: el
+// tema oscuro es una variante declarada en la ficha 12, no un layout aparte.
+console.log('\n[9] Cobertura del catalogo de Slides');
+const composicion = (src) => {
+  const c = new Map();
+  for (const m of src.matchAll(/class="[^"]*\b(span-\d+)/g)) c.set(m[1], (c.get(m[1]) || 0) + 1);
+  const marco = /class="[^"]*slide-frame/.test(src) ? 'frame' : 'libre';
+  return marco + ' ' + [...c.entries()].sort().map(([k, n]) => `${k}x${n}`).join(' ');
+};
+const fichas = files.filter((f) => /guidelines[/\\]slides[/\\].+\.html$/.test(f));
+const tplSlides = files.filter((f) => /templates[/\\].+\.dc\.html$/.test(f))
+  .filter((f) => !/@template/.test(fs.readFileSync(f, 'utf8').slice(0, 400)));
+const enCatalogo = new Set(fichas.map((f) => composicion(fs.readFileSync(f, 'utf8'))));
+const sinFicha = new Map();
+for (const f of tplSlides) {
+  const k = composicion(fs.readFileSync(f, 'utf8'));
+  if (!enCatalogo.has(k)) { if (!sinFicha.has(k)) sinFicha.set(k, []); sinFicha.get(k).push(rel(f)); }
+}
+if (sinFicha.size) {
+  for (const [k, fsx] of sinFicha) fail(`la composicion "${k}" se usa en ${fsx.length} slide(s) de templates (${fsx[0]}) y ninguna ficha de guidelines/slides la muestra — agregar la ficha al apartado Slides`);
+} else {
+  ok(`${fichas.length} fichas cubren las ${enCatalogo.size} composiciones del catalogo; los ${tplSlides.length} slides de templates no usan ninguna que falte`);
+}
+
+// ── 10. La grilla de 12 columnas es la unica forma de dimensionar ─────────────
+// Contrato 3 del readme: grid-column:span n es la UNICA forma de dimensionar un
+// bloque, para que el ancho caiga siempre en 260/410/560/710/860/1010/1160/1760.
+// Pisar grid-template-columns en un .slide-body deja anchos que no existen en el
+// sistema y ademas saca a esa slide del catalogo, porque su composicion no matchea
+// con ninguna ficha.
+console.log('\n[10] La grilla de 12 columnas, sin excepciones');
+let pisadas = 0;
+for (const f of files.filter((f) => /\.(html)$/.test(f))) {
+  const src = fs.readFileSync(f, 'utf8');
+  for (const m of src.matchAll(/class="[^"]*slide-body[^"]*"[^>]*style="([^"]*)"/g)) {
+    if (/grid-template-columns|column-gap/.test(m[1])) { fail(`${rel(f)} pisa la grilla del .slide-body (${m[1].slice(0, 60)}) — usar span-n`); pisadas++; }
+  }
+}
+if (!pisadas) ok('ningun .slide-body pisa grid-template-columns ni column-gap');
+
 // ── Resumen ───────────────────────────────────────────────────────────────────
 console.log(`\n${errors ? '✗' : '✓'} ${errors} errores · ${warns} advertencias\n`);
 process.exit(errors ? 1 : 0);
