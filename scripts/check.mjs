@@ -175,25 +175,48 @@ if (!sinPie && !pieSinLogo && !nombreEscrito) ok(`${slideFiles.length} slides re
 // ── 9. El catalogo de Slides cubre lo que usan los templates ─────────────────
 // El panel del DS solo muestra lo que tiene @dsCard, y ese tag se lee unicamente
 // dentro de guidelines/. Un layout inventado adentro de un template queda invisible
-// por construccion: nadie lo puede pedir por nombre y Claude no lo tiene en el
-// vocabulario. Esta validacion evita que el catalogo vuelva a quedar corto.
+// por construccion: nadie lo puede pedir por nombre y no entra en el vocabulario
+// con el que se elige el tipo de slide. Regla: la ficha se agrega primero.
+//
+// Se compara la COMPOSICION (que anchos y cuantos de cada uno), no el fondo: el
+// tema oscuro es una variante declarada en la ficha 12, no un layout aparte.
 console.log('\n[9] Cobertura del catalogo de Slides');
-const spansDe = (src) => new Set([...src.matchAll(/class="[^"]*\b(span-\d+)/g)].map((m) => m[1]));
-const cardsSlides = files.filter((f) => /guidelines[/\\]slides[/\\].+\.html$/.test(f));
-const tplSlides = files.filter((f) => /templates[/\\].+\.dc\.html$/.test(f));
-const enCatalogo = new Set();
-for (const f of cardsSlides) for (const s of spansDe(fs.readFileSync(f, 'utf8'))) enCatalogo.add(s);
-const faltan = new Map();
+const composicion = (src) => {
+  const c = new Map();
+  for (const m of src.matchAll(/class="[^"]*\b(span-\d+)/g)) c.set(m[1], (c.get(m[1]) || 0) + 1);
+  const marco = /class="[^"]*slide-frame/.test(src) ? 'frame' : 'libre';
+  return marco + ' ' + [...c.entries()].sort().map(([k, n]) => `${k}x${n}`).join(' ');
+};
+const fichas = files.filter((f) => /guidelines[/\\]slides[/\\].+\.html$/.test(f));
+const tplSlides = files.filter((f) => /templates[/\\].+\.dc\.html$/.test(f))
+  .filter((f) => !/@template/.test(fs.readFileSync(f, 'utf8').slice(0, 400)));
+const enCatalogo = new Set(fichas.map((f) => composicion(fs.readFileSync(f, 'utf8'))));
+const sinFicha = new Map();
 for (const f of tplSlides) {
-  for (const s of spansDe(fs.readFileSync(f, 'utf8'))) {
-    if (!enCatalogo.has(s)) { if (!faltan.has(s)) faltan.set(s, []); faltan.get(s).push(rel(f)); }
+  const k = composicion(fs.readFileSync(f, 'utf8'));
+  if (!enCatalogo.has(k)) { if (!sinFicha.has(k)) sinFicha.set(k, []); sinFicha.get(k).push(rel(f)); }
+}
+if (sinFicha.size) {
+  for (const [k, fsx] of sinFicha) fail(`la composicion "${k}" se usa en ${fsx.length} slide(s) de templates (${fsx[0]}) y ninguna ficha de guidelines/slides la muestra — agregar la ficha al apartado Slides`);
+} else {
+  ok(`${fichas.length} fichas cubren las ${enCatalogo.size} composiciones del catalogo; los ${tplSlides.length} slides de templates no usan ninguna que falte`);
+}
+
+// ── 10. La grilla de 12 columnas es la unica forma de dimensionar ─────────────
+// Contrato 3 del readme: grid-column:span n es la UNICA forma de dimensionar un
+// bloque, para que el ancho caiga siempre en 260/410/560/710/860/1010/1160/1760.
+// Pisar grid-template-columns en un .slide-body deja anchos que no existen en el
+// sistema y ademas saca a esa slide del catalogo, porque su composicion no matchea
+// con ninguna ficha.
+console.log('\n[10] La grilla de 12 columnas, sin excepciones');
+let pisadas = 0;
+for (const f of files.filter((f) => /\.(html)$/.test(f))) {
+  const src = fs.readFileSync(f, 'utf8');
+  for (const m of src.matchAll(/class="[^"]*slide-body[^"]*"[^>]*style="([^"]*)"/g)) {
+    if (/grid-template-columns|column-gap/.test(m[1])) { fail(`${rel(f)} pisa la grilla del .slide-body (${m[1].slice(0, 60)}) — usar span-n`); pisadas++; }
   }
 }
-if (faltan.size) {
-  for (const [s, fsx] of faltan) fail(`${s} se usa en templates (${fsx[0]}${fsx.length > 1 ? ` y ${fsx.length - 1} mas` : ''}) y ninguna ficha de guidelines/slides lo muestra — ese ancho no esta en el catalogo`);
-} else {
-  ok(`${cardsSlides.length} fichas cubren los ${enCatalogo.size} anchos que usan los ${tplSlides.length} slides de templates`);
-}
+if (!pisadas) ok('ningun .slide-body pisa grid-template-columns ni column-gap');
 
 // ── Resumen ───────────────────────────────────────────────────────────────────
 console.log(`\n${errors ? '✗' : '✓'} ${errors} errores · ${warns} advertencias\n`);
