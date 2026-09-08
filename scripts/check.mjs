@@ -172,6 +172,29 @@ for (const f of slideFiles) {
 }
 if (!sinPie && !pieSinLogo && !nombreEscrito) ok(`${slideFiles.length} slides revisadas, todas las de contenido con pie y logo`);
 
+// ── 9. El catalogo de Slides cubre lo que usan los templates ─────────────────
+// El panel del DS solo muestra lo que tiene @dsCard, y ese tag se lee unicamente
+// dentro de guidelines/. Un layout inventado adentro de un template queda invisible
+// por construccion: nadie lo puede pedir por nombre y Claude no lo tiene en el
+// vocabulario. Esta validacion evita que el catalogo vuelva a quedar corto.
+console.log('\n[9] Cobertura del catalogo de Slides');
+const spansDe = (src) => new Set([...src.matchAll(/class="[^"]*\b(span-\d+)/g)].map((m) => m[1]));
+const cardsSlides = files.filter((f) => /guidelines[/\\]slides[/\\].+\.html$/.test(f));
+const tplSlides = files.filter((f) => /templates[/\\].+\.dc\.html$/.test(f));
+const enCatalogo = new Set();
+for (const f of cardsSlides) for (const s of spansDe(fs.readFileSync(f, 'utf8'))) enCatalogo.add(s);
+const faltan = new Map();
+for (const f of tplSlides) {
+  for (const s of spansDe(fs.readFileSync(f, 'utf8'))) {
+    if (!enCatalogo.has(s)) { if (!faltan.has(s)) faltan.set(s, []); faltan.get(s).push(rel(f)); }
+  }
+}
+if (faltan.size) {
+  for (const [s, fsx] of faltan) fail(`${s} se usa en templates (${fsx[0]}${fsx.length > 1 ? ` y ${fsx.length - 1} mas` : ''}) y ninguna ficha de guidelines/slides lo muestra — ese ancho no esta en el catalogo`);
+} else {
+  ok(`${cardsSlides.length} fichas cubren los ${enCatalogo.size} anchos que usan los ${tplSlides.length} slides de templates`);
+}
+
 // ── Resumen ───────────────────────────────────────────────────────────────────
 console.log(`\n${errors ? '✗' : '✓'} ${errors} errores · ${warns} advertencias\n`);
 process.exit(errors ? 1 : 0);
