@@ -5,6 +5,51 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado 
 Para un design system: **MAJOR** = breaking (token o componente eliminado/renombrado),
 **MINOR** = agregado compatible, **PATCH** = fix visual o de documentación.
 
+## [5.1.0] — 2026-09-08
+
+El catálogo de Slides pasa de 12 a 20 fichas, y tres validaciones nuevas evitan que vuelva a
+quedar corto. El tag `@dsCard` se lee solo dentro de `guidelines/`, así que un layout inventado
+adentro de un template quedaba invisible: no se podía pedir por nombre y no entraba en el
+vocabulario con el que se elige el tipo de slide.
+
+### Agregado
+
+- **8 fichas de layout** en `guidelines/slides/`, una por cada grilla que los templates usaban y
+  el catálogo no mostraba: `13 · Split asimétrico 5+7`, `14 · Grilla de cuatro` (span-6 ×4),
+  `15 · Grilla de seis` (span-4 ×6), `16 · Banda + tres cards`, `17 · Banda + dos columnas`,
+  `18 · Banda + card destacada`, `19 · Banda doble + tres cards` y `20 · Grilla de tres`.
+- **Validación [8] — Pie en las slides de contenido.** Falla si una slide con `.slide-frame` no
+  tiene `.slide-footer`, si el pie no trae el logo como asset, o si escribe "Central de Pasajes"
+  como texto. Portada, divisor y cierre quedan afuera a propósito.
+- **Validación [9] — Cobertura del catálogo.** Falla si la composición de un slide de template no
+  está representada por ninguna ficha. Ignora el fondo: el tema oscuro es una variante declarada.
+- **Validación [10] — La grilla de 12 columnas, sin excepciones.** Falla si un `.slide-body` pisa
+  `grid-template-columns` o `column-gap`.
+- `readme.md` — las dos reglas que solo vivían en Claude Design: **el logo es un asset, nunca una
+  palabra** y **ritmo del deck**. Sin esto, un "Sync to latest" desde GitHub las borraba sin aviso.
+
+### Cambiado
+
+- **Las 12 fichas originales pasan de 157 valores hex a tokens semánticos.** Sin cambio visual:
+  las doce renderizadas antes y después son idénticas píxel a píxel. Los `fill` de los SVG pasaron
+  al atributo `style`, porque `var()` no funciona en un atributo de presentación.
+- `12 · Tema oscuro` pasa a documentarse como **variante de fondo**, no como tipo de slide.
+- `templates/comercial-carrito-web/Slide04..08` reciben el pie que les faltaba, detectado por [8].
+- `templates/comercial-institucional/Slide05` deja de pisar la grilla: `repeat(3,1fr)` con gap 20
+  pasa a `span-4 ×3`. Las columnas van de 573 a 560.
+
+### Notas
+
+- Geometría verificada en las 20 fichas: anchos exactos (410/560/710/860/1010/1760), nada pasa el
+  margen seguro de 1840, sin overflow y pie en `y=978`.
+- **Deuda:** los 6 archivos de template que se tocaron no se pudieron renderizar fuera de la
+  plataforma, porque dependen del runtime de Claude Design (`<x-dc>`, `<x-import>`, `support.js`).
+  Hay que confirmarlos ahí.
+- **Deuda:** la escala tipográfica sigue en disputa. `typography.css` define eyebrow 20, cuerpo 21,
+  card-desc 19, footnote 17 y table-value 26; las fichas y los templates usan 24, 30, 24, 24 y 48.
+  Los componentes siguen la primera y las slides escritas a mano la segunda, así que un deck mezcla
+  dos escalas.
+
 ## [5.0.0] — 2026-09-07
 
 Sincronización completa **Claude Design → repo**. Desde agosto el diseño avanzó solo en Claude
