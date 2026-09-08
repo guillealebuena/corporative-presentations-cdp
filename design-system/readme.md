@@ -72,6 +72,14 @@ Para un contenedor responsivo en vez de pantalla completa, usá `width:100%;max-
 - El eyebrow lleva una barra de color de 24×3px a la izquierda (12px de separación) — nunca un guion largo delante.
 - Sin emoji.
 - **No generar notas del orador (speaker notes) en ningún slide por default.** Solo si el pedido las pide explícitamente.
+- **El logo es un asset, nunca una palabra.** El pie de las slides de contenido se arma con `SlideFooter`, que ya lleva el wordmark a la
+  izquierda y el número de página a la derecha. Portada, divisores y cierre llevan el lockup con `LogoMark`. Escribir «Central de Pasajes»
+  como texto en el pie en lugar de poner el logo es un error: el nombre en tipografía de cuerpo no es la marca. Ningún deck puede terminar
+  sin el logo a la vista.
+- **Ritmo del deck.** Ningún tipo de slide se repite más de dos veces en un mismo deck. Alterná densidad: después de un slide cargado va uno
+  de respiro. El dato más importante del deck va solo, en escala héroe. Una comparación entre dos situaciones va en tabla comparativa, y una
+  secuencia va en línea de tiempo. El tema oscuro se reserva para el cierre o el slide de mayor impacto. Los topes de densidad siguen
+  valiendo: variar no es llenar.
 
 ## Voz y redacción — tics de IA prohibidos
 
