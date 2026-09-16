@@ -12,7 +12,7 @@ export function Pill({ children, tone = 'soft' }) {
   return React.createElement('span', {
     style: {
       display: 'inline-flex', alignItems: 'center', padding: '12px 28px', borderRadius: 'var(--radius-pill)',
-      fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 24, lineHeight: '28px',
+      fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: var(--text-caption-size), lineHeight: '28px',
       letterSpacing: '.4px', ...t
     }
   }, children);

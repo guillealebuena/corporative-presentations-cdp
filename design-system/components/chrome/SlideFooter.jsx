@@ -9,7 +9,7 @@ export function SlideFooter({ pageNumber }) {
   },
     React.createElement(LogoMark, { variant: 'wordmark-violeta', height: 22 }),
     pageNumber && React.createElement('span', {
-      style: { fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 24, color: 'var(--brand-primary)' }
+      style: { fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: var(--text-caption-size), color: 'var(--brand-primary)' }
     }, pageNumber)
   );
 }
