@@ -14,11 +14,21 @@
 /* Rule 3: 12 columns of 110px with 40px gutter — grid-column:span n is the ONLY way to size a block,
    so its rendered width always lands on 260/410/560/710/860/1010/1160/1310/1760. */
 .slide-body{display:grid;grid-template-columns:repeat(12,var(--col));column-gap:var(--gutter);row-gap:var(--space-48);align-content:start}
+/* Distribución vertical del body. Por defecto el contenido arranca arriba y, si es
+   corto, deja un hueco muerto contra el pie: medido, 12 de 17 fichas dejaban más de
+   200px de vacío y el slide se leía sin terminar. Estas dos clases son la salida, y
+   la regla para elegir está en el readme ("Vacío vertical"). */
+.slide-body.center{align-content:center}
+.slide-body.fill{align-content:stretch}
+.slide-body.fill>*{height:100%}
 .slide-body>*{min-width:0}
-.span-2{grid-column:span 2}.span-3{grid-column:span 3}.span-4{grid-column:span 4}.span-5{grid-column:span 5}
-.span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-8{grid-column:span 8}.span-9{grid-column:span 9}
-.span-12{grid-column:span 12}
+/* Las 12 clases existen todas. Antes faltaban span-1, span-10 y span-11: si una
+   slide las usaba, la clase no existía, el bloque caía a una sola columna de 110px
+   y el slide se rompía sin dar ningún error. Falla silenciosa, ya no. */
+.span-1{grid-column:span 1}.span-2{grid-column:span 2}.span-3{grid-column:span 3}.span-4{grid-column:span 4}
+.span-5{grid-column:span 5}.span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-8{grid-column:span 8}
+.span-9{grid-column:span 9}.span-10{grid-column:span 10}.span-11{grid-column:span 11}.span-12{grid-column:span 12}
 /* Rule 7: footer fixed at y=978 — never part of the flow, never shifts with body content. */
 .slide-footer{position:absolute;left:var(--slide-margin);right:var(--slide-margin);top:978px;display:flex;align-items:center;justify-content:space-between}
-.slide-footer .page-number{font-family:var(--font-body);font-weight:600;font-size:24px;color:var(--brand-primary);line-height:1}
-.slide-footnote{position:absolute;left:var(--slide-margin);right:var(--slide-margin);top:930px;font-family:var(--font-body);font-weight:400;font-size:24px;line-height:34px;color:#A6A8AA}
+.slide-footer .page-number{font-family:var(--font-body);font-weight:600;font-size:var(--text-caption-size);color:var(--brand-primary);line-height:1}
+.slide-footnote{position:absolute;left:var(--slide-margin);right:var(--slide-margin);top:930px;font-family:var(--font-body);font-weight:400;font-size:var(--text-caption-size);line-height:var(--text-caption-lh);color:var(--text-muted)}

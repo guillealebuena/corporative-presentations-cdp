@@ -28,7 +28,7 @@ export function ComparisonTable({
     padding: '24px 28px',
     fontFamily: 'var(--font-body)',
     fontWeight: 600,
-    fontSize: 24,
+    fontSize: var(--text-caption-size),
     color: 'var(--text-title)',
     background: 'var(--surface-soft)',
   };
@@ -40,7 +40,7 @@ export function ComparisonTable({
   };
   const sub = (color) => ({
     display: 'block',
-    marginTop: 4,
+    marginTop: 8,
     fontSize: 'var(--text-footnote-size)',
     fontWeight: 400,
     color,

@@ -1,5 +1,12 @@
 :root{
---space-1:8px;--space-2:16px;--space-3:20px;--space-4:24px;--space-5:32px;--space-6:40px;--space-7:48px;--space-8:64px;--space-9:80px;--space-10:96px;--space-11:128px;
+/* Escala de espaciado. 12 entró en la v5.2: era el segundo valor más usado del
+   sistema (gaps de ícono+etiqueta, filas de lista) y no existía como token, así
+   que se escribía a mano. Los valores 4/6/10/14/28/30 que había sueltos por los
+   componentes no son escala: se normalizaron al múltiplo más cercano. */
+--space-1:8px;--space-1-5:12px;--space-2:16px;--space-3:20px;--space-4:24px;--space-5:32px;--space-6:40px;--space-7:48px;--space-8:64px;--space-9:80px;--space-10:96px;--space-11:128px;
+/* Alias por valor — los usan layout.css y los componentes. */
+--space-8px:8px;--space-12:12px;
+/* Ritmo vertical de slide: 16/24/32/48/64/80 (readme, checklist de layout punto 7). */
 --space-16:16px;--space-24:24px;--space-32:32px;--space-48:48px;--space-64:64px;--space-80:80px;
 --canvas-w:1920px;--canvas-h:1080px;--canvas-margin:80px;--canvas-cols:12;/* @kind other */--canvas-col-w:110px;--canvas-gutter:40px;--canvas-safe-w:1760px;--canvas-safe-h:920px;
 --slide-margin:80px;--col:110px;--gutter:40px;--safe-w:1760px;

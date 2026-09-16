@@ -9,10 +9,10 @@ export function Timeline({ steps }) {
             width: 64, height: 64, borderRadius: '50%', background: 'var(--brand-primary)', color: '#fff',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
           }
-        }, s.icon ? React.createElement(Icon, { name: s.icon, size: 32, color: '#fff' }) : React.createElement('span', { style: { fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 28 } }, i + 1)),
+        }, s.icon ? React.createElement(Icon, { name: s.icon, size: 32, color: '#fff' }) : React.createElement('span', { style: { fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'var(--text-card-title-size)' } }, i + 1)),
         React.createElement('div', { style: { textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 8 } },
-          React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 30, color: 'var(--text-title)' } }, s.label),
-          s.description && React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontSize: 24, lineHeight: '34px', color: 'var(--text-secondary)' } }, s.description)
+          React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: var(--text-body-size), color: 'var(--text-title)' } }, s.label),
+          s.description && React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontSize: var(--text-caption-size), lineHeight: 'var(--text-caption-lh)', color: 'var(--text-secondary)' } }, s.description)
         )
       ),
       i < steps.length - 1 && React.createElement('div', { style: { flex: 1, height: 2, background: 'var(--violet-100)', marginTop: 32 } })

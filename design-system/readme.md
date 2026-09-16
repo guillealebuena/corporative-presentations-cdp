@@ -102,7 +102,7 @@ Variante para slides de datos e impacto: fondo `#1D001B` (`--surface-dark`) o `#
 
 **Tipografía:** Urbanist SemiBold para títulos/display/números héroe. Inter Regular/Medium/SemiBold para cuerpo, tablas, eyebrows. **No se usa Bold ni Light** — la jerarquía se resuelve con tamaño y color. Outfit queda reservado a mockups de producto insertados tal cual (no se re-tipografían).
 
-**Escala tipográfica (1920×1080, para proyección — REGLA DURA: 24px es el mínimo absoluto, sin excepciones: notas al pie, etiquetas de eje de gráfico y legales también van en 24px o más):**
+**Escala tipográfica (1920×1080, para proyección — REGLA DURA: 24px es el mínimo absoluto, sin excepciones: notas al pie, etiquetas de eje de gráfico y legales también van en 24px o más).** Esta tabla y `tokens/typography.css` dicen lo mismo: el token es la fuente ejecutable, la tabla la referencia de lectura. Si alguna vez se separan, gana la tabla y el token se corrige — la validación [11] falla si un token de texto declara menos de 24px.
 
 | Nivel | Tamaño/interlineado | Uso |
 |---|---|---|
@@ -119,13 +119,19 @@ Variante para slides de datos e impacto: fondo `#1D001B` (`--surface-dark`) o `#
 
 **Niveles de lectura:** con esta escala la diferencia numérica entre cuerpo (30) y título de card (32) es chica a propósito — la jerarquía real la dan el peso y el color, no solo el tamaño: títulos en Urbanist SemiBold `#30002D` (tinta), cuerpo en Inter Regular `#2A2B2D`, texto secundario Inter Regular `#737577`, notas `#A6A8AA`. Nunca más de tres niveles de lectura visibles en un mismo bloque.
 
-**Grid:** canvas 1920×1080, margen 80, 12 columnas de 110px con gutter 40, área segura 1760×920. Grillas de card: 4 cards de 410px.
+**Grid:** canvas 1920×1080, margen 80, 12 columnas de 110px con gutter 40, área segura 1760×920. Grillas de card: 4 cards de 410px. Las 12 clases `.span-1` … `.span-12` existen todas.
 
-**Espaciado:** escala 8/16/20/24/32/40/48/64/80/96/128.
+**Vacío vertical (regla de composición):** el body va de y≈300 a y=930, unos 630px. Si el contenido ocupa **menos del 60% de ese alto** (o sea, si quedan más de ~250px muertos entre el último bloque y el pie), el slide se lee sin terminar y es el defecto de composición más común del sistema. Tres salidas, en este orden:
+1. **Poner más adentro de cada bloque** — una línea de contexto en la card, el dato que faltaba, la cifra con su comparación. Casi siempre el slide está vacío porque el contenido se quedó corto, no porque el layout esté mal.
+2. **`.slide-body.center`** — centra el bloque en el alto libre. Es la salida correcta cuando el contenido es el que tiene que ser y simplemente es breve (una fila de tres cards, un insight solo).
+3. **`.slide-body.fill`** — las filas estiran a todo el alto. Solo cuando los bloques admiten crecer sin quedar huecos por dentro (columnas de texto largo, tablas).
+Nunca se resuelve agrandando la tipografía por encima de la escala ni metiendo un recurso decorativo para tapar el hueco.
+
+**Espaciado:** escala completa 8/12/16/20/24/32/40/48/64/80/96/128. El **ritmo vertical de slide** usa el subconjunto 16/24/32/48/64/80. El 12 existe para gaps chicos de ícono+etiqueta y filas de lista; nada se escribe fuera de la escala.
 
 **Radios:** 12 (sm) · 16 (md, default de card) · 20 (lg) · 24 (xl) · 999 (pill).
 
-**Cards:** borde `#EBEDEF` de 1.5px, radio 16, padding 30, sombra suave (`y4 blur16 negro 7%`). Sin fondos con degradado — fondo siempre sólido.
+**Cards:** borde `#EBEDEF` de 1.5px, radio 16, **padding 40, gap 20**, sombra suave (`y4 blur16 negro 7%`). Sin fondos con degradado — fondo siempre sólido.
 
 **Sombras:** card `0 4px 16px rgba(0,0,0,.07)`; tabla `0 6px 22px rgba(0,0,0,.10)`.
 
@@ -159,8 +165,9 @@ Toda slide de contenido (03–10; portada/divisores/cierre quedan exentas) usa `
 5. Los bloques hermanos comparten borde superior (misma fila de grid).
 6. Hay al menos 48px entre el fin del contenido y el footer (y=978).
 7. Todo espaciado vertical usa la escala 16/24/32/48/64/80.
+7b. El contenido ocupa al menos el 60% del alto del body — si no, ver "Vacío vertical" en Fundamentos visuales.
 8. Se respetan los límites de densidad: ≤3 bloques de primer nivel en el body, ≤8 cards, ≤10 filas de tabla + total, ≤2 KPIs héroe, ≤2 niveles de jerarquía por bloque.
-9. El footer está en y=978 (logo x=80, número de página x=1815, Inter SemiBold 24 `#9E1A96`); una nota al pie va 24px arriba del logo, nunca pegada.
+9. El footer está en y=978 (logo x=80 **con height 22px**, número de página x=1815, Inter SemiBold 24 `#9E1A96`); una nota al pie va 24px arriba del logo, nunca pegada. El logo va a 22 y no más: el pie arranca en 978 y el margen inferior cierra en 1000, así que 22px entra exacto y 26px se pasa 4px.
 10. Ningún texto — ni notas, ni etiquetas de eje, ni legales — está por debajo de 24px.
 11. Toda card, todo ítem de lista, toda fila de tabla que representa una categoría y todo KPI lleva un ícono Phosphor Regular en el color de acento del bloque, en el tamaño que corresponde (ver tabla de tamaños abajo).
 
