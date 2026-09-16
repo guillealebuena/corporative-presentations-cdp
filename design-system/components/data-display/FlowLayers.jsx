@@ -7,11 +7,11 @@ export function FlowLayers({ layers = [] }) {
         padding: '24px 32px', background: i === 0 ? 'var(--brand-primary)' : '#fff',
         border: i === 0 ? 'none' : 'var(--border-card)', borderRadius: 'var(--radius-sm)',
         color: i === 0 ? '#fff' : 'var(--text-title)',
-        fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 24, display: 'flex', justifyContent: 'space-between'
+        fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: var(--text-caption-size), display: 'flex', justifyContent: 'space-between'
       }
     },
       React.createElement('span', null, l.label),
-      l.detail && React.createElement('span', { style: { fontWeight: 400, opacity: .8, fontSize: 24 } }, l.detail)
+      l.detail && React.createElement('span', { style: { fontWeight: 400, opacity: .8, fontSize: var(--text-caption-size) } }, l.detail)
     ))
   );
 }

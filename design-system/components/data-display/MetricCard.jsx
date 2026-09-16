@@ -17,7 +17,7 @@ export function MetricCard({ icon, value, label, context, tone = 'light', accent
     React.createElement('div', { style: { flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', gap: 8 } },
       React.createElement('div', { style: { fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: valueSize, lineHeight: valueLh, color: '#fff' } }, value),
       React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 'var(--text-eyebrow-size)', letterSpacing: '1.2px', textTransform: 'uppercase', color: labelColor } }, label),
-      context && React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontWeight: 400, fontSize: 24, lineHeight: '32px', color: contextColor } }, context)
+      context && React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontWeight: 400, fontSize: var(--text-caption-size), lineHeight: '32px', color: contextColor } }, context)
     )
   );
 }

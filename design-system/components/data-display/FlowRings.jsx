@@ -10,8 +10,8 @@ export function FlowRings({ steps = [] }) {
         }
       }, React.createElement(Icon, { name: s.icon, size: 48, color: s.active ? 'var(--brand-primary)' : 'var(--text-muted)' })),
       React.createElement('div', { style: { textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 8 } },
-        React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 24, color: 'var(--text-title)' } }, s.label),
-        s.description && React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontSize: 24, lineHeight: '32px', color: 'var(--text-secondary)' } }, s.description)
+        React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: var(--text-caption-size), color: 'var(--text-title)' } }, s.label),
+        s.description && React.createElement('div', { style: { fontFamily: 'var(--font-body)', fontSize: var(--text-caption-size), lineHeight: '32px', color: 'var(--text-secondary)' } }, s.description)
       )
     ))
   );
