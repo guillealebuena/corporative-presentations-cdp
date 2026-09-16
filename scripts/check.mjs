@@ -218,6 +218,85 @@ for (const f of files.filter((f) => /\.(html)$/.test(f))) {
 }
 if (!pisadas) ok('ningun .slide-body pisa grid-template-columns ni column-gap');
 
+// ── 11. Piso de 24px en los tokens de texto ────────────────────────────
+// El readme declara 24px como minimo absoluto "sin excepciones". Antes de la 5.2 el
+// propio tokens/typography.css declaraba cinco tamanos por debajo (17/19/20/21/23),
+// asi que cualquier componente que siguiera el token rendereaba texto ilegible en
+// proyeccion. El archivo que define la regla no puede ser el que la rompe.
+console.log('\n[11] Piso de 24px en los tokens de texto');
+{
+  const tipo = fs.readFileSync(path.join(DS, 'tokens', 'typography.css'), 'utf8');
+  let bajos = 0;
+  for (const m of tipo.matchAll(/(--text-[a-z0-9-]*-size)\s*:\s*(\d+)px/g)) {
+    const [, name, px] = m;
+    if (Number(px) < 24) { fail(`${name} declara ${px}px — el piso del sistema es 24px`); bajos++; }
+  }
+  if (!bajos) ok('ningun token de texto declara menos de 24px');
+}
+
+// ── 12. Los tokens de texto describen lo que se pinta ────────────────────
+// Un token que no usa nadie es una trampa: parece autoridad y manda a quien lo lea a
+// una escala que no existe en ningun slide. Y un tamano pintado sin token obliga a
+// escribir numeros a mano. Las dos direcciones se chequean sobre guidelines/slides.
+console.log('\n[12] Los tokens de texto describen la escala real');
+{
+  const tipo = fs.readFileSync(path.join(DS, 'tokens', 'typography.css'), 'utf8');
+  const declarados = new Set([...tipo.matchAll(/--text-[a-z0-9-]*-size\s*:\s*(\d+)px/g)].map((m) => Number(m[1])));
+  const pintados = new Map();
+  for (const f of files.filter((f) => f.includes(`guidelines${path.sep}slides`) && f.endsWith('.html'))) {
+    for (const m of fs.readFileSync(f, 'utf8').matchAll(/font-size:\s*(\d+)px/g)) {
+      const px = Number(m[1]);
+      if (!pintados.has(px)) pintados.set(px, rel(f));
+    }
+  }
+  let sueltos = 0;
+  for (const [px, donde] of pintados) {
+    if (!declarados.has(px)) { fail(`${donde} pinta ${px}px y no hay token con ese valor`); sueltos++; }
+    if (px < 24) { fail(`${donde} pinta ${px}px, por debajo del piso de 24px`); sueltos++; }
+  }
+  if (!sueltos) ok(`los ${pintados.size} tamanos que pintan las fichas existen como token`);
+}
+
+// ── 13. Espaciado dentro de la escala ───────────────────────────────
+// Escala: 8/12/16/20/24/32/40/48/64/80/96/128. Los componentes de producto
+// (Button, Tag, ProductCard, ToggleSegment) reproducen la UI de la app y tienen su
+// propia escala: quedan exentos a proposito.
+console.log('\n[13] Espaciado dentro de la escala');
+{
+  const ESCALA = new Set([0, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]);
+  const EXENTOS = new Set(['Button.jsx', 'Tag.jsx', 'ProductCard.jsx', 'ToggleSegment.jsx']);
+  let fuera = 0;
+  for (const f of files.filter((f) => f.endsWith('.jsx'))) {
+    if (EXENTOS.has(path.basename(f))) continue;
+    for (const m of fs.readFileSync(f, 'utf8').matchAll(/\b(padding|gap|rowGap|columnGap|marginTop|marginBottom)\s*:\s*(\d+)\b/g)) {
+      if (!ESCALA.has(Number(m[2]))) { warn(`${rel(f)} usa ${m[1]}:${m[2]} — fuera de la escala de espaciado`); fuera++; }
+    }
+  }
+  if (!fuera) ok('todo padding y gap de los componentes de slide cae en la escala');
+}
+
+// ── 14. Un solo alto de logo en el pie ──────────────────────────────
+// El pie arranca en y=978 y el margen inferior cierra en 1000: 22px entra exacto.
+// Con 26 el logo se pasa 4px, y ademas convivian los dos valores (fichas en 26,
+// templates en 22), asi que un deck mezclado mostraba dos logos de distinto tamano.
+console.log('\n[14] Un solo alto de logo en el pie');
+{
+  const altos = new Map();
+  for (const f of files.filter((f) => f.endsWith('.html'))) {
+    const src = fs.readFileSync(f, 'utf8');
+    const i = src.indexOf('slide-footer');
+    if (i < 0) continue;
+    const m = src.slice(i).match(/<img[^>]*logos\/[^>]*height:\s*(\d+)px/);
+    if (m) { const h = Number(m[1]); if (!altos.has(h)) altos.set(h, []); altos.get(h).push(rel(f)); }
+  }
+  if (altos.size > 1) {
+    fail(`el logo del pie tiene ${altos.size} alturas distintas: ${[...altos.keys()].join(', ')}px`);
+    for (const [h, fs0] of altos) if (h !== 22) fs0.slice(0, 4).forEach((x) => fail(`  ${x} usa ${h}px, deberia ser 22px`));
+  } else if (altos.size === 1 && ![...altos.keys()].includes(22)) {
+    fail(`el logo del pie mide ${[...altos.keys()][0]}px — el sistema fija 22px`);
+  } else ok(`las ${[...altos.values()][0]?.length ?? 0} slides con pie usan el logo a 22px`);
+}
+
 // ── Resumen ───────────────────────────────────────────────────────────────────
 console.log(`\n${errors ? '✗' : '✓'} ${errors} errores · ${warns} advertencias\n`);
 process.exit(errors ? 1 : 0);
