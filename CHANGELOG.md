@@ -5,6 +5,64 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · Versionado 
 Para un design system: **MAJOR** = breaking (token o componente eliminado/renombrado),
 **MINOR** = agregado compatible, **PATCH** = fix visual o de documentación.
 
+## [5.2.0] — 2026-09-16
+
+Auditoría de diseño del Kit, medida renderizando las 20 fichas de Slides y los 49 slides de
+template. El hallazgo de fondo: **`tokens/typography.css` declaraba una escala que no usaba
+nadie.** 9 de sus 13 tokens de tamaño no pintaban un solo carácter en ningún slide, 9 tamaños
+que sí se pintaban no tenían token, y 5 tokens declaraban menos de 24px, que es el piso duro
+que el propio `readme.md` fija "sin excepciones". Consecuencia práctica: un slide escrito
+siguiendo los tokens salía en otra escala que el template de al lado, y había que corregirlo
+a mano. Es la causa de que cada deck necesitara ajustes.
+
+### Cambiado
+
+- **`tokens/typography.css` pasa a declarar la escala real**, la del `readme.md`, que es la
+  que ya pintaban las fichas y los templates: 112 display · 72 H1 · 48 H2 · 32 título de card ·
+  36 destacado · 30 cuerpo · 24 caption y overline · 48 valor de tabla · 56 métrica media ·
+  140 métrica héroe. Cobertura de tokens sobre el texto pintado: **72% → 97%**. No es MAJOR
+  porque ningún token se elimina ni se renombra — `--text-hero-number-*` y `--text-mega-number-*`
+  quedan como alias del mismo valor.
+- **Ritmo de card unificado en padding 40 / gap 20.** El `readme.md` se contradecía: "padding 30"
+  en Fundamentos visuales y "padding 40px, gap 20px" en Recursos decorativos. Cada implementación
+  siguió una: las fichas 30/16, los componentes 40/20. Una ficha no se parecía al componente que
+  ella misma manda usar.
+- **Logo del pie unificado en 22px.** Convivían 26 (fichas) y 22 (templates). 26 se pasa 4px del
+  margen inferior: el pie arranca en y=978 y el margen cierra en 1000.
+- **30 `fontSize` numéricos de los componentes pasan a token.** `Button`, `Tag`, `ProductCard` y
+  `ToggleSegment` quedan exentos a propósito: reproducen la UI de la app y su escala es la del
+  producto, no la del deck.
+- Espaciados `4/6/10/14/28/30` sueltos en los componentes, normalizados a la escala.
+
+### Agregado
+
+- **`--space-1-5` / `--space-12` (12px)** entra a la escala de espaciado. Era el segundo valor
+  más usado del sistema y no existía como token, así que se escribía a mano.
+- **`.span-1`, `.span-10` y `.span-11`.** Faltaban. Si una slide las usaba, la clase no existía,
+  el bloque caía a una sola columna de 110px y el slide se rompía sin dar ningún error.
+- **`.slide-body.center` y `.slide-body.fill`** para resolver el vacío vertical, más la regla
+  "Vacío vertical" en el `readme.md` para elegir entre las dos. Medido: 12 de 17 fichas de
+  contenido dejaban más de 250px muertos entre el último bloque y el pie, y el slide se leía
+  sin terminar. Era el defecto de composición más común del sistema. Las 12 ya la usan: la
+  holgura del catálogo pasó de un rango de 56–545px a uno de 56–272px.
+- **Cuatro validaciones nuevas** en `npm run check`: `[11]` ningún token de texto declara menos
+  de 24px · `[12]` los tamaños que pintan las fichas existen como token, chequeado en las dos
+  direcciones · `[13]` padding y gap de los componentes de slide caen en la escala · `[14]` un
+  solo alto de logo en el pie.
+- `--text-body-lead-*` (36/52), `--text-caption-*` (24/34), `--text-metric-hero-*` (140/140) y
+  `--text-ordinal-size` (160) como niveles con nombre propio.
+
+### Cómo se verificó
+
+Las 17 fichas de contenido renderizadas y medidas en Chromium antes y después: ninguna se pasa
+del área segura (1840×930), el pie sigue clavado en y=978 en las 17, y la holgura más ajustada
+contra el pie es de 56px, por encima del mínimo de 48 que pide el checklist de layout.
+
+### Pendiente que esta versión no toca
+
+La reconciliación **Design → repo** de las fichas 13–20 sigue abierta: las de Design las generó
+Claude Design con los componentes reales. Un "Sync to latest" desde el repo las reemplaza.
+
 ## [5.1.0] — 2026-09-08
 
 El catálogo de Slides pasa de 12 a 20 fichas, y tres validaciones nuevas evitan que vuelva a
